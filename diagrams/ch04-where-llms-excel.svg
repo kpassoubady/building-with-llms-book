@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="529.25" viewBox="20 -5 800 529.25">
+<rect x="20" y="-5" width="800" height="529.25" fill="#ffffff"/>
+<text x="40" y="32" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="20" fill="#1e1e1e" text-anchor="start" opacity="1">The Sweet Spot: When the Answer Is Already There</text>
+<rect x="40" y="70" width="380" height="400" rx="95" ry="95" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="70" y="101.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#2f9e44" text-anchor="start" opacity="1">Answer is in the prompt</text>
+<text x="70" y="123.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#2f9e44" text-anchor="start" opacity="1">or follows a known template  →  Reliable</text>
+<rect x="70" y="150" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="170.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Summarize</text>
+<rect x="70" y="194" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="214.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Classify</text>
+<rect x="70" y="238" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="258.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Rewrite / edit</text>
+<rect x="70" y="282" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="302.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Q&amp;A over given text</text>
+<rect x="70" y="326" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="346.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Format conversion</text>
+<rect x="70" y="370" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="390.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Translate</text>
+<rect x="70" y="414" width="320" height="34" rx="8.5" ry="8.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="434.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Generate code</text>
+<rect x="460" y="70" width="340" height="400" rx="85" ry="85" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="490" y="101.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#e03131" text-anchor="start" opacity="1">Needs facts recalled</text>
+<text x="490" y="123.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#e03131" text-anchor="start" opacity="1">from training memory  →  Risky</text>
+<rect x="490" y="150" width="280" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="630" y="173.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Recent events</text>
+<rect x="490" y="210" width="280" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="630" y="233.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Exact counting</text>
+<rect x="490" y="270" width="280" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="630" y="293.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Specific citations</text>
+<rect x="490" y="330" width="280" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="630" y="353.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Precise arithmetic</text>
+<rect x="490" y="390" width="280" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="630" y="413.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Niche trivia</text>
+<text x="40" y="499.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#868e96" text-anchor="start" opacity="1">Reliability drops the more the model has to rely on memory instead of the prompt.</text>
+</svg>

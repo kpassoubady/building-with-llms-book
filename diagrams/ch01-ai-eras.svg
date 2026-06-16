@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="192.5" viewBox="30 -5 740 192.5">
+<rect x="30" y="-5" width="740" height="192.5" fill="#ffffff"/>
+<ellipse cx="100" cy="90" rx="50" ry="30" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="100" y="84.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Rules</text>
+<text x="100" y="101.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">(1950s)</text>
+<ellipse cx="260" cy="82.5" rx="60" ry="37.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="260" y="76.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">ML</text>
+<text x="260" y="94.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">(1990s)</text>
+<ellipse cx="445" cy="75" rx="75" ry="45" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="445" y="69.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Deep Learning</text>
+<text x="445" y="86.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">(2010s)</text>
+<ellipse cx="660" cy="70" rx="90" ry="55" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="660" y="64.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">GenAI</text>
+<text x="660" y="81.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">(2017+)</text>
+<g><path d="M 150 90 L 200 90" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="200,90 192,94 192,86" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 320 82 L 370 82" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="370,82 362,86 362,78" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 520 75 L 570 75" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="570,75 562,79 562,71" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="250" y="161.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">Increasing capability →</text>
+</svg>

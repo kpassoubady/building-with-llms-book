@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="530.15" height="345" viewBox="40 15 530.15 345">
+<rect x="40" y="15" width="530.15" height="345" fill="#ffffff"/>
+<rect x="100" y="300" width="250" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="323.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">System Message</text>
+<rect x="100" y="255" width="250" height="40" rx="10" ry="10" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="278.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">User 1</text>
+<rect x="100" y="210" width="250" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="233.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Assistant 1</text>
+<rect x="100" y="165" width="250" height="40" rx="10" ry="10" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="188.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">User 2</text>
+<rect x="100" y="120" width="250" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="143.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Assistant 2</text>
+<rect x="100" y="75" width="250" height="40" rx="10" ry="10" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="98.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">User 3 ...</text>
+<path d="M 60 50 L 390 50" fill="none" stroke="#e03131" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8.0 4.0" opacity="1" />
+<text x="400" y="46.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#e03131" text-anchor="start" opacity="1">128K token limit</text>
+<text x="400" y="211.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#868e96" text-anchor="start" opacity="1">← Truncate (scissors)</text>
+<text x="400" y="251.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#868e96" text-anchor="start" opacity="1">← Or summarize</text>
+</svg>

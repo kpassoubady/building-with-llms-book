@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="870" height="100" viewBox="10 30 870 100">
+<rect x="10" y="30" width="870" height="100" fill="#ffffff"/>
+<rect x="30" y="50" width="130" height="60" rx="15" ry="15" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="95" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Raw Text</text>
+<rect x="210" y="50" width="110" height="60" rx="15" ry="15" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="265" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Clean</text>
+<rect x="370" y="50" width="130" height="60" rx="15" ry="15" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="435" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Strip PII</text>
+<rect x="550" y="50" width="110" height="60" rx="15" ry="15" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="605" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Chunk</text>
+<rect x="710" y="50" width="150" height="60" rx="15" ry="15" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="785" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Ready for API</text>
+<g><path d="M 160 80 L 210 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="210,80 202,84 202,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 320 80 L 370 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="370,80 362,84 362,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 500 80 L 550 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="550,80 542,84 542,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 660 80 L 710 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="710,80 702,84 702,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

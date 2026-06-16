@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="265" viewBox="10 -10 710 265">
+<rect x="10" y="-10" width="710" height="265" fill="#ffffff"/>
+<text x="50" y="21.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#e03131" text-anchor="start" opacity="1">Without Defense:</text>
+<rect x="30" y="40" width="130" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="95" y="68.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Attacker</text>
+<rect x="210" y="40" width="160" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="290" y="60.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">"Ignore all</text>
+<text x="290" y="75.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">instructions..."</text>
+<rect x="420" y="40" width="100" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="470" y="68.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">LLM</text>
+<rect x="570" y="40" width="130" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="635" y="68.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Leaked Data!</text>
+<g><path d="M 160 65 L 210 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="210,65 202,69 202,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 370 65 L 420 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="420,65 412,69 412,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 520 65 L 570 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="570,65 562,69 562,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="50" y="141.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#2f9e44" text-anchor="start" opacity="1">With Defense:</text>
+<rect x="30" y="160" width="130" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="95" y="188.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Attacker</text>
+<rect x="210" y="160" width="120" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="270" y="188.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Input Filter</text>
+<rect x="380" y="160" width="100" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="430" y="188.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">LLM</text>
+<rect x="530" y="160" width="130" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="595" y="188.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Safe Response</text>
+<g><path d="M 160 185 L 210 185" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="210,185 202,189 202,181" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 330 185 L 380 185" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="380,185 372,189 372,181" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 480 185 L 530 185" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="530,185 522,189 522,181" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="220" y="230.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#2f9e44" text-anchor="start" opacity="1">Attack blocked ↑</text>
+</svg>

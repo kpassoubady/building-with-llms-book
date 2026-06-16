@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="607.9" height="250" viewBox="30 20 607.9 250">
+<rect x="30" y="20" width="607.9" height="250" fill="#ffffff"/>
+<rect x="50" y="40" width="130" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="115" y="68.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Recommend</text>
+<g><path d="M 180 65 L 230 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="230,65 222,69 222,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="240" y="40" width="280" height="50" rx="12.5" ry="12.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="380" y="68.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">AI suggests → Human decides</text>
+<rect x="50" y="120" width="130" height="50" rx="12.5" ry="12.5" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="115" y="148.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Augment</text>
+<g><path d="M 180 145 L 230 145" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="230,145 222,149 222,141" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="240" y="120" width="280" height="50" rx="12.5" ry="12.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="380" y="148.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">AI drafts → Human edits</text>
+<rect x="50" y="200" width="130" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="115" y="228.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Automate</text>
+<g><path d="M 180 225 L 230 225" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="230,225 222,229 222,221" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="240" y="200" width="280" height="50" rx="12.5" ry="12.5" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="380" y="228.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">AI acts → Human audits</text>
+<text x="540" y="51.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#2f9e44" text-anchor="start" opacity="1">Low risk</text>
+<text x="540" y="211.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#e03131" text-anchor="start" opacity="1">High risk</text>
+<g><path d="M 560 60 L 560 190" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="560,190 556,182 564,182" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="575" y="131.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#495057" text-anchor="start" opacity="1">↓ Risk</text>
+</svg>

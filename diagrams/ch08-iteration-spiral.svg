@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="315" viewBox="20 10 490 315">
+<rect x="20" y="10" width="490" height="315" fill="#ffffff"/>
+<rect x="200" y="30" width="130" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="265" y="59.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Write</text>
+<rect x="380" y="130" width="110" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="435" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Test</text>
+<rect x="200" y="230" width="130" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="265" y="259.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Analyze</text>
+<rect x="40" y="130" width="120" height="50" rx="12.5" ry="12.5" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="100" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Refine</text>
+<g><path d="M 330 55 L 380 105" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="380,105 371.51,102.17 377.17,96.51" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 435 180 L 385 230" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="385,230 387.83,221.51 393.49,227.17" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 200 255 L 150 205" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="150,205 158.49,207.83 152.83,213.49" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 40 155 L 90 105" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="90,105 87.17,113.49 81.51,107.83" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="190" y="151.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">v1 → v2 → v3</text>
+</svg>

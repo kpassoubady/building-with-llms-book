@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="100" viewBox="30 30 860 100">
+<rect x="30" y="30" width="860" height="100" fill="#ffffff"/>
+<rect x="50" y="50" width="140" height="60" rx="15" ry="15" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="120" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Your Code</text>
+<rect x="260" y="50" width="160" height="60" rx="15" ry="15" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="340" y="74.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Request</text>
+<text x="340" y="91.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">model + messages</text>
+<rect x="490" y="50" width="140" height="60" rx="15" ry="15" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="560" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">LLM API</text>
+<rect x="700" y="50" width="170" height="60" rx="15" ry="15" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="785" y="74.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Response</text>
+<text x="785" y="91.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">content + usage</text>
+<g><path d="M 190 80 L 260 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="260,80 252,84 252,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 420 80 L 490 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="490,80 482,84 482,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 630 80 L 700 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="700,80 692,84 692,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

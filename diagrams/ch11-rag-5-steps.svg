@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="180" viewBox="10 40 760 180">
+<rect x="10" y="40" width="760" height="180" fill="#ffffff"/>
+<rect x="30" y="60" width="120" height="50" rx="12.5" ry="12.5" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="90" y="89.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Documents</text>
+<rect x="180" y="60" width="100" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="230" y="89.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Chunk</text>
+<rect x="310" y="60" width="100" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="360" y="89.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Embed</text>
+<rect x="440" y="60" width="100" height="50" rx="12.5" ry="12.5" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="490" y="89.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Store</text>
+<rect x="580" y="60" width="170" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="665" y="79.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Retrieve +</text>
+<text x="665" y="96.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Generate</text>
+<g><path d="M 150 85 L 180 85" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="180,85 172,89 172,81" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 280 85 L 310 85" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="310,85 302,89 302,81" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 410 85 L 440 85" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="440,85 432,89 432,81" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 540 85 L 580 85" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="580,85 572,89 572,81" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="550" y="160" width="140" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="620" y="183.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">User Query</text>
+<g><path d="M 620 155 L 620 110" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="620,110 624,118 616,118" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

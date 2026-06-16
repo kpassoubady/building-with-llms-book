@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="431" height="290" viewBox="60 0 431 290">
+<rect x="60" y="0" width="431" height="290" fill="#ffffff"/>
+<text x="100" y="38.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="22" fill="#2f9e44" text-anchor="start" opacity="1">Strengths</text>
+<text x="350" y="38.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="22" fill="#e03131" text-anchor="start" opacity="1">Weaknesses</text>
+<path d="M 300 20 L 300 270" fill="none" stroke="#495057" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" />
+<text x="80" y="85.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#2f9e44" text-anchor="start" opacity="1">✓ Summarize</text>
+<text x="80" y="140.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#2f9e44" text-anchor="start" opacity="1">✓ Classify</text>
+<text x="80" y="195.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#2f9e44" text-anchor="start" opacity="1">✓ Generate Code</text>
+<text x="330" y="85.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#e03131" text-anchor="start" opacity="1">✗ Math</text>
+<text x="330" y="140.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#e03131" text-anchor="start" opacity="1">✗ Recent Facts</text>
+<text x="330" y="195.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#e03131" text-anchor="start" opacity="1">✗ Counting</text>
+</svg>

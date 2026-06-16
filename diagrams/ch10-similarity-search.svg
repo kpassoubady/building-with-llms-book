@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="549" height="362.5" viewBox="30 10 549 362.5">
+<rect x="30" y="10" width="549" height="362.5" fill="#ffffff"/>
+<rect x="50" y="30" width="450" height="300" rx="75" ry="75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="60" y="346.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">Similarity Search: Top-K Retrieval</text>
+<ellipse cx="157" cy="107" rx="7" ry="7" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="207" cy="187" rx="7" ry="7" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="257" cy="87" rx="7" ry="7" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="287" cy="207" rx="7" ry="7" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="357" cy="157" rx="7" ry="7" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="407" cy="107" rx="7" ry="7" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="127" cy="257" rx="7" ry="7" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="387" cy="257" rx="7" ry="7" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<ellipse cx="270" cy="160" rx="10" ry="10" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="285" y="161.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#e8590c" text-anchor="start" opacity="1">Q</text>
+<text x="460" y="90.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">● Stored chunks</text>
+<text x="460" y="110.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#2f9e44" text-anchor="start" opacity="1">● Top-3 results</text>
+<text x="460" y="130.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#e8590c" text-anchor="start" opacity="1">★ Query</text>
+</svg>

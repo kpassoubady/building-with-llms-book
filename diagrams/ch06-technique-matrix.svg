@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="790" height="360" viewBox="30 0 790 360">
+<rect x="30" y="0" width="790" height="360" fill="#ffffff"/>
+<text x="50" y="37" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="20" fill="#1e1e1e" text-anchor="start" opacity="1">Technique Comparison Matrix</text>
+<rect x="50" y="60" width="180" height="35" rx="8.75" ry="8.75" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="80.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Technique</text>
+<rect x="240" y="60" width="180" height="35" rx="8.75" ry="8.75" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="80.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">When to Use</text>
+<rect x="430" y="60" width="180" height="35" rx="8.75" ry="8.75" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="80.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Pros</text>
+<rect x="620" y="60" width="180" height="35" rx="8.75" ry="8.75" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="80.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Cons</text>
+<rect x="50" y="105" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="125.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Zero-Shot</text>
+<rect x="240" y="105" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="125.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Simple tasks</text>
+<rect x="430" y="105" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="125.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">No examples needed</text>
+<rect x="620" y="105" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="125.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Inconsistent format</text>
+<rect x="50" y="145" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="165.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Few-Shot</text>
+<rect x="240" y="145" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="165.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Classification</text>
+<rect x="430" y="145" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="165.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">High accuracy</text>
+<rect x="620" y="145" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="165.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Uses more tokens</text>
+<rect x="50" y="185" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="205.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Chain-of-Thought</text>
+<rect x="240" y="185" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="205.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Multi-step reasoning</text>
+<rect x="430" y="185" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="205.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Better logic</text>
+<rect x="620" y="185" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="205.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Longer output</text>
+<rect x="50" y="225" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="245.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Role Prompting</text>
+<rect x="240" y="225" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="245.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Domain expertise</text>
+<rect x="430" y="225" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="245.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Focused style</text>
+<rect x="620" y="225" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="245.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">May hallucinate role</text>
+<rect x="50" y="265" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="285.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Structured Output</text>
+<rect x="240" y="265" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="285.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">JSON / tables</text>
+<rect x="430" y="265" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="285.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Parseable</text>
+<rect x="620" y="265" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="285.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">May truncate</text>
+<rect x="50" y="305" width="180" height="35" rx="8.75" ry="8.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="140" y="325.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Combined</text>
+<rect x="240" y="305" width="180" height="35" rx="8.75" ry="8.75" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="325.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Production systems</text>
+<rect x="430" y="305" width="180" height="35" rx="8.75" ry="8.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="520" y="325.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Most reliable</text>
+<rect x="620" y="305" width="180" height="35" rx="8.75" ry="8.75" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="710" y="325.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Complex prompts</text>
+</svg>

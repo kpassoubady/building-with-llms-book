@@ -1,0 +1,417 @@
+{
+  "bookTitle": "Building with LLMs: The Developer's Handbook",
+  "outputFilename": "Building-with-LLMs-Developers-Handbook.pdf",
+  "author": "Kangeyan Passoubady",
+  "language": "en-US",
+  "identifier": "urn:uuid:ad43c889-9862-4ca2-8b63-ee84234e00dd",
+  "pageSettings": {
+    "header": "{title}",
+    "headerFallback": "{bookTitle}",
+    "headerRight": "{page} of {pages}",
+    "footerLeft": "{date}",
+    "footerCenter": "Building with LLMs: The Developer's Handbook",
+    "footerRight": "Kangs | Kavin School",
+    "dateFormat": "%B %d, %Y"
+  },
+  "styleSettings": {
+    "mcqColumns": 2,
+    "pageSize": "6in 9in",
+    "margins": "0.75in 0.6in 0.75in 0.8in",
+    "fontFamily": "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "monoFontFamily": "SF Mono, Monaco, Menlo, Consolas, Liberation Mono, monospace",
+    "bodyFontSize": "9pt",
+    "bodyLineHeight": "1.6",
+    "bodyColor": "#333333",
+    "headingColor": "#1a1a2e",
+    "headingMarginTop": "0.5em",
+    "headingMarginBottom": "0.3em",
+    "h1FontSize": "14pt",
+    "h1MarginTop": "0em",
+    "h1MarginBottom": "1px",
+    "h2MarginTop": "1px",
+    "h2MarginBottom": "0.2em",
+    "h3MarginTop": "1px",
+    "h3MarginBottom": "0.2em",
+    "paragraphMarginTop": "0.2em",
+    "paragraphMarginBottom": "0.6em",
+    "h2FontSize": "12pt",
+    "h3FontSize": "11pt",
+    "h4FontSize": "10pt",
+    "codeFontSize": "7pt",
+    "codeBlockFontSize": null,
+    "inlineCodeFontSize": null,
+    "codeBlockPadding": "1em",
+    "codeBlockBorderRadius": "2px",
+    "codeBlockLineHeight": "1.4",
+    "avoidCodeBlockPageBreak": false,
+    "tableFontSize": "7.5pt",
+    "tableCellPadding": "2px 6px",
+    "tableMargin": "0.3em 0",
+    "tableTextAlign": "center",
+    "tableAlign": "center",
+    "codeBackground": "#f5f5f5",
+    "linkColor": "#0066cc",
+    "linkFontSize": "7pt",
+    "headerFontSize": "9px",
+    "footerFontSize": "8px",
+    "imageSizing": {
+      "hero-": {
+        "maxWidth": "55%",
+        "align": "center",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      },
+      "diagrams/": {
+        "maxWidth": "80%",
+        "align": "center",
+        "marginTop": "0px",
+        "marginBottom": "0px"
+      }
+    }
+  },
+  "tocSettings": {
+    "titleFontSize": 12,
+    "subtitleFontSize": 10,
+    "subtitleText": "Table of Contents",
+    "entryFontSize": 10,
+    "footerFontSize": 8,
+    "showMainToc": true,
+    "lineColor": "#1a1a2e",
+    "entryColor": "#1a1a2e",
+    "footerColor": "#666666",
+    "fontFamily": "'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+    "showHorizontalLine": false,
+    "showAltToc": false
+  },
+  "contentProcessing": {
+    "imageCaptions": {
+      "enabled": true,
+      "marginTop": "-10px",
+      "figureMarginTop": "2px",
+      "figureMarginBottom": "2px"
+    },
+    "admonitionHandling": {
+      "enabled": true,
+      "labelLanguage": "en",
+      "padding": "4px 8px",
+      "margin": "6px 0",
+      "titleSpacing": "2px",
+      "showBorderLeft": true,
+      "linkFontSize": "7pt",
+      "customTypes": {
+        "PROMPT": {
+          "label": "▶ PROMPT",
+          "backgroundColor": "#EBF5FF",
+          "borderColor": "#0066CC",
+          "borderWidth": "3px",
+          "outlineColor": "#CCE0F5",
+          "borderRadius": "4px",
+          "labelColor": "#0066CC",
+          "labelFontSize": "7.5pt",
+          "useBodyFont": true,
+          "labelSeparator": true
+        },
+        "TRY IT": {
+          "label": "Try It Yourself",
+          "backgroundColor": "#EBF5FF",
+          "borderColor": "#0066CC",
+          "borderWidth": "3px",
+          "outlineColor": "#CCE0F5",
+          "borderRadius": "4px",
+          "labelColor": "#0066CC",
+          "labelFontSize": "7.5pt",
+          "useBodyFont": true,
+          "labelSeparator": true
+        },
+        "KEY CONCEPT": {
+          "label": "Key Concept",
+          "backgroundColor": "#F0FFF0",
+          "borderColor": "#228B22",
+          "borderWidth": "3px",
+          "outlineColor": "#D0F0D0",
+          "borderRadius": "4px",
+          "labelColor": "#228B22",
+          "labelFontSize": "7.5pt",
+          "useBodyFont": true,
+          "labelSeparator": true
+        }
+      }
+    },
+    "promptHandling": {
+      "enabled": true,
+      "label": "▶ PROMPT"
+    },
+    "footnoteHandling": {
+      "enabled": true,
+      "placement": "endOfBook",
+      "numbering": "continuous",
+      "deduplication": false,
+      "endnotesTitle": "Endnotes",
+      "endnotesPosition": "append",
+      "superscriptFontSize": "0.6em",
+      "endnotesSeparator": false
+    },
+    "blockquoteListHandling": {
+      "enabled": true,
+      "padding": "4px 8px",
+      "margin": "6px 0",
+      "titleSpacing": "2px",
+      "showBorderLeft": false
+    },
+    "titledListHandling": {
+      "enabled": true,
+      "margin": "6px 0",
+      "titleSpacing": "2px"
+    }
+  },
+  "imageOptimization": {
+    "default": {
+      "maxWidth": 800,
+      "maxHeight": 1000,
+      "jpegQuality": 75,
+      "convertToJpeg": true
+    },
+    "covers": {
+      "maxWidth": 2400,
+      "maxHeight": 3200,
+      "jpegQuality": 95,
+      "convertToJpeg": false
+    }
+  },
+  "indexSettings": {
+    "enabled": true,
+    "termPattern": "^\\*\\*(.+?)\\*\\*",
+    "title": "Index",
+    "tocLabel": "Index",
+    "layout": "two-column",
+    "pageTarget": "definition",
+    "sortBy": "english",
+    "pageLabel": "",
+    "h1FontSize": "10pt",
+    "headingColor": "#1a1a2e",
+    "titleBorder": false
+  },
+  "chapters": [
+    {
+      "section": "Front Cover",
+      "files": [
+        "book/cover-info/front-cover.md",
+        "book/cover-info/front-cover.png"
+      ],
+      "note": "PNG file is required for EPUB format cover"
+    },
+    {
+      "section": "Dedication",
+      "files": [
+        "book/00-dedication.md"
+      ],
+      "excludeFromToc": true,
+      "dedication": true
+    },
+    {
+      "section": "Preface",
+      "tocLabel": "Preface",
+      "files": [
+        "book/00-front-matter.md"
+      ]
+    },
+    {
+      "section": "How to Use This Book",
+      "tocLabel": "How to Use This Book",
+      "files": [
+        "book/00.5-how-to-use.md"
+      ]
+    },
+    {
+      "section": "Part I: Foundations of Generative AI",
+      "partDivider": true,
+      "excludeFromToc": false,
+      "tocLabel": "Part I: Foundations of Generative AI"
+    },
+    {
+      "section": "1. Introduction to Generative AI & LLMs",
+      "tocLabel": "1. Introduction to Generative AI & LLMs",
+      "files": [
+        "book/01-intro-genai-llms.md"
+      ],
+      "note": "Covers AI evolution, transformer architecture, tokenization, embeddings, context windows"
+    },
+    {
+      "section": "2. The LLM Landscape",
+      "tocLabel": "2. The LLM Landscape",
+      "files": [
+        "book/02-llm-landscape.md"
+      ],
+      "note": "GPT-4, Claude, Gemini, Llama, Mistral; open vs closed models; NLP task taxonomy"
+    },
+    {
+      "section": "3. Working with LLM APIs",
+      "tocLabel": "3. Working with LLM APIs",
+      "files": [
+        "book/03-working-with-llm-apis.md"
+      ],
+      "styleSettings": {
+        "avoidCodeBlockPageBreak": false
+      },
+      "note": "API setup, request/response anatomy, provider-agnostic SDK, first API calls"
+    },
+    {
+      "section": "4. Model Capabilities & Limitations",
+      "tocLabel": "4. Model Capabilities & Limitations",
+      "files": [
+        "book/04-capabilities-limitations.md"
+      ],
+      "note": "Strengths, failure modes, hallucinations, token counting, model selection"
+    },
+    {
+      "section": "Part II: Prompt Engineering",
+      "partDivider": true,
+      "excludeFromToc": false,
+      "tocLabel": "Part II: Prompt Engineering"
+    },
+    {
+      "section": "5. Prompt Engineering Fundamentals",
+      "tocLabel": "5. Prompt Engineering Fundamentals",
+      "files": [
+        "book/05-prompt-fundamentals.md"
+      ],
+      "note": "The 4 building blocks, system vs user messages, anti-patterns"
+    },
+    {
+      "section": "6. Prompting Techniques",
+      "tocLabel": "6. Prompting Techniques",
+      "files": [
+        "book/06-prompting-techniques.md"
+      ],
+      "note": "Zero-shot, few-shot, chain-of-thought, role prompting, structured output"
+    },
+    {
+      "section": "7. API Parameters & Output Control",
+      "tocLabel": "7. API Parameters & Output Control",
+      "files": [
+        "book/07-api-parameters.md"
+      ],
+      "note": "Temperature, top_p, penalties, max_tokens, stop sequences, streaming"
+    },
+    {
+      "section": "8. Prompt Iteration & Evaluation",
+      "tocLabel": "8. Prompt Iteration & Evaluation",
+      "files": [
+        "book/08-iteration-evaluation.md"
+      ],
+      "note": "Write-test-refine loop, rubrics, golden datasets, LLM-as-judge, versioning"
+    },
+    {
+      "section": "Part III: Conversational AI & RAG",
+      "partDivider": true,
+      "excludeFromToc": false,
+      "tocLabel": "Part III: Conversational AI & RAG"
+    },
+    {
+      "section": "9. Conversation Design & Multi-turn Chat",
+      "tocLabel": "9. Conversation Design & Multi-turn Chat",
+      "files": [
+        "book/09-conversation-design.md"
+      ],
+      "note": "Stateless vs stateful, context management, persona, conversation flow"
+    },
+    {
+      "section": "10. Embeddings & Vector Databases",
+      "tocLabel": "10. Embeddings & Vector Databases",
+      "files": [
+        "book/10-embeddings-vector-databases.md"
+      ],
+      "note": "Embedding models, FAISS, Chroma, Pinecone, similarity search"
+    },
+    {
+      "section": "11. Retrieval-Augmented Generation (RAG)",
+      "tocLabel": "11. Retrieval-Augmented Generation (RAG)",
+      "files": [
+        "book/11-rag-architecture.md"
+      ],
+      "note": "End-to-end RAG pipeline: ingestion, chunking, retrieval, generation, citations"
+    },
+    {
+      "section": "Part IV: Production & Responsible AI",
+      "partDivider": true,
+      "excludeFromToc": false,
+      "tocLabel": "Part IV: Production & Responsible AI"
+    },
+    {
+      "section": "12. Security & Guardrails",
+      "tocLabel": "12. Security & Guardrails",
+      "files": [
+        "book/12-security-guardrails.md"
+      ],
+      "note": "API key management, prompt injection, PII, input/output filters"
+    },
+    {
+      "section": "13. Cost, Latency & Error Handling",
+      "tocLabel": "13. Cost, Latency & Error Handling",
+      "files": [
+        "book/13-cost-optimization.md"
+      ],
+      "note": "Token economics, caching, retry logic, monitoring"
+    },
+    {
+      "section": "14. Ethics, Bias & Evaluation",
+      "tocLabel": "14. Ethics, Bias & Evaluation",
+      "files": [
+        "book/14-ethics-evaluation.md"
+      ],
+      "note": "Bias detection, mitigation, human-in-the-loop, evaluation harnesses"
+    },
+    {
+      "section": "Appendix A: Hands-on Labs Reference",
+      "tocLabel": "Appendix A: Hands-on Labs Reference",
+      "files": [
+        "book/appendix-a-labs.md"
+      ],
+      "note": "All 13 labs with full code listings and expected output"
+    },
+    {
+      "section": "Appendix B: Capstone Project",
+      "tocLabel": "Appendix B: Capstone Project",
+      "files": [
+        "book/appendix-b-capstone.md"
+      ],
+      "note": "Fleet services capstone: issue classifier, work order parser, fleet advisor"
+    },
+    {
+      "section": "Appendix C: Setup & Installation",
+      "tocLabel": "Appendix C: Setup & Installation",
+      "files": [
+        "book/appendix-c-setup.md"
+      ],
+      "note": "Python, API keys, dependencies, IDE setup"
+    },
+    {
+      "section": "Appendix D: Further Reading & Resources",
+      "tocLabel": "Appendix D: Further Reading & Resources",
+      "files": [
+        "book/appendix-d-resources.md"
+      ]
+    },
+    {
+      "section": "Appendix E: Diagrams Reference",
+      "tocLabel": "Appendix E: Diagrams Reference",
+      "files": [
+        "book/appendix-e-diagrams.md"
+      ]
+    },
+    {
+      "section": "About the Author",
+      "tocLabel": "About the Author",
+      "files": [
+        "book/cover-info/about-authors.md"
+      ]
+    },
+    {
+      "section": "Back Cover",
+      "files": [
+        "book/cover-info/back-cover.md",
+        "book/cover-info/back-cover.png"
+      ]
+    }
+  ]
+}

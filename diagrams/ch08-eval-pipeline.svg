@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="610" height="270" viewBox="10 20 610 270">
+<rect x="10" y="20" width="610" height="270" fill="#ffffff"/>
+<rect x="30" y="40" width="140" height="50" rx="12.5" ry="12.5" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="100" y="69.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Golden Dataset</text>
+<rect x="210" y="40" width="140" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="280" y="69.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Prompt Runner</text>
+<rect x="390" y="40" width="150" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="465" y="69.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Output Collector</text>
+<g><path d="M 170 65 L 210 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="210,65 202,69 202,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 350 65 L 390 65" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="390,65 382,69 382,61" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="100" y="130" width="140" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="170" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Exact Match</text>
+<rect x="270" y="130" width="130" height="50" rx="12.5" ry="12.5" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="335" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Fuzzy Match</text>
+<rect x="430" y="130" width="140" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="500" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">LLM-as-Judge</text>
+<g><path d="M 460 90 L 460 120" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="460,120 456,112 464,112" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 350 90 L 270 120" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="270,120 276.09,113.45 278.9,120.94" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 270 90 L 170 120" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="170,120 176.51,113.87 178.81,121.53" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="200" y="220" width="170" height="50" rx="12.5" ry="12.5" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="285" y="249.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Report Generator</text>
+<rect x="420" y="220" width="180" height="50" rx="12.5" ry="12.5" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="510" y="249.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Regression Tracker</text>
+<g><path d="M 170 180 L 270 220" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="270,220 261.09,220.74 264.06,213.31" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 335 180 L 335 220" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="335,220 331,212 339,212" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 500 180 L 500 220" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="500,220 496,212 504,212" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

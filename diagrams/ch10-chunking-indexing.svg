@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="630" height="270" viewBox="0 30 630 270">
+<rect x="0" y="30" width="630" height="270" fill="#ffffff"/>
+<rect x="20" y="50" width="120" height="50" rx="12.5" ry="12.5" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="80" y="79.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Document</text>
+<rect x="170" y="50" width="100" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="220" y="79.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Loader</text>
+<rect x="300" y="50" width="100" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="350" y="79.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Splitter</text>
+<g><path d="M 140 75 L 170 75" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="170,75 162,79 162,71" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 270 75 L 300 75" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,75 292,79 292,71" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="50" y="140" width="120" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="110" y="168.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Fixed</text>
+<rect x="190" y="140" width="120" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="250" y="168.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Semantic</text>
+<rect x="330" y="140" width="120" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="390" y="168.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Overlap</text>
+<g><path d="M 350 100 L 300 140" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,140 303.75,131.88 308.75,138.13" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 350 100 L 250 140" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="250,140 255.94,133.31 258.91,140.74" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 350 100 L 200 140" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="200,140 206.7,134.07 208.76,141.8" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="130" y="230" width="170" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="215" y="259.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Embedding Model</text>
+<rect x="340" y="230" width="130" height="50" rx="12.5" ry="12.5" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="405" y="259.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Vector DB</text>
+<rect x="510" y="230" width="100" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="560" y="259.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Index</text>
+<g><path d="M 110 190 L 200 230" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="200,230 191.06,230.41 194.31,223.1" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 250 190 L 250 230" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="250,230 246,222 254,222" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 390 190 L 340 230" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="340,230 343.75,221.88 348.75,228.13" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 255 L 340 255" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="340,255 332,259 332,251" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 470 255 L 510 255" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="510,255 502,259 502,251" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>
