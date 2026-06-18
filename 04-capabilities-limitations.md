@@ -363,8 +363,9 @@ print(response)
 Extend the `scrub_pii()` function to also redact Social Security numbers (pattern: `NNN-NN-NNNN`) and credit card numbers (4 groups of 4 digits). Test it with sample text before sending anything to an API.
 
 > [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building code explainers, bug triagers, and auditing hallucinations.
+> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building code explainers, bug triagers, user story generators, and auditing hallucinations.
 > - [building-with-llms-companion/exercises/ch04/code_explainer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/code_explainer)
+> - [building-with-llms-companion/exercises/ch04/user_story_generator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/user_story_generator)
 > - [building-with-llms-companion/exercises/ch04/bug_triager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/bug_triager)
 > - [building-with-llms-companion/exercises/ch04/hallucination_audit](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/hallucination_audit)
 

@@ -30,7 +30,7 @@ Hallucinations happen for three reasons:
 
 **Retrieval-Augmented Generation (RAG)** solves this by retrieving relevant documents before generating a response. Instead of relying on the model's training data, you hand it the specific documents it needs to answer the question.
 
-![RAG ingestion and query pipelines end-to-end](../day3/diagrams/rag-pipeline.svg)
+![RAG ingestion and query pipelines end-to-end](./diagrams/ch11-rag-full.svg)
 
 > [!TIP]
 > **High-Resolution Architecture:** For a full-page, high-resolution RAG architecture diagram, see [Appendix E](appendix-e-diagrams.md#chapter-11-rag-architecture-full). The high-resolution file is also available in the companion repository:
@@ -298,7 +298,7 @@ Bot:  Python dictionaries are the primary data structure for
 
 RAG is not the only way to give an LLM access to your data. The three main approaches are prompt engineering, RAG, and fine-tuning. Each has different trade-offs.
 
-![RAG vs Alternatives](../day3/diagrams/rag-vs-alternatives.svg)
+![RAG vs Alternatives](./diagrams/ch11-rag-sandwich.svg)
 
 | Approach | When to Use | Cost | Data Freshness | Effort |
 |:---------|:------------|:-----|:---------------|:-------|

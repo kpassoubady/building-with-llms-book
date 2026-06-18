@@ -21,7 +21,7 @@ The fix is not a smarter model. The fix is your code. You manage the conversatio
 ## The Stateless Problem
 **Stateless API** means each request is processed independently. There is no session, no cookie, no server-side memory. When you call the API twice, the second call has no knowledge of the first.
 
-![Stateless API: each request independent, no shared memory](../day3/diagrams/stateless-api.svg)
+![Stateless API: each request independent, no shared memory](./diagrams/ch09-stateless-stateful.svg)
 
 The diagrams contrast a stateless API (two independent requests) with a stateful conversation (your app managing history); the sketch below shows how your code bridges the gap by passing a growing messages[] array across turns.
 
@@ -109,7 +109,7 @@ Every model has a maximum context window. GPT-4o supports 128K tokens. Claude 3.
 
 You need a strategy. There are three core approaches, and most production systems use a hybrid.
 
-![Four context management strategies compared: full, truncation, summarization, sliding window](../day3/diagrams/context-window-strategies.svg)
+![Four context management strategies compared: full, truncation, summarization, sliding window](./diagrams/ch09-context-filling.svg)
 
 The diagram branches from a capacity check into three management strategies (truncation, summarization, sliding window); the sketch below visualizes a context window filling up and shows where each strategy trims or compresses the history.
 
@@ -252,7 +252,7 @@ Notice the structure: capabilities tell the model what it can do, limitations te
 
 A well-designed chatbot handles more than the happy path. Real users go off-topic, ask ambiguous questions, get frustrated, and occasionally try to break the bot.
 
-![Conversation Flow](../day3/diagrams/conversation-flow.svg)
+![Conversation Flow](./diagrams/conversation-flow.svg)
 
 ### Intents and Fallbacks
 

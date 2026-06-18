@@ -77,7 +77,7 @@ The same workloads on GPT-4o-mini cost roughly 15 times less. For many tasks, th
 
 Five strategies cover the vast majority of cost optimization opportunities. Apply them in order of impact.
 
-![Cost optimization strategy map](../day4/diagrams/cost-optimization-strategies.svg)
+![Cost optimization strategy map](./diagrams/ch13-cost-decision-tree.svg)
 
 ### Strategy 1: Model Tiering
 
@@ -317,7 +317,7 @@ def completion_with_retry(messages, max_retries=3, base_delay=1.0):
     raise RuntimeError("Max retries exceeded")
 ```
 
-![API call retry loop: success exits, 429/500 waits 2^n seconds before retry](../day4/diagrams/retry-backoff.svg)
+![API call retry loop: success exits, 429/500 waits 2^n seconds before retry](./diagrams/ch13-retry-backoff.svg)
 
 The diagram shows the retry decision loop with exponential wait times and a max-retries exit; the sketch below lays out the same attempts on a timeline with 1s, 2s, and 4s wait labels between each retry.
 
