@@ -34,7 +34,8 @@
       "Exec(mkdir)",
       "Exec(head)",
       "Exec(mv)",
-      "Exec(git)"
+      "Exec(git)",
+      "Exec(./build.sh pdf)"
     ]
   }
 }
