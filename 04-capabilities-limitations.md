@@ -22,7 +22,7 @@ In this chapter, you will learn where LLMs excel, where they fail, and how to pr
 
 LLMs are strongest when the task involves transforming, reorganizing, or generating text based on patterns they have seen billions of times during training. The following tasks consistently produce high-quality results across providers and model sizes.
 
-![Where LLMs excel: reliable when the answer is in the prompt, risky when it must be recalled from memory](diagrams/ch04-where-llms-excel.svg)
+![Where LLMs excel: reliable when the answer is in the prompt, risky when it must be recalled from memory](diagrams/ch04-where-llms-excel-sketch.svg)
 
 | Task | Reliability | Best Tier | Why It Works |
 |:-----|:-----------|:----------|:-------------|
@@ -121,7 +121,7 @@ print(response)
 
 Understanding failure modes is more important than understanding strengths. A model that fails silently is more dangerous than one that throws an exception. LLMs never say "I don't know" unless you explicitly instruct them to. Instead, they generate plausible-sounding text regardless of whether it is true.
 
-![LLM strengths vs weaknesses](diagrams/ch04-strengths-weaknesses.svg)
+![LLM strengths vs weaknesses](diagrams/ch04-strengths-weaknesses-sketch.svg)
 
 ### 1. Hallucinations
 
@@ -213,7 +213,7 @@ The single most effective strategy is also the simplest: provide the source mate
 
 The quality of your output depends on the quality of your input. Raw text from real-world sources contains noise, sensitive data, and formatting issues that degrade model performance. A preprocessing pipeline solves these problems before the text reaches the API.
 
-![Input preprocessing pipeline](diagrams/ch04-preprocessing.svg)
+![Input preprocessing pipeline](diagrams/ch04-preprocessing-sketch.svg)
 
 ### Step 1: Clean the Text
 

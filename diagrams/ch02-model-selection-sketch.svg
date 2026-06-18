@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="730" height="530" viewBox="30 10 730 530">
+<rect x="30" y="10" width="730" height="530" fill="#ffffff"/>
+<path d="M 340 30 L 430 75 L 340 120 L 250 75 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="340" y="68.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Budget</text>
+<text x="340" y="88.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">tight?</text>
+<rect x="50" y="180" width="160" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="130" y="208.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Mini / Flash</text>
+<path d="M 390 180 L 480 225 L 390 270 L 300 225 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="390" y="218.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Privacy</text>
+<text x="390" y="238.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">required?</text>
+<rect x="100" y="330" width="180" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="190" y="358.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Llama / Mistral</text>
+<path d="M 440 330 L 530 375 L 440 420 L 350 375 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="440" y="368.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">Complex</text>
+<text x="440" y="388.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">reasoning?</text>
+<rect x="560" y="330" width="180" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="650" y="358.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">GPT-4o / Sonnet</text>
+<rect x="350" y="470" width="180" height="50" rx="12.5" ry="12.5" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="440" y="498.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">GPT-4o-mini</text>
+<text x="155" y="141.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<text x="420" y="141.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+<text x="200" y="291.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<text x="470" y="291.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+<text x="540" y="411.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<text x="400" y="451.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+<g><path d="M 260 120 L 180 180" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="180,180 184,172 188.8,178.4" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 390 120 L 390 180" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="390,180 386,172 394,172" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 270 L 190 330" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="190,330 195.11,322.66 198.94,329.68" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 440 270 L 440 330" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="440,330 436,322 444,322" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 530 375 L 560 375" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="560,375 552,379 552,371" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 440 420 L 440 470" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="440,470 436,462 444,462" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

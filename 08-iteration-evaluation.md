@@ -22,7 +22,7 @@ Seven iterations. Each one targeted a specific failure mode observed in the prev
 
 Prompt engineering is not a one-shot activity. Every production prompt goes through multiple iterations. The process follows a predictable loop: write, test, analyze, refine, repeat.
 
-![Write-test-analyze-refine loop with ship exit condition](./diagrams/ch08-iteration-spiral.svg)
+![Write-test-analyze-refine loop with ship exit condition](./diagrams/ch08-iteration-spiral-sketch.png)
 
 The diagram shows the write, test, analyze, refine cycle as a decision loop with a "ship it" exit; the sketch below renders the same process as a spiral where each orbit represents a versioned improvement.
 
@@ -230,7 +230,7 @@ The LLM-as-judge pattern uses a strong model (like GPT-4o) to evaluate the outpu
 
 Start with manual rubrics to calibrate your expectations. Switch to LLM-as-judge once you have validated that the judge agrees with your manual scores on at least 20 examples.
 
-![Complete evaluation pipeline](diagrams/ch08-eval-pipeline.svg)
+![Complete evaluation pipeline](diagrams/ch08-eval-pipeline-sketch.svg)
 
 > [!NOTE]
 > **Did You Know?** Anthropic's prompt engineering team reports that their production prompts go through an average of 12 iterations before deployment. Even experts do not get prompts right on the first try.

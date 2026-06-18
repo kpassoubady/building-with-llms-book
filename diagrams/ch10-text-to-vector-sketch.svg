@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="689" height="240" viewBox="10 30 689 240">
+<rect x="10" y="30" width="689" height="240" fill="#ffffff"/>
+<rect x="30" y="80" width="200" height="60" rx="15" ry="15" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="130" y="104.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">"The cat sat</text>
+<text x="130" y="121.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">on the mat"</text>
+<g><path d="M 230 110 L 300 110" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,110 292,114 292,106" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="245" y="99.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">Embed</text>
+<rect x="320" y="50" width="350" height="200" rx="50" ry="50" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="330" y="65.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">Dimension 2 ↑</text>
+<text x="550" y="240.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">Dimension 1 →</text>
+<ellipse cx="408" cy="128" rx="8" ry="8" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="420" y="125.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1971c2" text-anchor="start" opacity="1">cat sat</text>
+<ellipse cx="438" cy="148" rx="8" ry="8" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="450" y="145.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#2f9e44" text-anchor="start" opacity="1">kitten rested</text>
+<ellipse cx="568" cy="208" rx="8" ry="8" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="580" y="205.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#e03131" text-anchor="start" opacity="1">database schema</text>
+</svg>

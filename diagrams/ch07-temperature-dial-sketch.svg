@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290" height="345" viewBox="130 10 290 345">
+<rect x="130" y="10" width="290" height="345" fill="#ffffff"/>
+<ellipse cx="275" cy="155" rx="125" ry="125" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="200" y="73.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1971c2" text-anchor="start" opacity="1">0.0–0.3</text>
+<text x="170" y="101.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1971c2" text-anchor="start" opacity="1">Deterministic</text>
+<text x="170" y="119.35" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="11" fill="#868e96" text-anchor="start" opacity="1">code, classification</text>
+<text x="200" y="163.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#2f9e44" text-anchor="start" opacity="1">0.3–0.7</text>
+<text x="185" y="191.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#2f9e44" text-anchor="start" opacity="1">Balanced</text>
+<text x="180" y="209.35" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="11" fill="#868e96" text-anchor="start" opacity="1">chat, general</text>
+<text x="200" y="243.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#e8590c" text-anchor="start" opacity="1">0.8–1.5</text>
+<text x="180" y="266.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#e8590c" text-anchor="start" opacity="1">Creative</text>
+<text x="165" y="284.35" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="11" fill="#868e96" text-anchor="start" opacity="1">brainstorming, writing</text>
+<text x="200" y="327" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="20" fill="#495057" text-anchor="start" opacity="1">Temperature</text>
+</svg>

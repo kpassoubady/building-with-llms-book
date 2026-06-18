@@ -13,7 +13,7 @@ import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.join(SCRIPT_DIR, "..")
-BOOK_DIAGRAMS = os.path.join(ROOT_DIR, "book", "diagrams")
+BOOK_DIAGRAMS = os.path.join(ROOT_DIR, "diagrams")
 
 # ── Colors (Excalidraw palette) ──────────────────────────────
 BLUE = "#a5d8ff"
@@ -168,7 +168,7 @@ def ch01_token_pipeline():
     s.arrow(590, y + 30, 50, 0, start=b3, end=b4)
     s.arrow(790, y + 30, 50, 0, start=b4, end=b5)
     s.text(350, 140, "The mental model: how your text becomes an LLM response", fs=14, color="#868e96")
-    s.save("ch01-token-pipeline.excalidraw")
+    s.save("ch01-token-pipeline-sketch.excalidraw")
 
 
 def ch01_ai_eras():
@@ -182,7 +182,7 @@ def ch01_ai_eras():
     s.arrow(320, 82, 50, 0)
     s.arrow(520, 75, 50, 0)
     s.text(250, 150, "Increasing capability →", fs=14, color="#868e96")
-    s.save("ch01-ai-eras.excalidraw")
+    s.save("ch01-ai-eras-sketch.excalidraw")
 
 
 def ch01_transformer_full():
@@ -201,7 +201,7 @@ def ch01_transformer_full():
     s.text(430, 210, "← Self-attention:\nWhich words matter?", fs=14, color="#868e96")
     s.text(430, 370, "← Refines each\ntoken representation", fs=14, color="#868e96")
     s.text(cx + 20, 600, "Full Transformer block (simplified)", fs=14, color="#868e96")
-    s.save("ch01-transformer-full.excalidraw")
+    s.save("ch01-transformer-full-sketch.excalidraw")
 
 
 def ch02_model_selection():
@@ -226,7 +226,7 @@ def ch02_model_selection():
     s.arrow(440, 270, 0, 60, start=d2, end=d3)
     s.arrow(530, 375, 30, 0, start=d3, end=b3)
     s.arrow(440, 420, 0, 50, start=d3, end=b4)
-    s.save("ch02-model-selection.excalidraw")
+    s.save("ch02-model-selection-sketch.excalidraw")
 
 
 def ch02_open_closed():
@@ -244,7 +244,7 @@ def ch02_open_closed():
         s.text(mx - 20, 40, name, fs=14)
     s.text(50, 150, "your infra / full control", fs=12, color="#868e96")
     s.text(580, 150, "their API / managed", fs=12, color="#868e96")
-    s.save("ch02-open-closed.excalidraw")
+    s.save("ch02-open-closed-sketch.excalidraw")
 
 
 def ch03_api_anatomy():
@@ -258,7 +258,7 @@ def ch03_api_anatomy():
     s.arrow(190, y + 30, 70, 0, start=b1, end=b2)
     s.arrow(420, y + 30, 70, 0, start=b2, end=b3)
     s.arrow(630, y + 30, 70, 0, start=b3, end=b4)
-    s.save("ch03-api-anatomy.excalidraw")
+    s.save("ch03-api-anatomy-sketch.excalidraw")
 
 
 def ch03_three_roles():
@@ -270,7 +270,7 @@ def ch03_three_roles():
     s.box(x, 220, 350, 60, "Assistant: \"This function calculates...\"", bg=GREEN, fs=14)
     s.text(50, 100, "messages[]", fs=16, color="#495057")
     s.line(130, 50, 0, 220, color="#495057")
-    s.save("ch03-three-roles.excalidraw")
+    s.save("ch03-three-roles-sketch.excalidraw")
 
 
 def ch04_strengths_weaknesses():
@@ -285,7 +285,7 @@ def ch04_strengths_weaknesses():
         s.text(80, 70 + i * 55, t, fs=18, color="#2f9e44")
     for i, t in enumerate(weaknesses):
         s.text(330, 70 + i * 55, t, fs=18, color="#e03131")
-    s.save("ch04-strengths-weaknesses.excalidraw")
+    s.save("ch04-strengths-weaknesses-sketch.excalidraw")
 
 
 def ch04_preprocessing():
@@ -301,7 +301,7 @@ def ch04_preprocessing():
     s.arrow(320, y + 30, 50, 0, start=b2, end=b3)
     s.arrow(500, y + 30, 50, 0, start=b3, end=b4)
     s.arrow(660, y + 30, 50, 0, start=b4, end=b5)
-    s.save("ch04-preprocessing.excalidraw")
+    s.save("ch04-preprocessing-sketch.excalidraw")
 
 
 def ch04_capability_matrix():
@@ -329,7 +329,7 @@ def ch04_capability_matrix():
         s.box(230, ry, 170, 40, rel, bg=color, fs=13)
         s.box(410, ry, 170, 40, model, bg=WHITE, fs=13)
         s.box(590, ry, 170, 40, cost, bg=WHITE, fs=13)
-    s.save("ch04-capability-matrix.excalidraw")
+    s.save("ch04-capability-matrix-sketch.excalidraw")
 
 
 def ch04_where_llms_excel():
@@ -361,7 +361,7 @@ def ch04_where_llms_excel():
     s.text(40, 488,
            "Reliability drops the more the model has to rely on memory instead of the prompt.",
            fs=13, color="#868e96")
-    s.save("ch04-where-llms-excel.excalidraw")
+    s.save("ch04-where-llms-excel-sketch.excalidraw")
 
 
 def ch05_building_blocks():
@@ -374,7 +374,7 @@ def ch05_building_blocks():
     s.box(x, 235, 280, 55, "Output Format", bg=ORANGE, fs=18)
     s.text(460, 140, "Your\nPrompt", fs=20, color="#495057")
     s.line(445, 50, 0, 230, color="#495057")
-    s.save("ch05-building-blocks.excalidraw")
+    s.save("ch05-building-blocks-sketch.excalidraw")
 
 
 def ch05_bad_vs_good():
@@ -391,7 +391,7 @@ def ch05_bad_vs_good():
     s.text(400, 160, "→ Clean JSON output", fs=14, color="#868e96")
 
     s.arrow(290, 120, 60, 0, label="Prompt\nEngineering")
-    s.save("ch05-bad-vs-good.excalidraw")
+    s.save("ch05-bad-vs-good-sketch.excalidraw")
 
 
 def ch06_technique_ladder():
@@ -407,7 +407,7 @@ def ch06_technique_ladder():
         s.box(x, y, 160, 55, label, bg=bg, fs=14)
         s.text(x + 30, y + 60, note, fs=12, color="#868e96")
     s.text(650, 60, "↑ Increasing\nreliability", fs=14, color="#495057")
-    s.save("ch06-technique-ladder.excalidraw")
+    s.save("ch06-technique-ladder-sketch.excalidraw")
 
 
 def ch06_few_shot_layout():
@@ -420,7 +420,7 @@ def ch06_few_shot_layout():
     s.box(x, 210, 350, 50, "Example 3: edge case → output", bg=ORANGE, fs=14)
     s.box(x, 270, 350, 50, "Actual Input", bg=GREEN, fs=14)
     s.text(450, 150, "← Cover edge cases!", fs=13, color="#e8590c")
-    s.save("ch06-few-shot-layout.excalidraw")
+    s.save("ch06-few-shot-layout-sketch.excalidraw")
 
 
 def ch06_technique_matrix():
@@ -444,7 +444,7 @@ def ch06_technique_matrix():
         s.box(240, ry, 180, 35, when, bg=WHITE, fs=12)
         s.box(430, ry, 180, 35, pros, bg=GREEN, fs=12)
         s.box(620, ry, 180, 35, cons, bg=RED, fs=12)
-    s.save("ch06-technique-matrix.excalidraw")
+    s.save("ch06-technique-matrix-sketch.excalidraw")
 
 
 def ch07_temperature_dial():
@@ -461,7 +461,7 @@ def ch07_temperature_dial():
     s.text(180, 255, "Creative", fs=13, color="#e8590c")
     s.text(165, 275, "brainstorming, writing", fs=11, color="#868e96")
     s.text(200, 310, "Temperature", fs=20, color="#495057")
-    s.save("ch07-temperature-dial.excalidraw")
+    s.save("ch07-temperature-dial-sketch.excalidraw")
 
 
 def ch07_control_panel():
@@ -483,7 +483,7 @@ def ch07_control_panel():
         y = 60 + row * 85
         s.box(x, y, 250, 35, name, bg=bg, fs=15)
         s.box(x, y + 40, 250, 30, rng, bg=WHITE, fs=13)
-    s.save("ch07-control-panel.excalidraw")
+    s.save("ch07-control-panel-sketch.excalidraw")
 
 
 def ch08_iteration_spiral():
@@ -498,7 +498,7 @@ def ch08_iteration_spiral():
     s.arrow(200, 255, -50, -50, start=b3, end=b4)
     s.arrow(40, 155, 50, -50, start=b4, end=b1)
     s.text(190, 140, "v1 → v2 → v3", fs=14, color="#868e96")
-    s.save("ch08-iteration-spiral.excalidraw")
+    s.save("ch08-iteration-spiral-sketch.excalidraw")
 
 
 def ch08_golden_dataset():
@@ -518,7 +518,7 @@ def ch08_golden_dataset():
         s.box(200, y, 140, 40, exp, bg=WHITE, fs=12)
         s.box(350, y, 140, 40, act, bg=WHITE, fs=12)
         s.box(500, y, 140, 40, pf, bg=bg, fs=16)
-    s.save("ch08-golden-dataset.excalidraw")
+    s.save("ch08-golden-dataset-sketch.excalidraw")
 
 
 def ch08_eval_pipeline():
@@ -543,7 +543,7 @@ def ch08_eval_pipeline():
     s.arrow(170, y2 + 50, 100, 40, start=b4, end=b7)
     s.arrow(335, y2 + 50, 0, 40, start=b5, end=b7)
     s.arrow(500, y2 + 50, 0, 40, start=b6, end=b8)
-    s.save("ch08-eval-pipeline.excalidraw")
+    s.save("ch08-eval-pipeline-sketch.excalidraw")
 
 
 def ch09_stateless_stateful():
@@ -561,7 +561,7 @@ def ch09_stateless_stateful():
     s.box(300, 120, 250, 50, "Turn 2: [history] + request → response", bg=GREEN, fs=11)
     s.box(570, 70, 100, 80, "messages[]", bg=YELLOW, fs=13)
     s.arrow(550, 95, 20, 0)
-    s.save("ch09-stateless-stateful.excalidraw")
+    s.save("ch09-stateless-stateful-sketch.excalidraw")
 
 
 def ch09_context_filling():
@@ -578,7 +578,7 @@ def ch09_context_filling():
     s.text(400, 35, "128K token limit", fs=14, color="#e03131")
     s.text(400, 200, "← Truncate (scissors)", fs=13, color="#868e96")
     s.text(400, 240, "← Or summarize", fs=13, color="#868e96")
-    s.save("ch09-context-filling.excalidraw")
+    s.save("ch09-context-filling-sketch.excalidraw")
 
 
 def ch10_text_to_vector():
@@ -595,7 +595,7 @@ def ch10_text_to_vector():
     s.text(450, 135, "kitten rested", fs=12, color="#2f9e44")
     s.ellipse(560, 200, 16, 16, bg=RED)
     s.text(580, 195, "database schema", fs=12, color="#e03131")
-    s.save("ch10-text-to-vector.excalidraw")
+    s.save("ch10-text-to-vector-sketch.excalidraw")
 
 
 def ch10_similarity_search():
@@ -615,7 +615,7 @@ def ch10_similarity_search():
     s.text(460, 80, "● Stored chunks", fs=12, color="#868e96")
     s.text(460, 100, "● Top-3 results", fs=12, color="#2f9e44")
     s.text(460, 120, "★ Query", fs=12, color="#e8590c")
-    s.save("ch10-similarity-search.excalidraw")
+    s.save("ch10-similarity-search-sketch.excalidraw")
 
 
 def ch10_chunking_indexing():
@@ -643,7 +643,7 @@ def ch10_chunking_indexing():
     s.arrow(390, y2 + 50, -50, 40, start=b6, end=b7)
     s.arrow(300, y3 + 25, 40, 0, start=b7, end=b8)
     s.arrow(470, y3 + 25, 40, 0, start=b8, end=b9)
-    s.save("ch10-chunking-indexing.excalidraw")
+    s.save("ch10-chunking-indexing-sketch.excalidraw")
 
 
 def ch11_rag_5_steps():
@@ -661,7 +661,7 @@ def ch11_rag_5_steps():
     s.arrow(540, y + 25, 40, 0, start=b4, end=b5)
     uq = s.box(550, 160, 140, 40, "User Query", bg=YELLOW, fs=14)
     s.arrow(620, 155, 0, -45, start=uq, end=b5)
-    s.save("ch11-rag-5-steps.excalidraw")
+    s.save("ch11-rag-5-steps-sketch.excalidraw")
 
 
 def ch11_rag_sandwich():
@@ -674,7 +674,7 @@ def ch11_rag_sandwich():
     s.text(440, 80, "← Top bun", fs=13, color="#868e96")
     s.text(440, 140, "← Filling", fs=13, color="#868e96")
     s.text(440, 220, "← Bottom bun", fs=13, color="#868e96")
-    s.save("ch11-rag-sandwich.excalidraw")
+    s.save("ch11-rag-sandwich-sketch.excalidraw")
 
 
 def ch11_rag_full():
@@ -709,7 +709,7 @@ def ch11_rag_full():
     b12 = s.box(440, y3, 140, 40, "Faithfulness", bg=RED, fs=13)
     s.arrow(650, y2 + 20, 0, 50)
     s.text(20, 280, "Evaluation Loop ↑ — feedback to chunking and prompt tuning", fs=12, color="#868e96")
-    s.save("ch11-rag-full.excalidraw")
+    s.save("ch11-rag-full-sketch.excalidraw")
 
 
 def ch12_defense_rings():
@@ -724,7 +724,7 @@ def ch12_defense_rings():
     s.text(cx - 55, cy - 60, "Output\nValidation", fs=12, color="#1e1e1e")
     s.ellipse(cx - 35, cy - 35, 70, 70, bg=GREEN)
     s.text(cx - 30, cy - 12, "Your\nApp", fs=12, color="#1e1e1e")
-    s.save("ch12-defense-rings.excalidraw")
+    s.save("ch12-defense-rings-sketch.excalidraw")
 
 
 def ch12_injection_flow():
@@ -748,7 +748,7 @@ def ch12_injection_flow():
     s.arrow(330, 185, 50, 0, start=b2, end=b3)
     s.arrow(480, 185, 50, 0, start=b3, end=b4)
     s.text(220, 220, "Attack blocked ↑", fs=12, color="#2f9e44")
-    s.save("ch12-injection-flow.excalidraw")
+    s.save("ch12-injection-flow-sketch.excalidraw")
 
 
 def ch13_token_cost():
@@ -758,7 +758,7 @@ def ch13_token_cost():
     s.box(250, 40, 100, 200, "Output\n$10/1M", bg=RED, fs=14)
     s.text(130, 260, "Output costs 4x more!", fs=16, color="#e03131")
     s.line(60, 240, 320, 0, color="#495057")
-    s.save("ch13-token-cost.excalidraw")
+    s.save("ch13-token-cost-sketch.excalidraw")
 
 
 def ch13_retry_backoff():
@@ -776,7 +776,7 @@ def ch13_retry_backoff():
     s.arrow(260, y + 22, 60, 0)
     s.arrow(420, y + 22, 80, 0)
     s.text(150, 150, "Exponential backoff: 1s → 2s → 4s → success", fs=14, color="#868e96")
-    s.save("ch13-retry-backoff.excalidraw")
+    s.save("ch13-retry-backoff-sketch.excalidraw")
 
 
 def ch13_cost_decision_tree():
@@ -797,7 +797,7 @@ def ch13_cost_decision_tree():
     s.arrow(335, 340, 100, 40, start=d3, end=d4, label="no")
     s.arrow(380, 460, -20, 40, start=d4, end=b3, label="yes")
     s.arrow(470, 460, 100, 40, start=d4, end=b4, label="no")
-    s.save("ch13-cost-decision-tree.excalidraw")
+    s.save("ch13-cost-decision-tree-sketch.excalidraw")
 
 
 def ch14_human_in_loop():
@@ -816,7 +816,7 @@ def ch14_human_in_loop():
     s.text(540, 200, "High risk", fs=13, color="#e03131")
     s.arrow(560, 60, 0, 130)
     s.text(575, 120, "↓ Risk", fs=13, color="#495057")
-    s.save("ch14-human-in-loop.excalidraw")
+    s.save("ch14-human-in-loop-sketch.excalidraw")
 
 
 def ch14_bias_test():
@@ -837,7 +837,7 @@ def ch14_bias_test():
     s.arrow(430, 192, 60, 0, start=b3, end=r3)
     s.text(670, 90, "BIAS!", fs=24, color="#e03131")
     s.text(670, 125, "Outputs should\nbe identical", fs=13, color="#e03131")
-    s.save("ch14-bias-test.excalidraw")
+    s.save("ch14-bias-test-sketch.excalidraw")
 
 
 def ch14_eval_harness():
@@ -868,7 +868,7 @@ def ch14_eval_harness():
     b7 = s.box(480, y3, 130, 45, "Alert System", bg=RED, fs=13)
     s.arrow(260, y3 + 22, 40, 0, start=b5, end=b6)
     s.arrow(440, y3 + 22, 40, 0, start=b6, end=b7)
-    s.save("ch14-eval-harness.excalidraw")
+    s.save("ch14-eval-harness-sketch.excalidraw")
 
 
 # ── Main ─────────────────────────────────────────────────────

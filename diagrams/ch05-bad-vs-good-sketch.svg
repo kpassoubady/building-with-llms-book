@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="650" height="220" viewBox="10 10 650 220">
+<rect x="10" y="10" width="650" height="220" fill="#ffffff"/>
+<rect x="30" y="30" width="250" height="180" rx="45" ry="45" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="80" y="65.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#e03131" text-anchor="start" opacity="1">Bad Prompt</text>
+<text x="50" y="103.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="start" opacity="1">"Help me with</text>
+<text x="50" y="123.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="start" opacity="1">this code"</text>
+<text x="70" y="171.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">→ Rambling essay</text>
+<rect x="360" y="30" width="280" height="180" rx="45" ry="45" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="400" y="65.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#2f9e44" text-anchor="start" opacity="1">Good Prompt</text>
+<text x="380" y="101.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">Instruction + Context</text>
+<text x="380" y="119.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">+ Input + Output Format</text>
+<text x="400" y="171.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">→ Clean JSON output</text>
+<g><path d="M 290 120 L 350 120" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="350,120 342,124 342,116" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="300" y="109.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">Prompt</text>
+<text x="300" y="127.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">Engineering</text>
+</svg>

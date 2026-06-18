@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="325" viewBox="0 -10 670 325">
+<rect x="0" y="-10" width="670" height="325" fill="#ffffff"/>
+<text x="200" y="25.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="start" opacity="1">RAG Architecture with Evaluation</text>
+<rect x="20" y="50" width="110" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="75" y="73.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Load</text>
+<rect x="150" y="50" width="110" height="40" rx="10" ry="10" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="205" y="73.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Chunk</text>
+<rect x="280" y="50" width="110" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="335" y="73.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Embed</text>
+<rect x="410" y="50" width="110" height="40" rx="10" ry="10" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="465" y="73.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Store</text>
+<g><path d="M 130 70 L 150 70" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="150,70 142,74 142,66" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 260 70 L 280 70" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="280,70 272,74 272,66" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 390 70 L 410 70" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="410,70 402,74 402,66" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="20" y="110.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">Ingestion Pipeline ↑</text>
+<rect x="20" y="140" width="110" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="75" y="163.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Query</text>
+<rect x="150" y="140" width="110" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="205" y="163.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Embed Q</text>
+<rect x="280" y="140" width="110" height="40" rx="10" ry="10" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="335" y="163.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Search</text>
+<rect x="410" y="140" width="110" height="40" rx="10" ry="10" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="465" y="163.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Augment</text>
+<rect x="540" y="140" width="110" height="40" rx="10" ry="10" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="595" y="163.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Generate</text>
+<g><path d="M 130 160 L 150 160" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="150,160 142,164 142,156" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 260 160 L 280 160" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="280,160 272,164 272,156" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 390 160 L 410 160" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="410,160 402,164 402,156" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 520 160 L 540 160" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="540,160 532,164 532,156" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="20" y="200.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">Query Pipeline ↑</text>
+<rect x="100" y="230" width="140" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="170" y="252.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Retrieval Recall</text>
+<rect x="260" y="230" width="160" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="340" y="252.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Answer Accuracy</text>
+<rect x="440" y="230" width="140" height="40" rx="10" ry="10" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="510" y="252.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Faithfulness</text>
+<g><path d="M 650 160 L 650 210" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="650,210 646,202 654,202" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="20" y="290.2" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#868e96" text-anchor="start" opacity="1">Evaluation Loop ↑ — feedback to chunking and prompt tuning</text>
+</svg>

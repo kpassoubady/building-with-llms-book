@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="416" height="290" viewBox="130 20 416 290">
+<rect x="130" y="20" width="416" height="290" fill="#ffffff"/>
+<rect x="150" y="40" width="280" height="55" rx="13.75" ry="13.75" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="290" y="71.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Instruction</text>
+<rect x="150" y="105" width="280" height="55" rx="13.75" ry="13.75" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="290" y="136.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Context</text>
+<rect x="150" y="170" width="280" height="55" rx="13.75" ry="13.75" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="290" y="201.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Input Data</text>
+<rect x="150" y="235" width="280" height="55" rx="13.75" ry="13.75" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="290" y="266.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Output Format</text>
+<text x="460" y="157" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="20" fill="#495057" text-anchor="start" opacity="1">Your</text>
+<text x="460" y="182" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="20" fill="#495057" text-anchor="start" opacity="1">Prompt</text>
+<path d="M 445 50 L 445 280" fill="none" stroke="#495057" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" />
+</svg>

@@ -15,7 +15,7 @@
 
 set -euo pipefail
 
-DIAGRAMS_DIR="$(cd "$(dirname "$0")/../book/diagrams" && pwd)"
+DIAGRAMS_DIR="$(cd "$(dirname "$0")/../diagrams" && pwd)"
 SVG_COUNT=0
 PNG_COUNT=0
 FAILED=0
