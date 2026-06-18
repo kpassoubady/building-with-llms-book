@@ -552,9 +552,9 @@ Give the model a buggy function and ask it to debug using structured CoT. Compar
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building sentiment classifiers, parsing resumes, and comparing prompting techniques.
-> - [building-with-llms-companion/exercises/ch06/sentiment_classifier.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch06/resume_parser.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch06/technique_shootout.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch06/sentiment_classifier](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/sentiment_classifier)
+> - [building-with-llms-companion/exercises/ch06/resume_parser](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/resume_parser)
+> - [building-with-llms-companion/exercises/ch06/technique_shootout](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/technique_shootout)
 
 ## 📋 Chapter Summary
 

@@ -474,8 +474,8 @@ Each of these prompts contains an anti-pattern. Identify the problem and rewrite
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for rewriting prompts and building effective system messages.
-> - [building-with-llms-companion/exercises/ch05/prompt_rewriter.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch05/system_message_lab.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch05/prompt_rewriter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/prompt_rewriter)
+> - [building-with-llms-companion/exercises/ch05/system_message_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/system_message_lab)
 
 ## 📋 Chapter Summary
 
