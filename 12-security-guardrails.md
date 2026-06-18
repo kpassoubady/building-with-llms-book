@@ -371,7 +371,7 @@ Combine input filtering, the sandwich defense, and output filtering into a singl
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building a multi-layered moderation system to defend against prompt injection.
-> - [building-with-llms-companion/exercises/ch12/moderation_layer.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch12/moderation_layer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch12/moderation_layer)
 
 ## 📋 Chapter Summary
 

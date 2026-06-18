@@ -403,9 +403,9 @@ print(f"\nAccuracy: {correct}/{len(GOLDEN_DATASET)}")
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building refactor assistants, evaluation harnesses, and LLM-as-judge pipelines.
-> - [building-with-llms-companion/exercises/ch08/refactor_assistant.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch08/eval_harness.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch08/llm_judge.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch08/refactor_assistant](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/refactor_assistant)
+> - [building-with-llms-companion/exercises/ch08/eval_harness](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/eval_harness)
+> - [building-with-llms-companion/exercises/ch08/llm_judge](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/llm_judge)
 
 ## 📋 Chapter Summary
 

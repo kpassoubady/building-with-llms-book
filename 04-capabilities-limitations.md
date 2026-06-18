@@ -364,9 +364,9 @@ Extend the `scrub_pii()` function to also redact Social Security numbers (patter
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building code explainers, bug triagers, and auditing hallucinations.
-> - [building-with-llms-companion/exercises/ch04/code_explainer.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch04/bug_triager.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch04/hallucination_audit.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch04/code_explainer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/code_explainer)
+> - [building-with-llms-companion/exercises/ch04/bug_triager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/bug_triager)
+> - [building-with-llms-companion/exercises/ch04/hallucination_audit](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/hallucination_audit)
 
 ## 📋 Chapter Summary
 

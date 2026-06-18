@@ -400,7 +400,7 @@ Run your evaluation harness twice with different prompts (one concise, one verbo
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building an evaluation harness to detect regressions and measure bias.
-> - [building-with-llms-companion/exercises/ch14/eval_harness.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch14/eval_harness](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch14/eval_harness)
 
 ## 📋 Chapter Summary
 

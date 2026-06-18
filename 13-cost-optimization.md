@@ -437,7 +437,7 @@ Wrap `get_completion` with the `completion_with_retry` function. Simulate failur
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for implementing semantic caching and robust retry logic.
-> - [building-with-llms-companion/exercises/ch13/caching_lab.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch13/caching_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch13/caching_lab)
 
 ## 📋 Chapter Summary
 

@@ -385,9 +385,9 @@ Modify your `retrieve` function to discard results with an L2 distance above a t
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building a complete RAG pipeline, wrapping it in an API, and evaluating retrieval quality.
-> - [building-with-llms-companion/exercises/ch11/rag_pipeline.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch11/rag_api.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch11/rag_evaluator.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch11/rag_pipeline](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_pipeline)
+> - [building-with-llms-companion/exercises/ch11/rag_api](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_api)
+> - [building-with-llms-companion/exercises/ch11/rag_evaluator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_evaluator)
 
 ## 📋 Chapter Summary
 
