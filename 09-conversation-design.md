@@ -22,6 +22,7 @@ The fix is not a smarter model. The fix is your code. You manage the conversatio
 **Stateless API** means each request is processed independently. There is no session, no cookie, no server-side memory. When you call the API twice, the second call has no knowledge of the first.
 
 ![Stateless API: each request independent, no shared memory](./diagrams/ch09-stateless-stateful-sketch.png)
+<!-- figure: Stateless API: each request independent, no shared memory -->
 
 The diagrams contrast a stateless API (two independent requests) with a stateful conversation (your app managing history); the sketch below shows how your code bridges the gap by passing a growing messages[] array across turns.
 
@@ -50,6 +51,7 @@ print(response2)  # "I don't know your name or where you work."
 ```
 
 ![Your code adds state by passing messages across turns](diagrams/ch09-stateless-stateful.svg)
+<!-- figure: Your code adds state by passing messages across turns -->
 
 The model answered correctly both times. In the second call, it genuinely had no information about the user. The API did exactly what it was designed to do.
 
@@ -110,10 +112,12 @@ Every model has a maximum context window. GPT-4o supports 128K tokens. Claude 3.
 You need a strategy. There are three core approaches, and most production systems use a hybrid.
 
 ![Four context management strategies compared: full, truncation, summarization, sliding window](./diagrams/ch09-context-filling-sketch.png)
+<!-- figure: Four context management strategies compared: full, truncation, summarization, sliding window -->
 
 The diagram branches from a capacity check into three management strategies (truncation, summarization, sliding window); the sketch below visualizes a context window filling up and shows where each strategy trims or compresses the history.
 
 ![Context window filling up with truncation and summarize-back options](diagrams/ch09-context-filling.svg)
+<!-- figure: Context window filling up with truncation and summarize-back options -->
 
 ### Truncation
 
@@ -253,6 +257,7 @@ Notice the structure: capabilities tell the model what it can do, limitations te
 A well-designed chatbot handles more than the happy path. Real users go off-topic, ask ambiguous questions, get frustrated, and occasionally try to break the bot.
 
 ![Conversation Flow](./diagrams/conversation-flow-sketch.png)
+<!-- figure: Conversation Flow -->
 
 ### Intents and Fallbacks
 

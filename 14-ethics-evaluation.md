@@ -35,6 +35,7 @@ Five distinct sources inject bias into LLM outputs. Each requires a different de
 | Selection | Evaluating only convenient test cases hides systematic issues | Testing only English inputs misses multilingual bias |
 
 ![Bias mitigation pipeline](./diagrams/ch14-bias-test-sketch.png)
+<!-- figure: Bias mitigation pipeline -->
 
 The critical insight is that bias is not a single problem with a single fix. It enters at multiple points and requires ongoing monitoring, not a one-time patch.
 
@@ -82,6 +83,7 @@ for name, response in results.items():
 ```
 
 ![Bias detection test](diagrams/ch14-bias-test.svg)
+<!-- figure: Bias detection test -->
 
 > [!TIP]
 > **High-Resolution Evaluation Harness:** For a full-page, high-resolution Production Evaluation Harness architecture, see [Appendix E](appendix-e-diagrams.md#chapter-14-production-evaluation-harness). The high-resolution file is also available in the companion repository:
@@ -190,10 +192,12 @@ Always disclose AI involvement to users. A simple disclosure reduces legal risk 
 ### The Three Modes
 
 ![Confidence-based routing: high auto-approve, medium human review, low escalate](./diagrams/ch14-human-in-loop-sketch.png)
+<!-- figure: Confidence-based routing: high auto-approve, medium human review, low escalate -->
 
 The diagram routes queries by confidence level through auto-approve, human-review, and escalation paths; the sketch below labels the same three paths as recommend, augment, and automate modes annotated with their risk levels.
 
 ![Recommend, augment, and automate modes with risk level annotations](diagrams/ch14-human-in-loop.svg)
+<!-- figure: Recommend, augment, and automate modes with risk level annotations -->
 
 **Recommendation mode** is when the AI suggests, and the human decides. The LLM generates options, ranks candidates, or provides analysis, but a human makes the final call. Use this for medium-risk decisions where speed matters but mistakes are costly.
 
@@ -319,6 +323,7 @@ Use a stronger model as judge (GPT-4o judging GPT-4o-mini outputs). If you use t
 ### The Complete Evaluation Pipeline
 
 ![Evaluation harness: golden dataset through multi-scorer to output store and alerts](./diagrams/ch14-eval-harness-sketch.png)
+<!-- figure: Evaluation harness: golden dataset through multi-scorer to output store and alerts -->
 
 The diagram breaks the evaluation harness into four stages from golden dataset through scoring to report; the sketch further below shows the complete pipeline with a drift monitor and report generator layered in.
 
@@ -333,6 +338,7 @@ A production evaluation harness combines keyword scoring, LLM-as-judge, and bias
 7. Generate a report with pass rate, average score, and flagged regressions
 
 ![Complete evaluation pipeline with drift monitor and report generator](diagrams/ch14-eval-harness.svg)
+<!-- figure: Complete evaluation pipeline with drift monitor and report generator -->
 
 The capstone project in Appendix B applies this evaluation pipeline to a real application, giving you hands-on practice building and running an evaluation harness end to end.
 
@@ -449,14 +455,10 @@ Run your evaluation harness twice with different prompts (one concise, one verbo
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) Models learning prejudices from patterns in their training data.** LLMs learn statistical patterns from internet text, which reflects societal biases. The model is not intentionally biased; it reproduces patterns it learned during training.
-
-2. **False.** Fairness instructions in the system message reduce bias but do not eliminate it. Effective mitigation requires multiple layers: debiased prompts, diverse few-shot examples, post-processing filters, and regular bias audits with demographic swap tests.
-
-3. **Human**-in-the-loop. In this pattern, the AI generates recommendations or drafts, but a human makes the final decision. The level of human involvement scales with the risk level of the decision.
-
-4. **(b) Monitoring model accuracy over time to catch gradual degradation.** Drift occurs when model behavior changes due to provider updates, shifting user patterns, or evolving data. Regular re-evaluation against a golden dataset is the primary detection mechanism.
-
-5. Three mitigation steps: **(1)** Remove or blind names in prompts sent to the LLM so the model evaluates qualifications only. **(2)** Add explicit fairness instructions to the system prompt: "Evaluate based solely on skills, experience, and qualifications." **(3)** Build a bias test suite with diverse names and run it after every prompt change. Additional steps include adding human review for all hiring recommendations and auditing past decisions for systematic bias. Cross-reference [Chapter 12](12-security-guardrails.md) for security guardrails that complement ethical guardrails.
+1. **Answer**: (b) Models learning prejudices from patterns in their training data. LLMs learn statistical patterns from internet text, which reflects societal biases. The model is not intentionally biased; it reproduces patterns it learned during training.
+2. **True/False**: False. Fairness instructions in the system message reduce bias but do not eliminate it. Effective mitigation requires multiple layers: debiased prompts, diverse few-shot examples, post-processing filters, and regular bias audits with demographic swap tests.
+3. **Answer**: Human-in-the-loop. In this pattern, the AI generates recommendations or drafts, but a human makes the final decision. The level of human involvement scales with the risk level of the decision.
+4. **Answer**: (b) Monitoring model accuracy over time to catch gradual degradation. Drift occurs when model behavior changes due to provider updates, shifting user patterns, or evolving data. Regular re-evaluation against a golden dataset is the primary detection mechanism.
+5. **Answer**: Three mitigation steps: (1) Remove or blind names in prompts sent to the LLM so the model evaluates qualifications only. (2) Add explicit fairness instructions to the system prompt: "Evaluate based solely on skills, experience, and qualifications." (3) Build a bias test suite with diverse names and run it after every prompt change. Additional steps include adding human review for all hiring recommendations and auditing past decisions for systematic bias. Cross-reference [Chapter 12](12-security-guardrails.md) for security guardrails that complement ethical guardrails.
 
 </details>

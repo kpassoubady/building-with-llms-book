@@ -23,10 +23,12 @@ Seven iterations. Each one targeted a specific failure mode observed in the prev
 Prompt engineering is not a one-shot activity. Every production prompt goes through multiple iterations. The process follows a predictable loop: write, test, analyze, refine, repeat.
 
 ![Write-test-analyze-refine loop with ship exit condition](./diagrams/ch08-iteration-spiral-sketch.png)
+<!-- figure: Write-test-analyze-refine loop with ship exit condition -->
 
 The diagram shows the write, test, analyze, refine cycle as a decision loop with a "ship it" exit; the sketch below renders the same process as a spiral where each orbit represents a versioned improvement.
 
 ![Prompt iteration spiral showing version progression](diagrams/ch08-iteration-spiral.svg)
+<!-- figure: Prompt iteration spiral showing version progression -->
 
 ### The Five Steps
 
@@ -69,6 +71,7 @@ Each version fixed exactly one problem. The developer did not rewrite the entire
 **Golden dataset** is a curated set of input/expected-output pairs that you have manually verified. It is the foundation of every serious prompt evaluation effort.
 
 ![Golden dataset concept](diagrams/ch08-golden-dataset.svg)
+<!-- figure: Golden dataset concept -->
 
 > [!TIP]
 > **High-Resolution Pipeline:** For a full-page version of the complete Evaluation Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-8-evaluation-pipeline). The high-resolution file is also available in the companion repository:
@@ -231,6 +234,7 @@ The LLM-as-judge pattern uses a strong model (like GPT-4o) to evaluate the outpu
 Start with manual rubrics to calibrate your expectations. Switch to LLM-as-judge once you have validated that the judge agrees with your manual scores on at least 20 examples.
 
 ![Complete evaluation pipeline](diagrams/ch08-eval-pipeline-sketch.svg)
+<!-- figure: Complete evaluation pipeline -->
 
 > [!NOTE]
 > **Did You Know?** Anthropic's prompt engineering team reports that their production prompts go through an average of 12 iterations before deployment. Even experts do not get prompts right on the first try.

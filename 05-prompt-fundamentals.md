@@ -199,7 +199,7 @@ Certain prompt patterns reliably produce poor output. Learning to recognize them
 
 The diagram maps each anti-pattern to its corrected version with explicit fix arrows; the sketch below places a vague prompt alongside a structured one so you can compare the transformation at a glance.
 
-![Bad prompt transformed into a structured good prompt — side-by-side sketch](diagrams/ch05-bad-vs-good.svg)
+![Bad prompt transformed into a structured good prompt - side-by-side sketch](diagrams/ch05-bad-vs-good.svg)
 
 ### Anti-Pattern 1: Vague Instructions
 
@@ -524,10 +524,10 @@ Each of these prompts contains an anti-pattern. Identify the problem and rewrite
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Output Format**: The output format block specifies how the model should structure its response (JSON, table, bullets, code). Instruction specifies what to do, context provides background, and input data is the material to process.
-2. **False**: The system message should contain persistent rules, persona, and format that apply to every request. The specific task goes in the user message, which changes per request.
-3. **goal**: Goal-first prompting starts by writing the exact expected output, then works backwards through format, context, and instruction to build the prompt.
-4. **"Help me with this"**: This is a vague instruction anti-pattern. It gives the model no direction about what kind of help is needed. The other options are all specific, actionable instructions.
-5. **Output Format**: Without an explicit output format specification, the model chooses a format based on its best guess, which varies between calls. Adding a format template (e.g., "Respond as JSON with these fields...") makes the output consistent and parseable.
+1. **Answer**: Output Format. The output format block specifies how the model should structure its response (JSON, table, bullets, code). Instruction specifies what to do, context provides background, and input data is the material to process.
+2. **True/False**: False. The system message should contain persistent rules, persona, and format that apply to every request. The specific task goes in the user message, which changes per request.
+3. **Answer**: goal. Goal-first prompting starts by writing the exact expected output, then works backwards through format, context, and instruction to build the prompt.
+4. **Answer**: "Help me with this". This is a vague instruction anti-pattern. It gives the model no direction about what kind of help is needed. The other options are all specific, actionable instructions.
+5. **Answer**: Output Format. Without an explicit output format specification, the model chooses a format based on its best guess, which varies between calls. Adding a format template (e.g., "Respond as JSON with these fields...") makes the output consistent and parseable.
 
 </details>
