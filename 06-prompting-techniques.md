@@ -328,7 +328,7 @@ The role sets the perspective. The constraints set the rules. Together, they pro
 
 For production systems, free-form text is not enough. You need output that code can parse, validate, and route. Structured output techniques force the model to respond in a specific format.
 
-![Structured Output Flow](../day2/diagrams/structured-output-flow.svg)
+![Structured Output Flow](./diagrams/ch06-few-shot-layout.svg)
 
 ### Strategy 1: Prompt-Based JSON
 
@@ -434,7 +434,7 @@ This function handles the three most common failure modes: clean JSON, JSON wrap
 
 With five techniques in your toolkit, the question becomes: which one should you use? The answer depends on your task type, reliability requirements, and token budget.
 
-<!-- ![Five prompting techniques on a progression ladder](../day2/diagrams/prompting-techniques.svg) -->
+<!-- ![Five prompting techniques on a progression ladder](./diagrams/ch06-technique-ladder.svg) -->
 
 <!-- IMAGE: An open toolbox with several distinct prompt "tools," and a path of stepping stones leading from a question to a lightbulb. Conveys a kit of prompting methods. -->
 <img src="../day2/diagrams/prompting-techniques.svg" alt="Five prompting techniques on a progression ladder" style="float:right; margin-left:20px; height:650px; border-radius:8px;" />

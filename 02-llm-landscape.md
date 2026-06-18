@@ -22,7 +22,7 @@ In this chapter, you will learn the current LLM landscape, understand what diffe
 
 The LLM market in 2025 has five major players and a growing ecosystem of open-source alternatives. Each model family has distinct strengths, pricing, and tradeoffs.
 
-![LLM landscape overview](../day1/diagrams/llm-landscape.svg)
+![LLM landscape overview](./diagrams/ch02-open-closed.svg)
 
 | Model | Provider | Context | Strengths | Pricing (per 1M tokens) |
 |:------|:---------|:--------|:----------|:-----------------------|
@@ -84,7 +84,7 @@ Picking a model is not about finding the "best" one. It is about finding the bes
 | Privacy-sensitive | Llama 3.1 / Mistral (self-hosted) | Data stays on-premise |
 | Multilingual | GPT-4o / Gemini Pro | Best language coverage |
 
-![Model comparison by capability and cost](../day1/diagrams/model-comparison.svg)
+![Model comparison by capability and cost](./diagrams/ch02-model-selection.svg)
 
 ### By Constraint
 

@@ -34,7 +34,7 @@ Five distinct sources inject bias into LLM outputs. Each requires a different de
 | Prompt design | How you frame the question influences the answer | Leading few-shot examples steer outputs toward stereotypes |
 | Selection | Evaluating only convenient test cases hides systematic issues | Testing only English inputs misses multilingual bias |
 
-![Bias mitigation pipeline](../day4/diagrams/bias-mitigation-pipeline.svg)
+![Bias mitigation pipeline](./diagrams/ch14-bias-test.svg)
 
 The critical insight is that bias is not a single problem with a single fix. It enters at multiple points and requires ongoing monitoring, not a one-time patch.
 
@@ -189,7 +189,7 @@ Always disclose AI involvement to users. A simple disclosure reduces legal risk 
 
 ### The Three Modes
 
-![Confidence-based routing: high auto-approve, medium human review, low escalate](../day4/diagrams/human-in-the-loop.svg)
+![Confidence-based routing: high auto-approve, medium human review, low escalate](./diagrams/ch14-human-in-loop.svg)
 
 The diagram routes queries by confidence level through auto-approve, human-review, and escalation paths; the sketch below labels the same three paths as recommend, augment, and automate modes annotated with their risk levels.
 
@@ -318,7 +318,7 @@ Use a stronger model as judge (GPT-4o judging GPT-4o-mini outputs). If you use t
 
 ### The Complete Evaluation Pipeline
 
-![Evaluation harness: golden dataset through multi-scorer to output store and alerts](../day4/diagrams/evaluation-harness.svg)
+![Evaluation harness: golden dataset through multi-scorer to output store and alerts](./diagrams/ch14-eval-harness.svg)
 
 The diagram breaks the evaluation harness into four stages from golden dataset through scoring to report; the sketch further below shows the complete pipeline with a drift monitor and report generator layered in.
 

@@ -22,7 +22,7 @@ In this chapter, you will learn how to generate embeddings, measure similarity b
 
 **Embedding** is a vector (a list of floating-point numbers) that represents the meaning of a piece of text. The key property is that texts with similar meaning produce vectors that are close together in the number space, and texts with different meaning produce vectors that are far apart.
 
-![Text converted to high-dimensional vectors showing similar texts clustering close](../day3/diagrams/embedding-flow.svg)
+![Text converted to high-dimensional vectors showing similar texts clustering close](./diagrams/ch10-text-to-vector.svg)
 
 The diagram traces two sentences through an embedding model to vectors and a cosine similarity score; the sketch below maps those same vectors into a 2D space so you can see how similar texts cluster close together.
 
@@ -126,7 +126,7 @@ print(f"Dimensions: {len(vector)}")  # 1536
 
 **Chunking** splits documents into smaller pieces before embedding. You cannot embed an entire 50-page document as a single vector. Embedding models have token limits (typically 8K), and even within those limits, a single vector for a long document averages out the meaning of every paragraph, diluting the signal. You need to split documents into smaller pieces, called chunks, before embedding.
 
-![Chunking Strategies](../day3/diagrams/chunking-strategies.svg)
+![Chunking Strategies](./diagrams/ch10-chunking-indexing.svg)
 
 > [!TIP]
 > **High-Resolution Pipeline:** For a full-page version of the complete Chunking and Indexing Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-10-chunking-and-indexing-pipeline). The high-resolution file is also available in the companion repository:
@@ -293,7 +293,7 @@ Pinecone is a cloud-managed vector database for production workloads. It handles
 
 With embeddings stored in a vector database, you can now search by meaning rather than by keywords. This is the foundation of RAG and semantic search applications.
 
-![Query vector matched against stored chunks with scored results and top-K filter](../day3/diagrams/vector-search.svg)
+![Query vector matched against stored chunks with scored results and top-K filter](./diagrams/ch10-similarity-search.svg)
 
 The diagram follows a query vector through the index to scored chunks and a top-K filter; the sketch below shows the same search as a spatial layout with the query as a star and chunks as dots, highlighting the nearest matches.
 

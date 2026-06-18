@@ -22,7 +22,7 @@ Seven iterations. Each one targeted a specific failure mode observed in the prev
 
 Prompt engineering is not a one-shot activity. Every production prompt goes through multiple iterations. The process follows a predictable loop: write, test, analyze, refine, repeat.
 
-![Write-test-analyze-refine loop with ship exit condition](../day2/diagrams/prompt-iteration-loop.svg)
+![Write-test-analyze-refine loop with ship exit condition](./diagrams/ch08-iteration-spiral.svg)
 
 The diagram shows the write, test, analyze, refine cycle as a decision loop with a "ship it" exit; the sketch below renders the same process as a spiral where each orbit represents a versioned improvement.
 
@@ -402,8 +402,9 @@ print(f"\nAccuracy: {correct}/{len(GOLDEN_DATASET)}")
 ```
 
 > [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building refactor assistants, evaluation harnesses, and LLM-as-judge pipelines.
+> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for prompt iteration and LLM-as-judge scoring.
 > - [building-with-llms-companion/exercises/ch08/refactor_assistant](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/refactor_assistant)
+> - [building-with-llms-companion/exercises/ch08/email_drafter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/email_drafter)
 > - [building-with-llms-companion/exercises/ch08/eval_harness](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/eval_harness)
 > - [building-with-llms-companion/exercises/ch08/llm_judge](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/llm_judge)
 

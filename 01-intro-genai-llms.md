@@ -32,7 +32,7 @@ The path from the earliest AI systems to today's generative models spans seven d
 
 **Generative AI** (2017 to present) arrived with the Transformer. By processing all words in parallel through self-attention, Transformers eliminated the sequential bottleneck. Combined with massive datasets and unprecedented compute budgets, this produced models that generate code, prose, images, and music. The models are not merely classifying or predicting; they are creating new content.
 
-![AI evolution from rule-based systems to generative AI](../day1/diagrams/ai-evolution.svg)
+![AI evolution from rule-based systems to generative AI](./diagrams/ch01-ai-eras.svg)
 
 > [!NOTE]
 > **Did You Know?** The original Transformer paper "Attention Is All You Need" has been cited over 130,000 times, making it one of the most influential computer science papers ever written. The eight authors are now spread across multiple AI companies they helped found.
@@ -54,7 +54,7 @@ Every large language model you interact with, whether GPT-4o, Claude, or Gemini,
 
 LLMs do not read words. They read tokens, chunks of text that typically correspond to 3 to 4 English characters. The tokenizer splits your input into these chunks and converts each one to a numerical ID.
 
-![Transformer architecture high-level view](../day1/diagrams/transformer-high-level.svg)
+![Transformer architecture high-level view](./diagrams/ch01-transformer-full.svg)
 
 ```text
 "The cat sat on the mat" → [The, cat, sat, on, the, mat]
@@ -77,7 +77,7 @@ print(f"Token IDs:   {tokens}")
 
 Tokenization matters for three practical reasons. You are billed per token, not per word. Context windows are measured in tokens. Different languages tokenize differently: a sentence in Japanese may use twice as many tokens as the same meaning expressed in English.
 
-![Tokenization flow from text to token IDs](../day1/diagrams/tokenization-flow.svg)
+![Tokenization flow from text to token IDs](./diagrams/ch01-token-pipeline.svg)
 
 ### Step 2: Embeddings
 
@@ -172,7 +172,7 @@ Self-attention compares every token to every other token. For a sequence of leng
 
 LLMs are general-purpose text processors. They handle a wide range of natural language processing tasks that previously required separate, specialized models.
 
-![NLP task categories](../day1/diagrams/nlp-tasks.svg)
+![NLP task categories](./diagrams/ch04-where-llms-excel.svg)
 
 | Task | Description | Example |
 |:-----|:-----------|:--------|

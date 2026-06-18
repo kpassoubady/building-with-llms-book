@@ -22,7 +22,7 @@ This story illustrates the central thesis of this chapter: prompt engineering is
 
 Every effective prompt contains some combination of four components. You rarely need all four for simple tasks, but production prompts almost always use all of them.
 
-![Four building blocks converging into an effective prompt](../day2/diagrams/prompt-building-blocks.svg)
+![Four building blocks converging into an effective prompt](./diagrams/ch05-building-blocks.svg)
 
 The diagram traces how instruction, context, input data, and output format converge into a single prompt; the sketch below stacks the same four blocks as a card layout you can recreate on a whiteboard.
 
@@ -195,7 +195,7 @@ That prompt has no specificity, no context, no format, no constraints, and no de
 
 Certain prompt patterns reliably produce poor output. Learning to recognize them is as important as learning the building blocks.
 
-![Anti-pattern to corrected-pattern mapping with fix arrows](../day2/diagrams/prompt-anti-patterns.svg)
+![Anti-pattern to corrected-pattern mapping with fix arrows](./diagrams/ch05-bad-vs-good.svg)
 
 The diagram maps each anti-pattern to its corrected version with explicit fix arrows; the sketch below places a vague prompt alongside a structured one so you can compare the transformation at a glance.
 
@@ -257,7 +257,7 @@ Without a format specification, you will get a wall of text in an unpredictable 
 
 The chat completion API accepts three message roles: system, user, and assistant. Understanding which content goes where is essential for reliable prompt design.
 
-![System vs User Message Flow](../day2/diagrams/system-vs-user.svg)
+![System vs User Message Flow](./diagrams/ch03-three-roles.svg)
 
 | Content | Put In | Why |
 |:--------|:-------|:----|
