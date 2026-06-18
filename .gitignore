@@ -32,3 +32,5 @@ Thumbs.db
 scripts/
 node_modules
 
+builder/released/
+builder/temp/
