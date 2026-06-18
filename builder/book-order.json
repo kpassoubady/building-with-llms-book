@@ -191,6 +191,16 @@
     "headingColor": "#1a1a2e",
     "titleBorder": false
   },
+  "figureIndexSettings": {
+    "enabled": true,
+    "termPattern": "<!--\\s*figure:\\s*(.+?)\\s*-->",
+    "title": "Figure Index",
+    "tocLabel": "Figure Index",
+    "layout": "table",
+    "columns": ["term", "page"],
+    "columnLabels": { "term": "Figure", "page": "Page" },
+    "placement": "endOfBook"
+  },
   "chapters": [
     {
       "section": "Front Cover",
