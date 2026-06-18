@@ -249,8 +249,8 @@ For each scenario below, pick the best model and justify your choice:
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for calculating API costs and selecting the right model for specific use cases.
-> - [building-with-llms-companion/exercises/ch02/cost_calculator.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch02/model_selector.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch02/cost_calculator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/cost_calculator)
+> - [building-with-llms-companion/exercises/ch02/model_selector](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/model_selector)
 
 ## 📋 Chapter Summary
 

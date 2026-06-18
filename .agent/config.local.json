@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(*)",
+      "Write(*)",
+      "Exec(*)",
+      "Exec(sed)",
+      "Exec(nl)",
+      "Exec(grep)",
+      "Exec(git *)",
+      "Exec(git status)",
+      "Exec(python3)",
+      "Exec(cat)",
+      "Exec(./scripts/build-diagrams.sh)",
+      "Exec(!rm)",
+      "Exec(head *)",
+      "Exec(npm *)",
+      "Exec(./scripts/build-slides.sh)",
+      "Exec(git add)",
+      "Exec(git diff)",
+      "Exec(git log)",
+      "Exec(git pull)",
+      "Exec(git stash)",
+      "Exec(git rebase)",
+      "Exec(git checkout)",
+      "Exec(git push)",
+      "Exec(gh pr)",
+      "Exec(rg)",
+      "Exec(git commit)",
+      "Exec(git show)",
+      "Exec(git reset)",
+      "Exec(git restore)",
+      "Exec(ls)",
+      "Exec(mkdir)",
+      "Exec(head)"
+    ]
+  }
+}

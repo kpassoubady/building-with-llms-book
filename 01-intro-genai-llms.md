@@ -238,8 +238,8 @@ Try tokenizing these inputs and explain why the token counts differ:
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for exploring tokenization and building parameter intuition.
-> - [building-with-llms-companion/exercises/ch01/tokenizer_explorer.py](https://github.com/kpassoubady/building-with-llms-companion/blob/main/exercises/ch01/tokenizer_explorer.py)
-> - [building-with-llms-companion/exercises/ch01/parameter_intuition.py](https://github.com/kpassoubady/building-with-llms-companion/blob/main/exercises/ch01/parameter_intuition.py)
+> - [building-with-llms-companion/exercises/ch01/tokenizer_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/tokenizer_explorer)
+> - [building-with-llms-companion/exercises/ch01/parameter_intuition](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/parameter_intuition)
 
 ## 📋 Chapter Summary
 

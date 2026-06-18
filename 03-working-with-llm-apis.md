@@ -524,8 +524,8 @@ Write a 10-line script that classifies support tickets into one of four categori
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for making basic LLM API calls and building simple CLI Q&A scripts.
-> - [building-with-llms-companion/exercises/ch03/hello_llm.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch03/cli_qa.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch03/hello_llm](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/hello_llm)
+> - [building-with-llms-companion/exercises/ch03/cli_qa](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/cli_qa)
 
 ## 📋 Chapter Summary
 
