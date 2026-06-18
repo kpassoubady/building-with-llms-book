@@ -1,0 +1,17 @@
+flowchart TB
+    A["👤 User Input"] --> B["🛡️ Layer 1:<br/>Input Filtering"]
+    B --> C["🔒 Layer 2:<br/>PII Redaction"]
+    C --> D["📝 Layer 3:<br/>Strong System Prompt"]
+    D --> E["🤖 LLM"]
+    E --> F["🛡️ Layer 4:<br/>Output Filtering"]
+    F --> G["✅ Layer 5:<br/>Content Moderation"]
+    G --> H["💬 Safe Response"]
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style E fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff
+    style F fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style G fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style H fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px

@@ -1,0 +1,18 @@
+flowchart TB
+    A["📄 Full Document"] --> B["Choose Strategy"]
+
+    B --> C["📏 Fixed Size<br/>Split every N tokens"]
+    B --> D["📝 Semantic<br/>Split by paragraphs<br/>or sections"]
+    B --> E["🔄 Overlapping<br/>Fixed size with<br/>overlap window"]
+
+    C --> F["Chunk 1 | Chunk 2 | Chunk 3"]
+    D --> G["Intro | Methods | Results"]
+    E --> H["Chunk 1 ──overlap── Chunk 2"]
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style F fill:#fff3e0,stroke:#e65100,stroke-width:1px
+    style G fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style H fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px

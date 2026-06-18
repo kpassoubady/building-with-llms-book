@@ -1,0 +1,38 @@
+flowchart LR
+    subgraph UserLayer["👤 User Interface"]
+        A["CLI / API<br/>Input"]
+    end
+
+    subgraph Security["🛡️ Security Layer"]
+        B["Input Filtering"] --> C["PII Redaction"]
+    end
+
+    subgraph Core["⚙️ Core Logic"]
+        D{"RAG or<br/>Direct?"}
+        D -->|RAG| E["🔍 Retrieve<br/>from Vector DB"]
+        D -->|Direct| F["📝 Build<br/>Prompt"]
+        E --> F
+        F --> G["🤖 LLM<br/>Generate"]
+    end
+
+    subgraph Output["📤 Output Layer"]
+        H["Output Filter"] --> I["📊 Log &<br/>Track Usage"]
+        I --> J["💬 Response"]
+    end
+
+    subgraph Eval["🧪 Evaluation"]
+        K["Golden Dataset<br/>Test Suite"]
+    end
+
+    A --> Security
+    C --> Core
+    G --> Output
+    K -.-> Core
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style G fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style J fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style K fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px

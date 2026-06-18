@@ -1,0 +1,15 @@
+sequenceDiagram
+    participant App as Python App
+    participant SDK as OpenAI SDK
+    participant API as OpenAI API
+    participant LLM as GPT-4o
+
+    App->>SDK: chat.completions.create()
+    SDK->>API: POST /v1/chat/completions
+    API->>LLM: Process prompt
+    LLM-->>API: Generated tokens
+    API-->>SDK: JSON response
+    SDK-->>App: ChatCompletion object
+
+    Note over App,LLM: messages=[{role, content}]
+    Note over API,LLM: temperature, max_tokens, model

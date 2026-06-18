@@ -1,0 +1,16 @@
+flowchart LR
+    A["👤 User Input"] --> B{"Contains<br/>injection?"}
+    B -->|Yes| C["🛡️ Block<br/>+ Log"]
+    B -->|No| D["📝 System Prompt<br/>+ User Input"]
+    D --> E["🤖 LLM"]
+    E --> F{"Output<br/>safe?"}
+    F -->|Yes| G["💬 Show<br/>Response"]
+    F -->|No| H["🛡️ Filter<br/>+ Replace"]
+    C --> I["⚠️ Safe<br/>Fallback"]
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style C fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style E fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff
+    style G fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style H fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style I fill:#fff3e0,stroke:#e65100,stroke-width:2px

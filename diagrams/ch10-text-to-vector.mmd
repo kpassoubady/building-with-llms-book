@@ -1,0 +1,17 @@
+flowchart LR
+    A["📝 Text<br/>'The cat sat<br/>on the mat'"] --> B["🔢 Embedding<br/>Model"]
+    B --> C["📊 Vector<br/>[0.021, -0.15,<br/>0.83, ..., 0.42]"]
+    C --> D["📐 1536<br/>dimensions"]
+
+    E["📝 Text<br/>'A kitten rested<br/>on the rug'"] --> F["🔢 Embedding<br/>Model"]
+    F --> G["📊 Vector<br/>[0.019, -0.14,<br/>0.81, ..., 0.40]"]
+
+    C --> H{"Cosine<br/>Similarity"}
+    G --> H
+    H --> I["🎯 0.94<br/>Very similar!"]
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style E fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style F fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style I fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px

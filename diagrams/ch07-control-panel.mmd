@@ -1,0 +1,22 @@
+flowchart TB
+    subgraph Params["API Parameters"]
+        direction TB
+        T["🌡️ temperature<br/>Creativity dial<br/>0.0 → 2.0"]
+        P["🎯 top_p<br/>Nucleus sampling<br/>0.0 → 1.0"]
+        F["🔄 frequency_penalty<br/>Reduce repetition<br/>-2.0 → 2.0"]
+        R["🆕 presence_penalty<br/>Encourage new topics<br/>-2.0 → 2.0"]
+        M["📏 max_tokens<br/>Response length cap"]
+        S["🛑 stop<br/>Stop sequences"]
+        SD["🎲 seed<br/>Reproducibility"]
+    end
+
+    T --> O["🤖 LLM<br/>Output"]
+    P --> O
+    F --> O
+    R --> O
+    M --> O
+    S --> O
+    SD --> O
+
+    style Params fill:#e3f2fd,stroke:#1a73e8
+    style O fill:#1a73e8,stroke:#0d47a1,color:#fff

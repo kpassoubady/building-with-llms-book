@@ -1,0 +1,12 @@
+flowchart TB
+    subgraph Stateful["Stateful Conversation"]
+        direction TB
+        B1["Message 1"] --> APP["Your App<br/>manages history"]
+        APP --> B2["Full history<br/>+ new message"]
+        B2 --> API3["LLM API"]
+        API3 --> B3["Response"]
+        B3 --> APP
+    end
+
+    style APP fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style API3 fill:#fff3e0,stroke:#e65100,stroke-width:2px

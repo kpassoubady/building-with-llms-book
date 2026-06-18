@@ -1,0 +1,34 @@
+flowchart TD
+    subgraph Input["📋 Golden Dataset"]
+        direction LR
+        A["Test Case 1<br/>Q + Expected"] ~~~ B["Test Case 2<br/>Q + Expected"] ~~~ C["Test Case N<br/>Q + Expected"]
+    end
+
+    subgraph Run["🔄 Test Runner"]
+        direction LR
+        D["Send to LLM"] --> E["Get Response"] --> F["Score Response"]
+    end
+
+    subgraph Eval["📊 Evaluation"]
+        direction LR
+        G["🔑 Keyword<br/>Matching"] ~~~ H["🧑‍⚖️ LLM-as-Judge<br/>Scoring"]
+    end
+
+    subgraph Report["📈 Report"]
+        direction LR
+        I["Pass Rate"] ~~~ J["Avg Score"] ~~~ K["Failed Cases"]
+    end
+
+    Input --> Run
+    F --> Eval
+    Eval --> Report
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:1px
+    style B fill:#e3f2fd,stroke:#1a73e8,stroke-width:1px
+    style C fill:#e3f2fd,stroke:#1a73e8,stroke-width:1px
+    style D fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style G fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style H fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style I fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style J fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style K fill:#ffebee,stroke:#c62828,stroke-width:1px

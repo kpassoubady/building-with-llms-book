@@ -1,0 +1,13 @@
+flowchart TB
+    subgraph Stateless["Stateless API"]
+        direction TB
+        A1["Request 1"] --> API1["LLM API"]
+        API1 --> R1["Response 1"]
+        A2["Request 2"] --> API2["LLM API"]
+        API2 --> R2["Response 2"]
+    end
+
+    style A1 fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style A2 fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style API1 fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style API2 fill:#fff3e0,stroke:#e65100,stroke-width:2px

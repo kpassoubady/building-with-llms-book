@@ -1,0 +1,20 @@
+flowchart TB
+    subgraph Techniques["Prompting Techniques"]
+        direction TB
+        A["Zero-Shot<br/>Direct instruction,<br/>no examples"]
+        B["Few-Shot<br/>Guide with 2-5<br/>examples"]
+        C["Chain-of-Thought<br/>'Think step<br/>by step'"]
+        D["Role Prompting<br/>'You are an<br/>expert...'"]
+        E["Structured Output<br/>JSON mode,<br/>schemas"]
+    end
+
+    A -->|"Add examples"| B
+    B -->|"Add reasoning"| C
+    C -->|"Add persona"| D
+    D -->|"Add format"| E
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#bbdefb,stroke:#1a73e8,stroke-width:2px
+    style C fill:#90caf9,stroke:#0d47a1,stroke-width:2px
+    style D fill:#64b5f6,stroke:#0d47a1,stroke-width:2px
+    style E fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff

@@ -1,0 +1,27 @@
+flowchart TB
+    subgraph Closed["Closed-Source (API Access)"]
+        direction LR
+        GPT["GPT-4o / 4o-mini<br/>(OpenAI)"]
+        Claude["Claude 3.5 / Haiku<br/>(Anthropic)"]
+        Gemini["Gemini 2.5 / Flash<br/>(Google)"]
+    end
+
+    subgraph Open["Open-Source Open Weight"]
+        direction LR
+        Llama["Llama 3.1<br/>(Meta)"]
+        Mistral["Mistral / Mixtral<br/>(Mistral AI)"]
+        Phi["Phi-3<br/>(Microsoft)"]
+    end
+
+    LLM["Large Language<br/>Models"] --> Closed
+    LLM --> Open
+
+    style LLM fill:#fff3e0,stroke:#0d47a1
+    style Closed fill:#e3f2fd,stroke:#1a73e8
+    style Open fill:#e8f5e9,stroke:#2e7d32
+    style GPT fill:#fff,stroke:#1a73e8
+    style Claude fill:#fff,stroke:#7b1fa2
+    style Gemini fill:#fff,stroke:#e65100
+    style Llama fill:#fff,stroke:#2e7d32
+    style Mistral fill:#fff,stroke:#2e7d32
+    style Phi fill:#fff,stroke:#2e7d32

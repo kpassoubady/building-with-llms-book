@@ -1,0 +1,31 @@
+flowchart
+    subgraph Request["API Request"]
+        direction TB
+        R1["model: 'gpt-4o'"]
+        R2["messages: [...]"]
+        R3["temperature: 0.7"]
+        R4["max_tokens: 1024"]
+    end
+
+    subgraph Messages["Messages Array"]
+        direction TB
+        M1["🎭 system: 'You are a helpful assistant'"]
+        M2["👤 user: 'Explain recursion'"]
+        M3["🤖 assistant: 'Recursion is...'"]
+        M4["👤 user: 'Give me an example'"]
+    end
+
+    subgraph Response["API Response"]
+        direction TB
+        S1["choices[0].message.content"]
+        S2["usage.prompt_tokens: 45"]
+        S3["usage.completion_tokens: 128"]
+        S4["finish_reason: 'stop'"]
+    end
+
+    Request --> |"POST /v1/chat/completions"| Messages
+    Messages --> |"LLM processes"| Response
+
+    style Request fill:#e3f2fd,stroke:#1a73e8
+    style Messages fill:#fff3e0,stroke:#e65100
+    style Response fill:#e8f5e9,stroke:#2e7d32

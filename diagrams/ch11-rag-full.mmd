@@ -1,0 +1,29 @@
+flowchart LR
+    subgraph Ingestion["📥 Ingestion Pipeline"]
+        direction LR
+        A["📄 Documents"] --> B["✂️ Chunking"]
+        B --> C["🔢 Embedding<br/>Model"]
+        C --> D[("🗄️ Vector<br/>Store")]
+    end
+
+    subgraph Query["🔍 Query Pipeline"]
+        direction LR
+        E["❓ User<br/>Query"] --> F["🔢 Embed<br/>Query"]
+        F --> G{"Similarity<br/>Search"}
+        D -.-> G
+        G --> H["📋 Top-K<br/>Chunks"]
+    end
+
+    subgraph Generation["✨ Generation"]
+        direction LR
+        H --> I["📝 Build Prompt<br/>Context + Query"]
+        E -.-> I
+        I --> J["🤖 LLM"]
+        J --> K["💬 Grounded<br/>Answer"]
+    end
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style K fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style J fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff

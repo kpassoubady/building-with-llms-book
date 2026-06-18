@@ -1,0 +1,11 @@
+flowchart LR
+    A["'Hello, AI!'"] --> B["Tokenizer<br/>(tiktoken)"]
+    B --> C["[15339, 11, 15592, 0]"]
+    C --> D["Embedding<br/>Vectors"]
+    D --> E["[0.12, -0.34, ...]<br/>[0.56, 0.78, ...]<br/>[0.91, -0.23, ...]<br/>[-0.45, 0.67, ...]"]
+
+    style A fill:#fff3e0,stroke:#e65100
+    style B fill:#e3f2fd,stroke:#1a73e8
+    style C fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#f3e5f5,stroke:#7b1fa2
+    style E fill:#fce4ec,stroke:#c62828
