@@ -317,9 +317,9 @@ Create two different system messages: one for a formal legal assistant and one f
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building multi-turn chatbots, managing context windows, and testing different personas.
-> - [building-with-llms-companion/exercises/ch09/multi_turn_chatbot.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch09/context_manager.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch09/persona_lab.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch09/multi_turn_chatbot](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/multi_turn_chatbot)
+> - [building-with-llms-companion/exercises/ch09/context_manager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/context_manager)
+> - [building-with-llms-companion/exercises/ch09/persona_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/persona_lab)
 
 ## 📋 Chapter Summary
 

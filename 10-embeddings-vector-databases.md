@@ -361,9 +361,9 @@ Load the same 5 documents into both FAISS (with a parallel metadata list) and Ch
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for exploring embeddings, experimenting with chunking strategies, and comparing vector databases.
-> - [building-with-llms-companion/exercises/ch10/embedding_explorer.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch10/chunking_lab.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch10/vector_db_comparison.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch10/embedding_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/embedding_explorer)
+> - [building-with-llms-companion/exercises/ch10/chunking_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/chunking_lab)
+> - [building-with-llms-companion/exercises/ch10/vector_db_comparison](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/vector_db_comparison)
 
 ## 📋 Chapter Summary
 

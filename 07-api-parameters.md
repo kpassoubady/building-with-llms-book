@@ -408,9 +408,9 @@ Generate a numbered list that stops cleanly at exactly 5 items. Use a stop seque
 
 > [!TIP]
 > **Starter Code:** The companion repository contains full exercises, starter code, and solutions for adjusting temperature, implementing streaming, and exploring API parameters.
-> - [building-with-llms-companion/exercises/ch07/temperature_lab.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch07/streaming_chat.py](https://github.com/kpassoubady/building-with-llms-companion)
-> - [building-with-llms-companion/exercises/ch07/parameter_explorer.py](https://github.com/kpassoubady/building-with-llms-companion)
+> - [building-with-llms-companion/exercises/ch07/temperature_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/temperature_lab)
+> - [building-with-llms-companion/exercises/ch07/streaming_chat](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/streaming_chat)
+> - [building-with-llms-companion/exercises/ch07/parameter_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/parameter_explorer)
 
 ## 📋 Chapter Summary
 
