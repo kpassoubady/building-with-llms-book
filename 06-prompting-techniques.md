@@ -328,7 +328,7 @@ The role sets the perspective. The constraints set the rules. Together, they pro
 
 For production systems, free-form text is not enough. You need output that code can parse, validate, and route. Structured output techniques force the model to respond in a specific format.
 
-![Structured Output Flow](./diagrams/ch06-few-shot-layout.svg)
+![Structured Output Flow](./diagrams/ch06-few-shot-layout-sketch.png)
 
 ### Strategy 1: Prompt-Based JSON
 
@@ -434,7 +434,7 @@ This function handles the three most common failure modes: clean JSON, JSON wrap
 
 With five techniques in your toolkit, the question becomes: which one should you use? The answer depends on your task type, reliability requirements, and token budget.
 
-<!-- ![Five prompting techniques on a progression ladder](./diagrams/ch06-technique-ladder.svg) -->
+<!-- ![Five prompting techniques on a progression ladder](./diagrams/ch06-technique-ladder-sketch.png) -->
 
 <!-- IMAGE: An open toolbox with several distinct prompt "tools," and a path of stepping stones leading from a question to a lightbulb. Conveys a kit of prompting methods. -->
 <img src="../day2/diagrams/prompting-techniques.svg" alt="Five prompting techniques on a progression ladder" style="float:right; margin-left:20px; height:650px; border-radius:8px;" />
@@ -504,7 +504,7 @@ This prompt tells the model who it is (role), how to think (CoT), what the outpu
 | Structured output | Low-Medium | High for format | Moderate | Production systems, APIs |
 | Combined | High | Highest | Complex | Production, critical systems |
 
-![Technique comparison matrix](diagrams/ch06-technique-matrix.svg)
+![Technique comparison matrix](diagrams/ch06-technique-matrix-sketch.svg)
 
 > [!NOTE]
 > **High-Resolution Matrix:** For a full-page version of the Prompting Technique Matrix comparing 6+ advanced techniques, see [Appendix E](appendix-e-diagrams.md#chapter-6-prompting-technique-matrix). The high-resolution file is also available in the companion repository:

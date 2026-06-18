@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="565" viewBox="0 0 670 565">
+<rect x="0" y="0" width="670" height="565" fill="#ffffff"/>
+<path d="M 335 20 L 420 60 L 335 100 L 250 60 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="335" y="53.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<text x="335" y="73.6" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="16" fill="#1e1e1e" text-anchor="middle" opacity="1">cost?</text>
+<path d="M 190 140 L 280 180 L 190 220 L 100 180 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="190" y="174.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Repeated</text>
+<text x="190" y="191.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">queries?</text>
+<rect x="20" y="260" width="120" height="45" rx="11.25" ry="11.25" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="80" y="277.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Add Cache</text>
+<text x="80" y="293.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">(−40%)</text>
+<path d="M 335 260 L 420 300 L 335 340 L 250 300 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="335" y="294.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Simple</text>
+<text x="335" y="311.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">task?</text>
+<rect x="150" y="380" width="150" height="45" rx="11.25" ry="11.25" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="225" y="397.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Downgrade Model</text>
+<text x="225" y="413.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">(−60%)</text>
+<path d="M 470 380 L 560 420 L 470 460 L 380 420 Z" stroke-linejoin="round" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="470" y="414.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Long</text>
+<text x="470" y="431.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">responses?</text>
+<rect x="300" y="500" width="160" height="45" rx="11.25" ry="11.25" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="380" y="517.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Reduce max_tokens</text>
+<text x="380" y="533.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">(−30%)</text>
+<rect x="520" y="500" width="130" height="45" rx="11.25" ry="11.25" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="585" y="517.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Batch</text>
+<text x="585" y="533.55" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">(−20%)</text>
+<g><path d="M 250 100 L 190 140" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="190,140 194.44,132.23 198.88,138.89" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="200" y="109.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<g><path d="M 100 220 L 80 260" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="80,260 80,251.06 87.16,254.63" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="70" y="229.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<g><path d="M 190 220 L 290 260" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="290,260 281.09,260.74 284.06,253.31" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="220" y="229.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+<g><path d="M 250 340 L 210 380" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="210,380 212.83,371.51 218.49,377.17" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="210" y="349.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<g><path d="M 335 340 L 435 380" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="435,380 426.09,380.74 429.06,373.31" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="365" y="349.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+<g><path d="M 380 460 L 360 500" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="360,500 360,491.06 367.16,494.63" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="350" y="469.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">yes</text>
+<g><path d="M 470 460 L 570 500" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="570,500 561.09,500.74 564.06,493.31" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="500" y="469.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="start" opacity="1">no</text>
+</svg>

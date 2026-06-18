@@ -22,7 +22,7 @@ This story captures the core lesson of this chapter: API parameters are the cont
 
 **Temperature** is the single most important parameter you will adjust. It controls randomness in token selection by scaling the probability distribution over candidate tokens before sampling.
 
-![Temperature scale from deterministic to highly random](./diagrams/ch07-temperature-dial.svg)
+![Temperature scale from deterministic to highly random](./diagrams/ch07-temperature-dial-sketch.png)
 
 The diagram lays out the temperature range as a left-to-right progression from deterministic (0.0) to experimental (1.5+); the sketch below maps the same range onto a vertical gauge annotated with recommended use cases at each level.
 
@@ -349,7 +349,7 @@ For these cases, use the standard non-streaming API and process the complete res
 
 The sketch acts as a control panel for tuning the model; the overview diagram below summarizes the effect of each parameter on the output.
 
-![API Parameters Overview](./diagrams/ch07-control-panel.svg)
+![API Parameters Overview](./diagrams/ch07-control-panel-sketch.png)
 
 | Parameter | Range | Default | When to Change |
 |:----------|:------|:--------|:---------------|

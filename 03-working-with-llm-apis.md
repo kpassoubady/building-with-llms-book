@@ -103,7 +103,7 @@ Use `"mini"` for experimentation and development. Use `"default"` when you need 
 
 Every LLM API call follows the same pattern: you send a model name, a list of messages, and optional parameters. The model processes your input and returns a response. The entire exchange is stateless. The model does not remember previous calls.
 
-![API request and response flow](./diagrams/ch03-api-anatomy.svg)
+![API request and response flow](./diagrams/ch03-api-anatomy-sketch.png)
 
 The diagram shows the round trip between your application and the API; the sketch below breaks down the anatomy of a single request into its core components.
 
@@ -131,7 +131,7 @@ print(response)
 
 Five lines. That is all it takes to query one of the most capable language models ever built. Now let's understand what each part does.
 
-![OpenAI API sequence diagram](./diagrams/ch03-three-roles.svg)
+![OpenAI API sequence diagram](./diagrams/ch03-three-roles-sketch.png)
 
 ### The `model` Parameter
 

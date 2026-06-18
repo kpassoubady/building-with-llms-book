@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="147.5" viewBox="30 30 990 147.5">
+<rect x="30" y="30" width="990" height="147.5" fill="#ffffff"/>
+<rect x="50" y="50" width="140" height="60" rx="15" ry="15" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="120" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Text</text>
+<rect x="240" y="50" width="140" height="60" rx="15" ry="15" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="310" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Tokens</text>
+<rect x="430" y="50" width="160" height="60" rx="15" ry="15" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="510" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Embeddings</text>
+<rect x="640" y="50" width="150" height="60" rx="15" ry="15" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="715" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Attention</text>
+<rect x="840" y="50" width="160" height="60" rx="15" ry="15" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="920" y="84.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Next Token</text>
+<g><path d="M 190 80 L 240 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="240,80 232,84 232,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 380 80 L 430 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="430,80 422,84 422,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 590 80 L 640 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="640,80 632,84 632,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 790 80 L 840 80" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="840,80 832,84 832,76" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="350" y="151.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">The mental model: how your text becomes an LLM response</text>
+</svg>

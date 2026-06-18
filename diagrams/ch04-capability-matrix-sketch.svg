@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="575" viewBox="30 0 750 575">
+<rect x="30" y="0" width="750" height="575" fill="#ffffff"/>
+<text x="50" y="38.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="22" fill="#1e1e1e" text-anchor="start" opacity="1">LLM Capability Matrix</text>
+<rect x="50" y="60" width="170" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="83.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Task</text>
+<rect x="230" y="60" width="170" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="83.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Reliability</text>
+<rect x="410" y="60" width="170" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="83.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Best Model</text>
+<rect x="590" y="60" width="170" height="40" rx="10" ry="10" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="83.15" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Cost Tier</text>
+<rect x="50" y="110" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="132.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Summarization</text>
+<rect x="230" y="110" width="170" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="132.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<rect x="410" y="110" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="132.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Mini</text>
+<rect x="590" y="110" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="132.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$</text>
+<rect x="50" y="155" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="177.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Code Generation</text>
+<rect x="230" y="155" width="170" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="177.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<rect x="410" y="155" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="177.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Standard</text>
+<rect x="590" y="155" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="177.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$</text>
+<rect x="50" y="200" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="222.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Classification</text>
+<rect x="230" y="200" width="170" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="222.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<rect x="410" y="200" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="222.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Mini</text>
+<rect x="590" y="200" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="222.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$</text>
+<rect x="50" y="245" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="267.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Translation</text>
+<rect x="230" y="245" width="170" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="267.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<rect x="410" y="245" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="267.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Standard</text>
+<rect x="590" y="245" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="267.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$</text>
+<rect x="50" y="290" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="312.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Rewriting</text>
+<rect x="230" y="290" width="170" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="312.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">High</text>
+<rect x="410" y="290" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="312.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Mini</text>
+<rect x="590" y="290" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="312.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$</text>
+<rect x="50" y="335" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="357.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Multi-step Reason</text>
+<rect x="230" y="335" width="170" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="357.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Medium</text>
+<rect x="410" y="335" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="357.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Premium</text>
+<rect x="590" y="335" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="357.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$$</text>
+<rect x="50" y="380" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="402.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Extraction (JSON)</text>
+<rect x="230" y="380" width="170" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="402.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Medium</text>
+<rect x="410" y="380" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="402.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Standard</text>
+<rect x="590" y="380" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="402.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$</text>
+<rect x="50" y="425" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="447.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Math / Counting</text>
+<rect x="230" y="425" width="170" height="40" rx="10" ry="10" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="447.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Low</text>
+<rect x="410" y="425" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="447.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Premium+Tools</text>
+<rect x="590" y="425" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="447.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$$</text>
+<rect x="50" y="470" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="492.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Recent Events</text>
+<rect x="230" y="470" width="170" height="40" rx="10" ry="10" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="492.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Low</text>
+<rect x="410" y="470" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="492.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">RAG Required</text>
+<rect x="590" y="470" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="492.93" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">$$</text>
+<rect x="50" y="515" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="135" y="537.92" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Exact String Ops</text>
+<rect x="230" y="515" width="170" height="40" rx="10" ry="10" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="315" y="537.92" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Low</text>
+<rect x="410" y="515" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="495" y="537.92" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Code Instead</text>
+<rect x="590" y="515" width="170" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="675" y="537.92" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">-</text>
+</svg>

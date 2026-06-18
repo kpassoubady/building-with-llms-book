@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="695" height="295" viewBox="0 -10 695 295">
+<rect x="0" y="-10" width="695" height="295" fill="#ffffff"/>
+<text x="150" y="25.3" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="start" opacity="1">Evaluation Harness Architecture</text>
+<rect x="20" y="50" width="130" height="45" rx="11.25" ry="11.25" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="85" y="75.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Golden Dataset</text>
+<rect x="180" y="50" width="140" height="45" rx="11.25" ry="11.25" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="250" y="75.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Prompt Variants</text>
+<rect x="350" y="50" width="130" height="45" rx="11.25" ry="11.25" fill="#a5d8ff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="415" y="75.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Model Runner</text>
+<rect x="510" y="50" width="130" height="45" rx="11.25" ry="11.25" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="575" y="75.42" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Output Store</text>
+<g><path d="M 150 72 L 180 72" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="180,72 172,76 172,68" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 320 72 L 350 72" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="350,72 342,76 342,68" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 480 72 L 510 72" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="510,72 502,76 502,68" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<rect x="50" y="140" width="145" height="40" rx="10" ry="10" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="122.5" y="162.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Exact Match</text>
+<rect x="210" y="140" width="145" height="40" rx="10" ry="10" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="282.5" y="162.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Fuzzy Match</text>
+<rect x="370" y="140" width="145" height="40" rx="10" ry="10" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="442.5" y="162.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">LLM-Judge</text>
+<rect x="530" y="140" width="145" height="40" rx="10" ry="10" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="602.5" y="162.7" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="12" fill="#1e1e1e" text-anchor="middle" opacity="1">Bias Detector</text>
+<text x="250" y="131.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#495057" text-anchor="start" opacity="1">Multi-Scorer</text>
+<rect x="100" y="220" width="160" height="45" rx="11.25" ry="11.25" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="180" y="245.43" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Report Generator</text>
+<rect x="300" y="220" width="140" height="45" rx="11.25" ry="11.25" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="370" y="245.43" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Drift Monitor</text>
+<rect x="480" y="220" width="130" height="45" rx="11.25" ry="11.25" fill="#ffc9c9" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="545" y="245.43" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="13" fill="#1e1e1e" text-anchor="middle" opacity="1">Alert System</text>
+<g><path d="M 260 242 L 300 242" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,242 292,246 292,238" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 440 242 L 480 242" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="480,242 472,246 472,238" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+</svg>

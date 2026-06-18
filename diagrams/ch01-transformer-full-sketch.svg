@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="424" height="607.5" viewBox="180 30 424 607.5">
+<rect x="180" y="30" width="424" height="607.5" fill="#ffffff"/>
+<rect x="200" y="50" width="200" height="50" rx="12.5" ry="12.5" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="79.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Input Embedding</text>
+<rect x="200" y="130" width="200" height="50" rx="12.5" ry="12.5" fill="#dee2e6" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="159.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Positional Encoding</text>
+<rect x="200" y="210" width="200" height="50" rx="12.5" ry="12.5" fill="#ffd8a8" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="229.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">Multi-Head Attention</text>
+<text x="300" y="246.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#1e1e1e" text-anchor="middle" opacity="1">(Q / K / V)</text>
+<rect x="200" y="290" width="200" height="50" rx="12.5" ry="12.5" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="319.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Add &amp; Norm</text>
+<rect x="200" y="370" width="200" height="50" rx="12.5" ry="12.5" fill="#b2f2bb" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="399.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Feed-Forward</text>
+<rect x="200" y="450" width="200" height="50" rx="12.5" ry="12.5" fill="#ffec99" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="479.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Add &amp; Norm</text>
+<rect x="200" y="530" width="200" height="50" rx="12.5" ry="12.5" fill="#d0bfff" stroke="#1e1e1e" stroke-width="2" opacity="1" />
+<text x="300" y="559.05" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="18" fill="#1e1e1e" text-anchor="middle" opacity="1">Output Probabilities</text>
+<g><path d="M 300 100 L 300 130" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,130 296,122 304,122" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 180 L 300 210" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,210 296,202 304,202" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 260 L 300 290" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,290 296,282 304,282" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 340 L 300 370" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,370 296,362 304,362" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 420 L 300 450" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,450 296,442 304,442" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<g><path d="M 300 500 L 300 530" fill="none" stroke="#1e1e1e" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="1" /><polygon points="300,530 296,522 304,522" fill="#1e1e1e" stroke="#1e1e1e" /></g>
+<text x="430" y="221.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">← Self-attention:</text>
+<text x="430" y="239.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">Which words matter?</text>
+<text x="430" y="381.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">← Refines each</text>
+<text x="430" y="399.4" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">token representation</text>
+<text x="220" y="611.9" font-family="Virgil, Segoe Print, Comic Sans MS, sans-serif" font-size="14" fill="#868e96" text-anchor="start" opacity="1">Full Transformer block (simplified)</text>
+</svg>
