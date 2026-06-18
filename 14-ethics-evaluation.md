@@ -449,14 +449,10 @@ Run your evaluation harness twice with different prompts (one concise, one verbo
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) Models learning prejudices from patterns in their training data.** LLMs learn statistical patterns from internet text, which reflects societal biases. The model is not intentionally biased; it reproduces patterns it learned during training.
-
-2. **False.** Fairness instructions in the system message reduce bias but do not eliminate it. Effective mitigation requires multiple layers: debiased prompts, diverse few-shot examples, post-processing filters, and regular bias audits with demographic swap tests.
-
-3. **Human**-in-the-loop. In this pattern, the AI generates recommendations or drafts, but a human makes the final decision. The level of human involvement scales with the risk level of the decision.
-
-4. **(b) Monitoring model accuracy over time to catch gradual degradation.** Drift occurs when model behavior changes due to provider updates, shifting user patterns, or evolving data. Regular re-evaluation against a golden dataset is the primary detection mechanism.
-
-5. Three mitigation steps: **(1)** Remove or blind names in prompts sent to the LLM so the model evaluates qualifications only. **(2)** Add explicit fairness instructions to the system prompt: "Evaluate based solely on skills, experience, and qualifications." **(3)** Build a bias test suite with diverse names and run it after every prompt change. Additional steps include adding human review for all hiring recommendations and auditing past decisions for systematic bias. Cross-reference [Chapter 12](12-security-guardrails.md) for security guardrails that complement ethical guardrails.
+1. **Answer**: (b) Models learning prejudices from patterns in their training data. LLMs learn statistical patterns from internet text, which reflects societal biases. The model is not intentionally biased; it reproduces patterns it learned during training.
+2. **True/False**: False. Fairness instructions in the system message reduce bias but do not eliminate it. Effective mitigation requires multiple layers: debiased prompts, diverse few-shot examples, post-processing filters, and regular bias audits with demographic swap tests.
+3. **Answer**: Human-in-the-loop. In this pattern, the AI generates recommendations or drafts, but a human makes the final decision. The level of human involvement scales with the risk level of the decision.
+4. **Answer**: (b) Monitoring model accuracy over time to catch gradual degradation. Drift occurs when model behavior changes due to provider updates, shifting user patterns, or evolving data. Regular re-evaluation against a golden dataset is the primary detection mechanism.
+5. **Answer**: Three mitigation steps: (1) Remove or blind names in prompts sent to the LLM so the model evaluates qualifications only. (2) Add explicit fairness instructions to the system prompt: "Evaluate based solely on skills, experience, and qualifications." (3) Build a bias test suite with diverse names and run it after every prompt change. Additional steps include adding human review for all hiring recommendations and auditing past decisions for systematic bias. Cross-reference [Chapter 12](12-security-guardrails.md) for security guardrails that complement ethical guardrails.
 
 </details>

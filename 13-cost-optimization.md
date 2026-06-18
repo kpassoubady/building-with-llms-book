@@ -90,7 +90,7 @@ def choose_model(task_complexity):
     elif task_complexity in ("summarization", "code_explanation"):
         return "gpt-4o-mini"   # Still good enough for most cases
     else:
-        return "gpt-4o"        # $2.50 / 1M input — complex reasoning only
+        return "gpt-4o"        # $2.50 / 1M input - complex reasoning only
 ```
 
 ### Strategy 2: Prompt Optimization
@@ -485,14 +485,10 @@ Wrap `get_completion` with the `completion_with_retry` function. Simulate failur
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) Output tokens.** Output tokens cost 3-5x more than input tokens across all major providers. This is because generation (producing tokens one at a time) is more compute-intensive than encoding (processing the full input in parallel).
-
-2. **True.** Exponential backoff doubles the wait: 1s, 2s, 4s, 8s. Adding random jitter (a small random delay) prevents the thundering herd problem where many clients retry simultaneously.
-
-3. **Semantic** cache. Unlike exact-match caching, semantic caching uses embeddings to match queries with similar meaning, catching paraphrased duplicates that hash-based caching would miss.
-
-4. **(b) Rate limit exceeded.** HTTP 429 means you have sent too many requests in a given time window. The correct response is to retry with exponential backoff, not to immediately resend the request.
-
-5. **~$175 per day** ($500 x 0.35 = $175). Monthly savings: ~$5,250 ($175 x 30). Over a year, that is $63,000 saved by a caching layer that takes a few hours to implement. Cross-reference [Chapter 10](10-embeddings-vector-databases.md) for the embeddings that power semantic caching.
+1. **Answer**: (b) Output tokens. Output tokens cost 3-5x more than input tokens across all major providers. This is because generation (producing tokens one at a time) is more compute-intensive than encoding (processing the full input in parallel).
+2. **True/False**: True. Exponential backoff doubles the wait: 1s, 2s, 4s, 8s. Adding random jitter (a small random delay) prevents the thundering herd problem where many clients retry simultaneously.
+3. **Answer**: Semantic cache. Unlike exact-match caching, semantic caching uses embeddings to match queries with similar meaning, catching paraphrased duplicates that hash-based caching would miss.
+4. **Answer**: (b) Rate limit exceeded. HTTP 429 means you have sent too many requests in a given time window. The correct response is to retry with exponential backoff, not to immediately resend the request.
+5. **Answer**: ~$175 per day ($500 x 0.35 = $175). Monthly savings: ~$5,250 ($175 x 30). Over a year, that is $63,000 saved by a caching layer that takes a few hours to implement. Cross-reference [Chapter 10](10-embeddings-vector-databases.md) for the embeddings that power semantic caching.
 
 </details>

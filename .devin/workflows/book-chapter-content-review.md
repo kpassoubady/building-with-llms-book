@@ -4,7 +4,7 @@ description: Review book chapters to remove AI-generated formatting tells, enfor
 
 # Book Chapter Content Review
 
-Strip LLM-style formatting patterns from book chapters. Applies to all markdown files under `book/` (chapters, front matter, back matter, and appendices).
+Strip LLM-style formatting patterns from book chapters. Applies to all markdown files in the root directory that represent chapters (e.g., `[0-9][0-9]-*.md`, `appendix-*.md`, `cover-info/*.md`).
 
 This workflow inherits the core rules from `natural-prose-formatting` and adds book-specific constraints for chapter structure, admonitions, and cross-references.
 
@@ -23,9 +23,9 @@ All rules from the `natural-prose-formatting` skill apply without exception: no 
 Every chapter must include, in this order:
 - Learning objectives (blockquote with 3 items using action verbs: Explain, Build, Evaluate, Compare...)
 - Opening story (2-3 paragraphs under a **scene-specific 3-5 word headline** — never the words "Opening Story" or "Hook")
-- Content sections (multiple `##` or `###` sections, separated by `---`)
-- Try It Yourself (section header `## Try It Yourself` with 2-3 mini exercises)
-- Chapter Summary (section header `## Chapter Summary` with a bulleted list `> **💡 Key Takeaways**`, followed immediately by a `[!PITFALLS]` admonition containing exactly 3 pitfalls)
+- Content sections (multiple `##` or `###` sections, separated by `---` ONLY if inside code blocks, not in prose)
+- Try It Yourself (section header `## 🧪 Try It Yourself` with 2-3 mini exercises)
+- Chapter Summary (section header `## 📋 Chapter Summary` with a bulleted list `> **💡 Key Takeaways**`, followed immediately by a `[!PITFALLS]` admonition containing exactly 3 pitfalls)
 - Knowledge Check (section header `## 🧠 Knowledge Check` with 5 questions — see format in rule 12)
 
 ### 2. Admonitions
@@ -43,6 +43,7 @@ Use 3-5 admonitions per chapter, distributed across sections:
 Admonitions should:
 - Start with a bold label (e.g., "**Did You Know?**")
 - Be concise (1-3 sentences typically)
+- **Consecutive TIPs:** Two `> [!TIP]` blocks must NEVER appear consecutively. Either combine them, replace one, or introduce a bridging prose line between them.
 - For cross-references, use format: `**Cross-Reference:** For a deeper dive into X, see [Chapter Y](YY-filename.md): Title.`
 
 ### 3. Code blocks
@@ -53,9 +54,9 @@ Code blocks in chapters should:
 - Be concise (5-20 lines for inline mini examples)
 - Include comments for non-obvious code
 - Not be truncated mid-statement
-- Use the `shared/llm_client.py` pattern for LLM calls
+- Use the `shared/llm_client.py` pattern for LLM calls (if applicable)
 - Show both code AND expected output
-- **No deep string-alignment indentation:** Python implicit string concatenation must NOT align continuation strings under the opening quote. Break after the comma and indent continuations exactly 4 spaces. No line should start with more than ~12 leading spaces from string alignment. See fix pattern:
+- **No deep string-alignment indentation:** Break after comma and indent continuations exactly 4 spaces. No line should start with more than ~12 leading spaces from string alignment. See fix pattern:
 
 ```python
 # Wrong — continuation aligned under opening quote (wraps in 6"x9" PDF)
@@ -94,12 +95,12 @@ Cross-references should follow this format:
 ### 6. Diagram references
 
 Diagrams should be referenced as:
-- Inline SVG: `![Description](../dayX/diagrams/filename.svg)`
+- Inline SVG: `![Description](diagrams/filename.svg)`
 - Excalidraw inline (≤6 elements): `![Description](diagrams/chNN-name.excalidraw.png)`
 - Excalidraw companion repo (>6 elements): `> See the companion repo for... [link](url)`
 
 Excalidraw rules:
-- ≤6 visual elements → inline in book as `book/diagrams/chNN-name.excalidraw.png`
+- ≤6 visual elements → inline in book as `diagrams/chNN-name.excalidraw.png`
 - >6 visual elements → companion repo at `building-with-llms-companion/diagrams/chNN-name.excalidraw.png`
 - Use hand-drawn/sketch style
 - Color-code meaningfully: green = good/success, red = bad/fail, blue = neutral/info
@@ -112,7 +113,7 @@ All diagram paths must be valid files.
 
 ### 7. Horizontal rules
 
-`---` must not appear anywhere in a book chapter except inside a fenced code block where it serves a functional purpose (e.g., a slide-deck separator in a prompt example, a YAML front-matter delimiter within a code snippet). Outside code blocks, `---` is always wrong and must be removed. The chapter template in `book-authoring-instructions.md` shows `---` between sections as a drafting aid; finished chapters do not need them — headings alone provide the visual break.
+`---` must not appear anywhere in a book chapter except inside a fenced code block where it serves a functional purpose (e.g., a slide-deck separator in a prompt example, a YAML front-matter delimiter within a code snippet). Outside code blocks, `---` is always wrong and must be removed.
 
 ### 8. Bold usage in chapters
 
@@ -151,24 +152,30 @@ Section header must be `## 🧠 Knowledge Check`. Questions use this exact forma
 
 1. **Multiple Choice:** Question text?
 
+    ::: {.mcq-2col}
     - [ ] Option A
     - [ ] Option B
     - [ ] Option C
     - [ ] Option D
+    :::
 
 2. **True or False:** Statement here?
 
+    ::: {.tf-inline}
     - [ ] True
     - [ ] False
+    :::
 
 3. **Fill in the Blank:** The ______ is the answer.
 
 4. **Multiple Choice:** Another question?
 
+    ::: {.mcq-2col}
     - [ ] Option A
     - [ ] Option B
     - [ ] Option C
     - [ ] Option D
+    :::
 
 5. **Scenario:** A scenario question here?
 
@@ -186,6 +193,7 @@ Section header must be `## 🧠 Knowledge Check`. Questions use this exact forma
 
 Critical rules:
 - Nested bullet lists need an **empty line before them** and **exactly 4-space indent** (not 3) — prevents PDF numbered list breakage
+- The `:::` containers are required for multiple choice and true/false questions.
 - Answers use `**Answer**:` (colon after bold), not `**Answer** -` (dash)
 - The `<details>` block must have a blank line before `</details>`
 
@@ -207,7 +215,7 @@ When reviewing, scan for these patterns and flag each:
 | "powerful", "game-changing", "revolutionary" | hyperbole | Use specific language instead |
 | "Let's dive in" / "Let's explore" | LLM opener | Delete or replace with the actual topic |
 | "In today's world" / "In the ever-evolving" | cliche opener | Delete, start with the subject |
-| `---` outside a fenced code block | horizontal rule abuse | Remove entirely; only allowed inside code blocks for functional use |
+| `---` outside a fenced code block | horizontal rule abuse | Remove entirely |
 | Missing required section | structure gap | Add the missing section |
 | Opening story titled "Opening Story" or "Hook" | structure tell | Rename to scene-specific 3-5 word headline |
 | `Common Pitfalls` as standalone `##` section | structure error | Move inside Chapter Summary as `[!PITFALLS]` admonition with exactly 3 bullets |
@@ -224,10 +232,9 @@ When reviewing, scan for these patterns and flag each:
 ### 2.1 File Existence
 
 For every file path mentioned in chapters, verify the file exists:
-- Diagram files (`day*/diagrams/*.svg`)
+- Diagram files (`diagrams/*.svg` or `diagrams/*.png`)
 - Exercise files in companion repo (`building-with-llms-companion/exercises/ch*/...`)
-- Cross-referenced chapters (`book/XX-chapter-title.md`)
-- Shared code references (`shared/llm_client.py`)
+- Cross-referenced chapters (`XX-chapter-title.md`)
 
 ### 2.2 Cross-Chapter References
 
@@ -239,7 +246,7 @@ When a chapter references content from another chapter, verify:
 ### 2.3 Diagram References
 
 - Every SVG image link must point to an existing file
-- Every Excalidraw placeholder should have a corresponding PNG in `book/diagrams/` or the companion repo
+- Every Excalidraw placeholder should have a corresponding PNG in `diagrams/` or the companion repo
 - Mermaid diagram references should point to existing `.svg` files
 
 ### Flag Format
@@ -273,13 +280,6 @@ Check that concepts are introduced before they are used:
 - No chapter should reference a technique that hasn't been explained in an earlier chapter
 - Cross-references should point backward (to earlier chapters) or forward (to later chapters) appropriately
 
-### 3.4 Code Consistency
-
-- Code examples should use the same function signatures as `shared/llm_client.py`
-- Import statements should reference packages from `requirements.txt`
-- Variable naming should be consistent across code examples
-- All inline examples must be immediately runnable (include imports)
-
 ---
 
 ## Output Format
@@ -306,20 +306,11 @@ For each reviewed file, produce:
 ### Verdict: clean / N issues found
 ```
 
-### Summary Table
-
-After all files, produce:
-
-| Chapter | Structure | Formatting | References | Consistency | Issues |
-|:--------|:---------|:-----------|:-----------|:------------|:-------|
-| 1 | clean | clean | clean | clean | 0 |
-| 2 | missing section | 2 issues | clean | 1 issue | 3 |
-
 ---
 
 ## How to Run This Review
 
-1. Specify which chapters or files to review (e.g., `book/05-prompt-fundamentals.md` or `book/`)
+1. Specify which chapters or files to review (e.g., `05-prompt-fundamentals.md` or `*`)
 2. For each file, list every violation with line number, category, and the offending text
 3. Provide the corrected version for each violation
 4. After listing violations, apply fixes if the user approves
@@ -328,19 +319,9 @@ After all files, produce:
 
 ## Scope
 
-This workflow applies to all files under:
+This workflow applies to all files under the root directory that match:
 
-- `book/*.md` (chapters, front matter, back matter)
-- `book/cover-info/*.md`
-- `book/appendix-*.md`
-
----
-
-## Reference Files
-
-These files are the source of truth for validation:
-
-- **Book structure:** `book/builder/book-order.json`
-- **LLM client interface:** `shared/llm_client.py`
-- **Dependencies:** `requirements.txt`
-- **Companion exercises:** External repo `building-with-llms-companion`
+- `[0-9][0-9]-*.md` (chapters)
+- `00-front-matter.md`, `00.5-how-to-use.md`
+- `cover-info/*.md`
+- `appendix-*.md`
