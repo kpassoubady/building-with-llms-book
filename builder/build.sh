@@ -5,9 +5,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
+ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 ORDER_FILE="$SCRIPT_DIR/book-order.json"
-OUTPUT_DIR="../$SCRIPT_DIR/released"
+OUTPUT_DIR="$SCRIPT_DIR/released"
 TEMP_DIR="$SCRIPT_DIR/temp"
 FORMAT="pdf"
 

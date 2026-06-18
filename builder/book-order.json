@@ -195,15 +195,15 @@
     {
       "section": "Front Cover",
       "files": [
-        "book/cover-info/front-cover.md",
-        "book/cover-info/front-cover.png"
+        "cover-info/front-cover.md",
+        "cover-info/front-cover.png"
       ],
       "note": "PNG file is required for EPUB format cover"
     },
     {
       "section": "Dedication",
       "files": [
-        "book/00-dedication.md"
+        "00-dedication.md"
       ],
       "excludeFromToc": true,
       "dedication": true
@@ -212,14 +212,14 @@
       "section": "Preface",
       "tocLabel": "Preface",
       "files": [
-        "book/00-front-matter.md"
+        "00-front-matter.md"
       ]
     },
     {
       "section": "How to Use This Book",
       "tocLabel": "How to Use This Book",
       "files": [
-        "book/00.5-how-to-use.md"
+        "00.5-how-to-use.md"
       ]
     },
     {
@@ -232,7 +232,7 @@
       "section": "1. Introduction to Generative AI & LLMs",
       "tocLabel": "1. Introduction to Generative AI & LLMs",
       "files": [
-        "book/01-intro-genai-llms.md"
+        "01-intro-genai-llms.md"
       ],
       "note": "Covers AI evolution, transformer architecture, tokenization, embeddings, context windows"
     },
@@ -240,7 +240,7 @@
       "section": "2. The LLM Landscape",
       "tocLabel": "2. The LLM Landscape",
       "files": [
-        "book/02-llm-landscape.md"
+        "02-llm-landscape.md"
       ],
       "note": "GPT-4, Claude, Gemini, Llama, Mistral; open vs closed models; NLP task taxonomy"
     },
@@ -248,7 +248,7 @@
       "section": "3. Working with LLM APIs",
       "tocLabel": "3. Working with LLM APIs",
       "files": [
-        "book/03-working-with-llm-apis.md"
+        "03-working-with-llm-apis.md"
       ],
       "styleSettings": {
         "avoidCodeBlockPageBreak": false
@@ -259,7 +259,7 @@
       "section": "4. Model Capabilities & Limitations",
       "tocLabel": "4. Model Capabilities & Limitations",
       "files": [
-        "book/04-capabilities-limitations.md"
+        "04-capabilities-limitations.md"
       ],
       "note": "Strengths, failure modes, hallucinations, token counting, model selection"
     },
@@ -273,7 +273,7 @@
       "section": "5. Prompt Engineering Fundamentals",
       "tocLabel": "5. Prompt Engineering Fundamentals",
       "files": [
-        "book/05-prompt-fundamentals.md"
+        "05-prompt-fundamentals.md"
       ],
       "note": "The 4 building blocks, system vs user messages, anti-patterns"
     },
@@ -281,7 +281,7 @@
       "section": "6. Prompting Techniques",
       "tocLabel": "6. Prompting Techniques",
       "files": [
-        "book/06-prompting-techniques.md"
+        "06-prompting-techniques.md"
       ],
       "note": "Zero-shot, few-shot, chain-of-thought, role prompting, structured output"
     },
@@ -289,7 +289,7 @@
       "section": "7. API Parameters & Output Control",
       "tocLabel": "7. API Parameters & Output Control",
       "files": [
-        "book/07-api-parameters.md"
+        "07-api-parameters.md"
       ],
       "note": "Temperature, top_p, penalties, max_tokens, stop sequences, streaming"
     },
@@ -297,7 +297,7 @@
       "section": "8. Prompt Iteration & Evaluation",
       "tocLabel": "8. Prompt Iteration & Evaluation",
       "files": [
-        "book/08-iteration-evaluation.md"
+        "08-iteration-evaluation.md"
       ],
       "note": "Write-test-refine loop, rubrics, golden datasets, LLM-as-judge, versioning"
     },
@@ -311,7 +311,7 @@
       "section": "9. Conversation Design & Multi-turn Chat",
       "tocLabel": "9. Conversation Design & Multi-turn Chat",
       "files": [
-        "book/09-conversation-design.md"
+        "09-conversation-design.md"
       ],
       "note": "Stateless vs stateful, context management, persona, conversation flow"
     },
@@ -319,7 +319,7 @@
       "section": "10. Embeddings & Vector Databases",
       "tocLabel": "10. Embeddings & Vector Databases",
       "files": [
-        "book/10-embeddings-vector-databases.md"
+        "10-embeddings-vector-databases.md"
       ],
       "note": "Embedding models, FAISS, Chroma, Pinecone, similarity search"
     },
@@ -327,7 +327,7 @@
       "section": "11. Retrieval-Augmented Generation (RAG)",
       "tocLabel": "11. Retrieval-Augmented Generation (RAG)",
       "files": [
-        "book/11-rag-architecture.md"
+        "11-rag-architecture.md"
       ],
       "note": "End-to-end RAG pipeline: ingestion, chunking, retrieval, generation, citations"
     },
@@ -341,7 +341,7 @@
       "section": "12. Security & Guardrails",
       "tocLabel": "12. Security & Guardrails",
       "files": [
-        "book/12-security-guardrails.md"
+        "12-security-guardrails.md"
       ],
       "note": "API key management, prompt injection, PII, input/output filters"
     },
@@ -349,7 +349,7 @@
       "section": "13. Cost, Latency & Error Handling",
       "tocLabel": "13. Cost, Latency & Error Handling",
       "files": [
-        "book/13-cost-optimization.md"
+        "13-cost-optimization.md"
       ],
       "note": "Token economics, caching, retry logic, monitoring"
     },
@@ -357,7 +357,7 @@
       "section": "14. Ethics, Bias & Evaluation",
       "tocLabel": "14. Ethics, Bias & Evaluation",
       "files": [
-        "book/14-ethics-evaluation.md"
+        "14-ethics-evaluation.md"
       ],
       "note": "Bias detection, mitigation, human-in-the-loop, evaluation harnesses"
     },
@@ -365,7 +365,7 @@
       "section": "Appendix A: Hands-on Labs Reference",
       "tocLabel": "Appendix A: Hands-on Labs Reference",
       "files": [
-        "book/appendix-a-labs.md"
+        "appendix-a-labs.md"
       ],
       "note": "All 13 labs with full code listings and expected output"
     },
@@ -373,7 +373,7 @@
       "section": "Appendix B: Capstone Project",
       "tocLabel": "Appendix B: Capstone Project",
       "files": [
-        "book/appendix-b-capstone.md"
+        "appendix-b-capstone.md"
       ],
       "note": "Fleet services capstone: issue classifier, work order parser, fleet advisor"
     },
@@ -381,7 +381,7 @@
       "section": "Appendix C: Setup & Installation",
       "tocLabel": "Appendix C: Setup & Installation",
       "files": [
-        "book/appendix-c-setup.md"
+        "appendix-c-setup.md"
       ],
       "note": "Python, API keys, dependencies, IDE setup"
     },
@@ -389,28 +389,28 @@
       "section": "Appendix D: Further Reading & Resources",
       "tocLabel": "Appendix D: Further Reading & Resources",
       "files": [
-        "book/appendix-d-resources.md"
+        "appendix-d-resources.md"
       ]
     },
     {
       "section": "Appendix E: Diagrams Reference",
       "tocLabel": "Appendix E: Diagrams Reference",
       "files": [
-        "book/appendix-e-diagrams.md"
+        "appendix-e-diagrams.md"
       ]
     },
     {
       "section": "About the Author",
       "tocLabel": "About the Author",
       "files": [
-        "book/cover-info/about-authors.md"
+        "cover-info/about-authors.md"
       ]
     },
     {
       "section": "Back Cover",
       "files": [
-        "book/cover-info/back-cover.md",
-        "book/cover-info/back-cover.png"
+        "cover-info/back-cover.md",
+        "cover-info/back-cover.png"
       ]
     }
   ]

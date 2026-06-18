@@ -1,0 +1,22 @@
+flowchart TB
+    subgraph Strategies["Context Window Management"]
+        direction TB
+        A["📋 Full History<br/>Send everything"]
+        B["✂️ Truncation<br/>Drop oldest messages"]
+        C["📝 Summarization<br/>Compress old turns"]
+        D["🪟 Sliding Window<br/>Keep last N turns"]
+    end
+
+    A --> E{"Context<br/>fits?"}
+    E -->|Yes| F["✅ Send as-is"]
+    E -->|No| G["Choose a strategy"]
+    G --> B
+    G --> C
+    G --> D
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style F fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style G fill:#ffebee,stroke:#c62828,stroke-width:2px

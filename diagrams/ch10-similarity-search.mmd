@@ -1,0 +1,19 @@
+flowchart LR
+    A["❓ Query Vector"] --> B{"🔍 Search<br/>Vector Store"}
+    B --> C["📄 Chunk 3<br/>score: 0.94"]
+    B --> D["📄 Chunk 7<br/>score: 0.89"]
+    B --> E["📄 Chunk 1<br/>score: 0.85"]
+    B --> F["📄 Chunk 12<br/>score: 0.52"]
+
+    C --> G["✅ Top-K = 3"]
+    D --> G
+    E --> G
+    F -.->|Below threshold| H["❌ Filtered out"]
+
+    style A fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style B fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style F fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style G fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px

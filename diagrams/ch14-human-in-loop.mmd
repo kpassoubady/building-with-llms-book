@@ -1,0 +1,23 @@
+flowchart TB
+    A["❓ User Query"] --> B["🤖 LLM<br/>Generate Response"]
+    B --> C{"Confidence<br/>Level?"}
+    C -->|High ≥ 0.9| D["✅ Auto-Approve<br/>Serve directly"]
+    C -->|Medium 0.7-0.9| E["👀 Human Review<br/>Queue for review"]
+    C -->|Low < 0.7| F["🚨 Escalate<br/>Route to expert"]
+
+    D --> G["💬 Response<br/>to User"]
+    E --> H["👤 Reviewer"]
+    H -->|Approve| G
+    H -->|Reject| I["✏️ Revise<br/>+ Respond"]
+    I --> G
+    F --> J["👨‍💼 Expert"]
+    J --> G
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#1a73e8,stroke:#0d47a1,stroke-width:2px,color:#fff
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style E fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style F fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style G fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style H fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style J fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px

@@ -1,0 +1,23 @@
+flowchart LR
+    subgraph System["🎭 System Message"]
+        direction TB
+        S1["Sets persona & role"]
+        S2["Defines constraints"]
+        S3["Establishes output format"]
+        S4["Persists across turns"]
+    end
+
+    subgraph User["👤 User Message"]
+        direction TB
+        U1["Provides the task"]
+        U2["Supplies input data"]
+        U3["Asks the question"]
+        U4["Changes each turn"]
+    end
+
+    System --> R["🤖 Model<br/>Response"]
+    User --> R
+
+    style System fill:#e3f2fd,stroke:#1a73e8
+    style User fill:#fff3e0,stroke:#e65100
+    style R fill:#e8f5e9,stroke:#2e7d32

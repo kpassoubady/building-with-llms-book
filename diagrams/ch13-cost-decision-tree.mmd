@@ -1,0 +1,20 @@
+flowchart TB
+    A["💰 Reduce LLM Costs"] --> B["🏷️ Model Tiering"]
+    A --> C["📦 Response Caching"]
+    A --> D["✂️ Prompt Optimization"]
+    A --> E["📏 Output Limiting"]
+
+    B --> B1["Simple tasks → mini<br/>Complex tasks → default"]
+    C --> C1["Cache identical queries<br/>TTL-based expiry"]
+    D --> D1["Remove filler words<br/>Shorter system prompts"]
+    E --> E1["Set max_tokens<br/>Truncate RAG context"]
+
+    style A fill:#e3f2fd,stroke:#1a73e8,stroke-width:2px
+    style B fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style C fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style E fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style B1 fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px
+    style C1 fill:#fff3e0,stroke:#e65100,stroke-width:1px
+    style D1 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1px
+    style E1 fill:#ffebee,stroke:#c62828,stroke-width:1px

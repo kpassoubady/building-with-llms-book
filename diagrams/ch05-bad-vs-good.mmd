@@ -1,0 +1,24 @@
+flowchart TB
+    subgraph Bad["❌ Anti-Patterns"]
+        direction TB
+        B1["Vague: 'Help me<br/>with this code'"]
+        B2["Leading: 'Don't you<br/>think X is best?'"]
+        B3["Conflicting: 'Be brief<br/>but very detailed'"]
+        B4["No format: 'Tell me<br/>about Python'"]
+    end
+
+    subgraph Good["✅ Good Patterns"]
+        direction TB
+        G1["Specific: 'Review this<br/>function for bugs'"]
+        G2["Neutral: 'Compare X<br/>and Y for use case Z'"]
+        G3["Clear: 'Summarize<br/>in 3 bullet points'"]
+        G4["Formatted: 'Respond<br/>as JSON with fields...'"]
+    end
+
+    B1 -.->|"Fix"| G1
+    B2 -.->|"Fix"| G2
+    B3 -.->|"Fix"| G3
+    B4 -.->|"Fix"| G4
+
+    style Bad fill:#fce4ec,stroke:#c62828
+    style Good fill:#e8f5e9,stroke:#2e7d32

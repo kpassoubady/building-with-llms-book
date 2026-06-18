@@ -1,0 +1,14 @@
+flowchart LR
+    A["Input Text"] --> B["Tokenizer"]
+    B --> C["Embedding<br/>Layer"]
+    C --> D["Transformer<br/>Blocks<br/>(Self-Attention<br/>+ Feed Forward)"]
+    D --> E["Output<br/>Layer"]
+    E --> F["Next Token<br/>Prediction"]
+    F -->|"loop"| D
+
+    style A fill:#fff3e0,stroke:#e65100
+    style B fill:#e3f2fd,stroke:#1a73e8
+    style C fill:#e8f5e9,stroke:#2e7d32
+    style D fill:#1a73e8,stroke:#0d47a1,color:#fff
+    style E fill:#e8f5e9,stroke:#2e7d32
+    style F fill:#f3e5f5,stroke:#7b1fa2
