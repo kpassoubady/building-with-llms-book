@@ -31,6 +31,7 @@ Hallucinations happen for three reasons:
 **Retrieval-Augmented Generation (RAG)** solves this by retrieving relevant documents before generating a response. Instead of relying on the model's training data, you hand it the specific documents it needs to answer the question.
 
 ![RAG ingestion and query pipelines end-to-end](./diagrams/ch11-rag-full-sketch.png)
+<!-- figure: RAG ingestion and query pipelines end-to-end -->
 
 > [!TIP]
 > **High-Resolution Architecture:** For a full-page, high-resolution RAG architecture diagram, see [Appendix E](appendix-e-diagrams.md#chapter-11-rag-architecture-full). The high-resolution file is also available in the companion repository:
@@ -39,6 +40,7 @@ Hallucinations happen for three reasons:
 The diagram separates RAG into three labeled subgraphs (ingestion, query, generation) with data flowing left to right; the sketch below condenses the same pipeline into five hand-drawn steps you can trace from document to grounded answer.
 
 ![RAG in five hand-drawn steps: chunk, embed, store, retrieve, generate](diagrams/ch11-rag-5-steps-sketch.svg)
+<!-- figure: RAG in five hand-drawn steps: chunk, embed, store, retrieve, generate -->
 
 The core idea is simple: search first, then answer. A RAG system finds the three or four most relevant chunks of documentation, injects them into the prompt, and instructs the model to answer based only on that context. The model still generates the response, but now it has real source material to work from instead of relying on patterns memorized during training.
 
@@ -249,6 +251,7 @@ Setting `temperature=0.0` makes the model deterministic. For RAG, you want the m
 The prompt is the most important part of the query pipeline. It controls whether the model stays grounded in the retrieved context or drifts into hallucination.
 
 ![RAG prompt sandwich](diagrams/ch11-rag-sandwich.svg)
+<!-- figure: RAG prompt sandwich -->
 
 A RAG prompt has three layers:
 
@@ -299,6 +302,7 @@ Bot:  Python dictionaries are the primary data structure for
 RAG is not the only way to give an LLM access to your data. The three main approaches are prompt engineering, RAG, and fine-tuning. Each has different trade-offs.
 
 ![RAG vs Alternatives](./diagrams/ch11-rag-sandwich-sketch.png)
+<!-- figure: RAG vs Alternatives -->
 
 | Approach | When to Use | Cost | Data Freshness | Effort |
 |:---------|:------------|:-----|:---------------|:-------|
@@ -368,6 +372,7 @@ For a prototype, manual review of 20-30 question-answer pairs is often sufficien
 > **Cross-Reference:** [Chapter 8](08-iteration-evaluation.md): Iteration & Evaluation covers golden datasets and the LLM-as-judge pattern in depth. Apply those same techniques to evaluate your RAG system.
 
 ![Complete RAG architecture with evaluation](diagrams/ch11-rag-full.svg)
+<!-- figure: Complete RAG architecture with evaluation -->
 
 ## 🧪 Try It Yourself
 

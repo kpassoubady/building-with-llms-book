@@ -23,6 +23,7 @@ In this chapter, you will learn the current LLM landscape, understand what diffe
 The LLM market in 2025 has five major players and a growing ecosystem of open-source alternatives. Each model family has distinct strengths, pricing, and tradeoffs.
 
 ![LLM landscape overview](./diagrams/ch02-open-closed-sketch.png)
+<!-- figure: LLM landscape overview -->
 
 | Model | Provider | Context | Strengths | Pricing (per 1M tokens) |
 |:------|:---------|:--------|:----------|:-----------------------|
@@ -85,6 +86,7 @@ Picking a model is not about finding the "best" one. It is about finding the bes
 | Multilingual | GPT-4o / Gemini Pro | Best language coverage |
 
 ![Model comparison by capability and cost](./diagrams/ch02-model-selection-sketch.png)
+<!-- figure: Model comparison by capability and cost -->
 
 ### By Constraint
 
@@ -99,6 +101,7 @@ Picking a model is not about finding the "best" one. It is about finding the bes
 The comparison chart maps models by capability and cost; the sketch below provides a step-by-step decision tree to select the right model based on your constraints.
 
 ![Model selection decision tree](diagrams/ch02-model-selection.svg)
+<!-- figure: Model selection decision tree -->
 
 ### Model Selection Walkthrough
 
@@ -121,6 +124,7 @@ Scenario 3: **Coding Assistant.** Your team wants an LLM that reviews pull reque
 The LLM landscape is split between proprietary API-only models and open-weight models you can run on your own infrastructure. Neither is universally better; the right choice depends on your constraints.
 
 ![Open vs closed model spectrum](diagrams/ch02-open-closed.svg)
+<!-- figure: Open vs closed model spectrum -->
 
 | Factor | Closed Source (API) | Open Source (Self-hosted) |
 |:-------|:-------------------|:-------------------------|

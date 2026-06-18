@@ -23,6 +23,7 @@ In this chapter, you will learn how that architecture works at a level that make
 The path from the earliest AI systems to today's generative models spans seven decades. Each era built on the limitations of the one before it.
 
 ![AI eras at a glance](diagrams/ch01-ai-eras.svg)
+<!-- figure: AI eras at a glance -->
 
 **Rule-based systems** (1950s to 1980s) relied on hand-written rules. IBM's Deep Blue played chess by evaluating millions of positions using human-defined heuristics. Spell checkers flagged words not found in a dictionary. These systems were brittle: they worked only for the exact scenarios their creators anticipated.
 
@@ -33,6 +34,7 @@ The path from the earliest AI systems to today's generative models spans seven d
 **Generative AI** (2017 to present) arrived with the Transformer. By processing all words in parallel through self-attention, Transformers eliminated the sequential bottleneck. Combined with massive datasets and unprecedented compute budgets, this produced models that generate code, prose, images, and music. The models are not merely classifying or predicting; they are creating new content.
 
 ![AI evolution from rule-based systems to generative AI](./diagrams/ch01-ai-eras-sketch.png)
+<!-- figure: AI evolution from rule-based systems to generative AI -->
 
 > [!NOTE]
 > **Did You Know?** The original Transformer paper "Attention Is All You Need" has been cited over 130,000 times, making it one of the most influential computer science papers ever written. The eight authors are now spread across multiple AI companies they helped found.
@@ -51,10 +53,12 @@ Every large language model you interact with, whether GPT-4o, Claude, or Gemini,
 ### Step 1: Tokenization
 
 ![Token-to-response pipeline](diagrams/ch01-token-pipeline.svg)
+<!-- figure: Token-to-response pipeline -->
 
 LLMs do not read words. They read tokens, chunks of text that typically correspond to 3 to 4 English characters. The tokenizer splits your input into these chunks and converts each one to a numerical ID.
 
 ![Transformer architecture high-level view](./diagrams/ch01-transformer-full-sketch.png)
+<!-- figure: Transformer architecture high-level view -->
 
 ```text
 "The cat sat on the mat" → [The, cat, sat, on, the, mat]
@@ -78,6 +82,7 @@ print(f"Token IDs:   {tokens}")
 Tokenization matters for three practical reasons. You are billed per token, not per word. Context windows are measured in tokens. Different languages tokenize differently: a sentence in Japanese may use twice as many tokens as the same meaning expressed in English.
 
 ![Tokenization flow from text to token IDs](./diagrams/ch01-token-pipeline-sketch.png)
+<!-- figure: Tokenization flow from text to token IDs -->
 
 ### Step 2: Embeddings
 
@@ -104,6 +109,7 @@ Consider this sentence:
 The word "bank" is ambiguous. Is it a financial institution or a riverbank? The attention mechanism connects "bank" to "closed" and "holiday," concluding it refers to a financial institution. In a different sentence, "The bank of the river was muddy," attention would connect "bank" to "river" and "muddy" instead.
 
 ![Full Transformer architecture](diagrams/ch01-transformer-full.svg)
+<!-- figure: Full Transformer architecture -->
 
 > [!TIP]
 > **High-Resolution Diagram:** For a full-page version of this architecture and other technical matrices, see [Appendix E](appendix-e-diagrams.md#chapter-1-the-transformer-architecture). The high-resolution file is also available in the companion repository: 
@@ -173,6 +179,7 @@ Self-attention compares every token to every other token. For a sequence of leng
 LLMs are general-purpose text processors. They handle a wide range of natural language processing tasks that previously required separate, specialized models.
 
 ![NLP task categories](./diagrams/ch04-where-llms-excel-sketch.png)
+<!-- figure: NLP task categories -->
 
 | Task | Description | Example |
 |:-----|:-----------|:--------|

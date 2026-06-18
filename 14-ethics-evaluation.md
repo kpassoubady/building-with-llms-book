@@ -35,6 +35,7 @@ Five distinct sources inject bias into LLM outputs. Each requires a different de
 | Selection | Evaluating only convenient test cases hides systematic issues | Testing only English inputs misses multilingual bias |
 
 ![Bias mitigation pipeline](./diagrams/ch14-bias-test-sketch.png)
+<!-- figure: Bias mitigation pipeline -->
 
 The critical insight is that bias is not a single problem with a single fix. It enters at multiple points and requires ongoing monitoring, not a one-time patch.
 
@@ -82,6 +83,7 @@ for name, response in results.items():
 ```
 
 ![Bias detection test](diagrams/ch14-bias-test.svg)
+<!-- figure: Bias detection test -->
 
 > [!TIP]
 > **High-Resolution Evaluation Harness:** For a full-page, high-resolution Production Evaluation Harness architecture, see [Appendix E](appendix-e-diagrams.md#chapter-14-production-evaluation-harness). The high-resolution file is also available in the companion repository:
@@ -190,10 +192,12 @@ Always disclose AI involvement to users. A simple disclosure reduces legal risk 
 ### The Three Modes
 
 ![Confidence-based routing: high auto-approve, medium human review, low escalate](./diagrams/ch14-human-in-loop-sketch.png)
+<!-- figure: Confidence-based routing: high auto-approve, medium human review, low escalate -->
 
 The diagram routes queries by confidence level through auto-approve, human-review, and escalation paths; the sketch below labels the same three paths as recommend, augment, and automate modes annotated with their risk levels.
 
 ![Recommend, augment, and automate modes with risk level annotations](diagrams/ch14-human-in-loop.svg)
+<!-- figure: Recommend, augment, and automate modes with risk level annotations -->
 
 **Recommendation mode** is when the AI suggests, and the human decides. The LLM generates options, ranks candidates, or provides analysis, but a human makes the final call. Use this for medium-risk decisions where speed matters but mistakes are costly.
 
@@ -319,6 +323,7 @@ Use a stronger model as judge (GPT-4o judging GPT-4o-mini outputs). If you use t
 ### The Complete Evaluation Pipeline
 
 ![Evaluation harness: golden dataset through multi-scorer to output store and alerts](./diagrams/ch14-eval-harness-sketch.png)
+<!-- figure: Evaluation harness: golden dataset through multi-scorer to output store and alerts -->
 
 The diagram breaks the evaluation harness into four stages from golden dataset through scoring to report; the sketch further below shows the complete pipeline with a drift monitor and report generator layered in.
 
@@ -333,6 +338,7 @@ A production evaluation harness combines keyword scoring, LLM-as-judge, and bias
 7. Generate a report with pass rate, average score, and flagged regressions
 
 ![Complete evaluation pipeline with drift monitor and report generator](diagrams/ch14-eval-harness.svg)
+<!-- figure: Complete evaluation pipeline with drift monitor and report generator -->
 
 The capstone project in Appendix B applies this evaluation pipeline to a real application, giving you hands-on practice building and running an evaluation harness end to end.
 

@@ -104,10 +104,12 @@ Use `"mini"` for experimentation and development. Use `"default"` when you need 
 Every LLM API call follows the same pattern: you send a model name, a list of messages, and optional parameters. The model processes your input and returns a response. The entire exchange is stateless. The model does not remember previous calls.
 
 ![API request and response flow](./diagrams/ch03-api-anatomy-sketch.png)
+<!-- figure: API request and response flow -->
 
 The diagram shows the round trip between your application and the API; the sketch below breaks down the anatomy of a single request into its core components.
 
 ![Anatomy of an API call](diagrams/ch03-api-anatomy.svg)
+<!-- figure: Anatomy of an API call -->
 
 Here is the simplest possible call:
 
@@ -132,6 +134,7 @@ print(response)
 Five lines. That is all it takes to query one of the most capable language models ever built. Now let's understand what each part does.
 
 ![OpenAI API sequence diagram](./diagrams/ch03-three-roles-sketch.png)
+<!-- figure: OpenAI API sequence diagram -->
 
 ### The `model` Parameter
 
@@ -243,6 +246,7 @@ def logged_call(messages, tier="mini", **kwargs):
 The message role system is the grammar of LLM conversations. Every message has one of three roles, and understanding when to use each one is the difference between a mediocre prompt and a production-quality one.
 
 ![The three message roles](diagrams/ch03-three-roles.svg)
+<!-- figure: The three message roles -->
 
 | Role | Purpose | When to Use |
 |:-----|:--------|:------------|

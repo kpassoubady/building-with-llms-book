@@ -35,6 +35,7 @@ In this chapter, you will learn how to calculate, optimize, and control the cost
 Output tokens cost 3 to 5 times more than input tokens across every major provider. A prompt that asks for a "detailed explanation with examples" generates far more output tokens than one that asks for a "one-sentence summary." Being explicit about response length in every production prompt is one of the simplest cost optimizations you can make.
 
 ![Token cost breakdown](diagrams/ch13-token-cost-sketch.svg)
+<!-- figure: Token cost breakdown -->
 
 > [!WARNING]
 > **Output tokens cost 3-5x more than input tokens.** A prompt that asks for a "detailed explanation" costs much more than one that asks for a "2-sentence summary." Be explicit about response length in every production prompt.
@@ -78,6 +79,7 @@ The same workloads on GPT-4o-mini cost roughly 15 times less. For many tasks, th
 Five strategies cover the vast majority of cost optimization opportunities. Apply them in order of impact.
 
 ![Cost optimization strategy map](./diagrams/ch13-cost-decision-tree-sketch.png)
+<!-- figure: Cost optimization strategy map -->
 
 ### Strategy 1: Model Tiering
 
@@ -156,6 +158,7 @@ One call with a longer prompt is cheaper than multiple calls with short prompts 
 | Caching | 30-50% | Medium (infrastructure) | Stale responses possible |
 
 ![Cost optimization decision tree](diagrams/ch13-cost-decision-tree.svg)
+<!-- figure: Cost optimization decision tree -->
 
 > [!TIP]
 > **High-Resolution Decision Tree:** For a full-page, high-resolution Cost Optimization Decision Tree, see [Appendix E](appendix-e-diagrams.md#chapter-13-cost-optimization-decision-tree). The high-resolution file is also available in the companion repository:
@@ -318,10 +321,12 @@ def completion_with_retry(messages, max_retries=3, base_delay=1.0):
 ```
 
 ![API call retry loop: success exits, 429/500 waits 2^n seconds before retry](./diagrams/ch13-retry-backoff-sketch.png)
+<!-- figure: API call retry loop: success exits, 429/500 waits 2^n seconds before retry -->
 
 The diagram shows the retry decision loop with exponential wait times and a max-retries exit; the sketch below lays out the same attempts on a timeline with 1s, 2s, and 4s wait labels between each retry.
 
 ![Three retry attempts with wait 1s, 2s, 4s annotated on timeline](diagrams/ch13-retry-backoff.svg)
+<!-- figure: Three retry attempts with wait 1s, 2s, 4s annotated on timeline -->
 
 ### Jitter
 
