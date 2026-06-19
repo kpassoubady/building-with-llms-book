@@ -63,8 +63,7 @@ Result: Concise, consistent, actionable. Ship it.
 
 Each version fixed exactly one problem. The developer did not rewrite the entire prompt at each step. She identified the failure, added the minimum fix, and tested again.
 
-> [!TIP]
-> **Cross-Reference:** The 4 building blocks from [Chapter 5](05-prompt-fundamentals.md) and the techniques from [Chapter 6](06-prompting-techniques.md) are the tools you use during the "Refine" step. If your output format is inconsistent, add an Output Format block. If zero-shot is not reliable enough, add few-shot examples.
+The 4 building blocks from [Chapter 5](05-prompt-fundamentals.md) and the techniques from [Chapter 6](06-prompting-techniques.md) are the tools you use during the "Refine" step. If your output format is inconsistent, add an Output Format block. If zero-shot is not reliable enough, add few-shot examples.
 
 ## Building a Golden Dataset
 
@@ -73,9 +72,8 @@ Each version fixed exactly one problem. The developer did not rewrite the entire
 ![Golden dataset concept](diagrams/ch08-golden-dataset.svg)
 <!-- figure: Golden dataset concept -->
 
-> [!TIP]
-> **High-Resolution Pipeline:** For a full-page version of the complete Evaluation Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-8-evaluation-pipeline). The high-resolution file is also available in the companion repository:
-> - [ch08-eval-pipeline.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch08-eval-pipeline.png)
+**High-Resolution Pipeline:** For a full-page version of the complete Evaluation Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-8-evaluation-pipeline). The high-resolution file is also available in the companion repository:
+- [ch08-eval-pipeline.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch08-eval-pipeline.png)
 
 ### What Makes a Good Golden Dataset
 
@@ -221,6 +219,9 @@ Criteria:
     return json.loads(response)
 ```
 
+> [!TIP]
+> **Robust JSON Parsing:** LLMs often wrap JSON outputs in markdown code blocks (e.g., \`\`\`json ... \`\`\`), which will cause `json.loads()` to throw an error. For production robustness, either use the provider's Structured Outputs API ("JSON mode") or add a quick string cleanup before parsing: `response.replace("\`\`\`json", "").replace("\`\`\`", "").strip()`.
+
 The LLM-as-judge pattern uses a strong model (like GPT-4o) to evaluate the output of any model, including itself. The judge prompt includes the original prompt, the output to evaluate, and a scoring rubric.
 
 ### Evaluation Methods Comparison
@@ -363,10 +364,16 @@ A realistic accuracy target depends on the task:
 | Summarization (manual rubric score) | 4.0/5.0 average |
 | Code generation | Manual review required |
 
-> [!TIP]
-> **Cross-Reference:** For building a full automated evaluation harness in production, see [Chapter 14](14-ethics-evaluation.md): Ethics, Evaluation & Responsible AI. For the capstone project that applies this iteration loop end-to-end, see Appendix B.
+For building a full automated evaluation harness in production, see [Chapter 14](14-ethics-evaluation.md): Ethics, Evaluation & Responsible AI. For the capstone project that applies this iteration loop end-to-end, see Appendix B.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for prompt iteration and LLM-as-judge scoring:
+
+- [building-with-llms-companion/exercises/ch08/refactor_assistant](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/refactor_assistant)
+- [building-with-llms-companion/exercises/ch08/email_drafter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/email_drafter)
+- [building-with-llms-companion/exercises/ch08/eval_harness](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/eval_harness)
+- [building-with-llms-companion/exercises/ch08/llm_judge](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/llm_judge)
 
 ### Exercise 1: Build a Golden Dataset
 
@@ -405,12 +412,7 @@ for test in GOLDEN_DATASET:
 print(f"\nAccuracy: {correct}/{len(GOLDEN_DATASET)}")
 ```
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for prompt iteration and LLM-as-judge scoring.
-> - [building-with-llms-companion/exercises/ch08/refactor_assistant](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/refactor_assistant)
-> - [building-with-llms-companion/exercises/ch08/email_drafter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/email_drafter)
-> - [building-with-llms-companion/exercises/ch08/eval_harness](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/eval_harness)
-> - [building-with-llms-companion/exercises/ch08/llm_judge](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch08/llm_judge)
+
 
 ## 📋 Chapter Summary
 
@@ -459,10 +461,10 @@ print(f"\nAccuracy: {correct}/{len(GOLDEN_DATASET)}")
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **10**: Ten diverse inputs covering happy paths, edge cases, and adversarial inputs is the minimum viable test set. Fewer than 10 gives false confidence because you miss failure modes that only appear with varied input.
-2. **False**: The LLM-as-judge pattern uses a strong model (e.g., GPT-4o) to evaluate the output of any model. Using the same model to judge its own output introduces bias. A stronger or different model provides more objective scoring.
-3. **golden**: A golden dataset contains manually verified input/expected-output pairs. It serves as a regression test suite for your prompts, growing over time as you add failure cases.
-4. **When accuracy plateaus between versions**: If version N and version N+1 score the same on your golden dataset, further iterations are unlikely to help. Ship the current version and monitor for new failure patterns in production.
-5. **Two next steps: (1) Analyze the 8% failures for patterns.** Are they all the same type of failure (e.g., ambiguous inputs, edge cases)? Fix the most common pattern. **(2) Add more edge-case examples** to the golden dataset and to the few-shot examples in the prompt. The failures often cluster around a specific input pattern that the prompt does not handle.
+1. **Answer**: 10. Ten diverse inputs covering happy paths, edge cases, and adversarial inputs is the minimum viable test set. Fewer than 10 gives false confidence because you miss failure modes that only appear with varied input.
+2. **Answer**: False. The LLM-as-judge pattern uses a strong model (e.g., GPT-4o) to evaluate the output of any model. Using the same model to judge its own output introduces bias. A stronger or different model provides more objective scoring.
+3. **Answer**: golden. A golden dataset contains manually verified input/expected-output pairs. It serves as a regression test suite for your prompts, growing over time as you add failure cases.
+4. **Answer**: When accuracy plateaus between versions. If version N and version N+1 score the same on your golden dataset, further iterations are unlikely to help. Ship the current version and monitor for new failure patterns in production.
+5. **Answer**: Two next steps: (1) Analyze the 8% failures for patterns. Are they all the same type of failure (e.g., ambiguous inputs, edge cases)? Fix the most common pattern. (2) Add more edge-case examples to the golden dataset and to the few-shot examples in the prompt. The failures often cluster around a specific input pattern that the prompt does not handle.
 
 </details>

@@ -86,8 +86,7 @@ At 0.2, the output is polished but predictable. At 0.7, it is creative and coher
 > [!TIP]
 > **Start with temperature=0 for code and classification tasks.** You want deterministic, reproducible output. Only increase temperature when you explicitly want variety (brainstorming, creative writing, generating alternatives).
 
-> [!TIP]
-> **Cross-Reference:** To see how these parameters are structured in a full API response alongside token usage statistics, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
+To see how these parameters are structured in a full API response alongside token usage statistics, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
 
 ## top_p: Nucleus Sampling
 
@@ -206,8 +205,7 @@ elif reason == "stop":
 
 Always check `finish_reason` in production. Truncated JSON breaks your parser. Truncated code breaks your compiler. Truncated summaries miss key points.
 
-> [!TIP]
-> **Cross-Reference:** Setting max_tokens too low is a common source of truncated JSON responses. For cost implications of setting max_tokens too high, see [Chapter 13](13-cost-optimization.md): Cost Optimization.
+Setting max_tokens too low is a common source of truncated JSON responses. For cost implications of setting max_tokens too high, see [Chapter 13](13-cost-optimization.md): Cost Optimization.
 
 ## Stop Sequences
 
@@ -255,6 +253,9 @@ print(response.choices[0].message.content)
 ```
 
 The model generates items 1 through 5 and stops cleanly before it can write item 6.
+
+> [!TIP]
+> **Developer Gotcha:** The stop string itself is **NOT** included in the returned output. If you use a stop sequence like `\ndef ` to stop after a function finishes, your code will need to manually prepend `\ndef ` back to the stream if you intend to parse a valid Python file containing the subsequent function.
 
 ## Seed for Reproducibility
 
@@ -381,6 +382,12 @@ The sketch acts as a control panel for tuning the model; the overview diagram be
 
 ## 🧪 Try It Yourself
 
+The companion repository contains full exercises, starter code, and solutions for adjusting temperature, implementing streaming, and exploring API parameters:
+
+- [building-with-llms-companion/exercises/ch07/temperature_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/temperature_lab)
+- [building-with-llms-companion/exercises/ch07/streaming_chat](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/streaming_chat)
+- [building-with-llms-companion/exercises/ch07/parameter_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/parameter_explorer)
+
 ### Exercise 1: Temperature Comparison
 
 Run the same creative prompt at three different temperatures and compare the results. Which temperature produces the best balance of creativity and coherence?
@@ -410,11 +417,7 @@ for temp in [0.2, 0.7, 1.2]:
 
 Generate a numbered list that stops cleanly at exactly 5 items. Use a stop sequence to prevent the model from generating item 6.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for adjusting temperature, implementing streaming, and exploring API parameters.
-> - [building-with-llms-companion/exercises/ch07/temperature_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/temperature_lab)
-> - [building-with-llms-companion/exercises/ch07/streaming_chat](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/streaming_chat)
-> - [building-with-llms-companion/exercises/ch07/parameter_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch07/parameter_explorer)
+
 
 ## 📋 Chapter Summary
 
@@ -452,10 +455,10 @@ Generate a numbered list that stops cleanly at exactly 5 items. Use a stop seque
 4. **Multiple Choice:** Why use streaming for user-facing applications?
 
     ::: {.mcq-2col}
-    - [ ] It produces more accurate output
-    - [ ] It reduces API costs
-    - [ ] It improves perceived response speed
-    - [ ] It enables larger context windows
+    - [ ] For more accurate output
+    - [ ] To reduce API costs
+    - [ ] For faster perceived response speed
+    - [ ] For larger context windows
     :::
 
 5. **Scenario:** Your JSON responses are sometimes truncated mid-object, causing `json.loads()` to fail. What parameter should you increase, and what field should you check to detect this problem?
@@ -463,10 +466,10 @@ Generate a numbered list that stops cleanly at exactly 5 items. Use a stop seque
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Deterministic output**: Temperature 0 always picks the most probable next token, producing the same output for the same input every time. Higher temperatures introduce randomness.
-2. **False**: `max_tokens` sets a hard upper limit. The model may stop earlier if it completes its response naturally. It only guarantees the response will not exceed that many tokens.
-3. **frequency**: The `frequency_penalty` parameter penalizes tokens proportional to how often they have appeared, reducing word-level repetition. The `presence_penalty` encourages new topics instead.
-4. **It improves perceived response speed**: Streaming delivers the first token in about 200ms instead of waiting for the full response. Total generation time is the same, but users perceive the response as faster because text appears immediately.
-5. **Increase `max_tokens`** to give the model enough room to complete the JSON object. **Check `finish_reason`**: if it equals `"length"`, the response was truncated by the token limit. If it equals `"stop"`, the response completed naturally.
+1. **Answer**: Deterministic output. Temperature 0 always picks the most probable next token, producing the same output for the same input every time. Higher temperatures introduce randomness.
+2. **Answer**: False. `max_tokens` sets a hard upper limit. The model may stop earlier if it completes its response naturally. It only guarantees the response will not exceed that many tokens.
+3. **Answer**: frequency. The `frequency_penalty` parameter penalizes tokens proportional to how often they have appeared, reducing word-level repetition. The `presence_penalty` encourages new topics instead.
+4. **Answer**: For faster perceived response speed. Streaming delivers the first token in about 200ms instead of waiting for the full response. Total generation time is the same, but users perceive the response as faster because text appears immediately.
+5. **Answer**: Increase `max_tokens` to give the model enough room to complete the JSON object. Check `finish_reason`: if it equals `"length"`, the response was truncated by the token limit. If it equals `"stop"`, the response completed naturally.
 
 </details>

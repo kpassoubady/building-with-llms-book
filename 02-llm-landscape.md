@@ -114,10 +114,13 @@ Scenario 2: **Legal Document Analyzer.** A law firm needs to review 200-page con
 Scenario 3: **Coding Assistant.** Your team wants an LLM that reviews pull requests and suggests improvements. Code quality and reasoning matter. Pick Claude 3.5 Sonnet or GPT-4o. Both lead the HumanEval benchmark. Start with GPT-4o-mini during development to save costs, then switch to the full model for production.
 
 > [!TIP]
-> **Cross-Reference:** For a detailed breakdown of which tasks each model handles best, see [Chapter 4](04-capabilities-limitations.md): Model Capabilities & Limitations. For advanced strategies to minimize your monthly API bill, see [Chapter 13](13-cost-optimization.md): Cost, Latency & Error Handling.
+> **Developer Gotcha:** When comparing models, do not just look at price and quality; look at rate limits. Free tiers (like Gemini Flash's free API) often have strict Requests Per Minute (RPM) limits that you will quickly hit during testing. Always design your code with exponential backoff (see [Chapter 13](13-cost-optimization.md)) regardless of the model you choose.
+
+For a detailed breakdown of which tasks each model handles best, see [Chapter 4](04-capabilities-limitations.md): Model Capabilities & Limitations. For advanced strategies to minimize your monthly API bill, see [Chapter 13](13-cost-optimization.md): Cost, Latency & Error Handling.
 
 > [!NOTE]
 > **Start cheap, scale up.** Begin every project with the cheapest model that might work (GPT-4o-mini or Gemini Flash). Only upgrade to a larger model when you hit a quality ceiling. Most tasks do not need the most powerful model.
+
 
 ## Open Source vs Closed Source
 
@@ -173,8 +176,7 @@ The top two or three models on any benchmark are usually within a few percentage
 
 Benchmarks also have a contamination problem. Models trained on internet data may have seen benchmark questions during pre-training, inflating their scores. Newer benchmarks like GPQA attempt to mitigate this with graduate-level questions that are less likely to appear in training data.
 
-> [!TIP]
-> **Cross-Reference:** For techniques to build your own evaluation harness, see [Chapter 8](08-iteration-evaluation.md): Iteration & Evaluation.
+For techniques to build your own evaluation harness, see [Chapter 8](08-iteration-evaluation.md): Iteration & Evaluation.
 
 ## Decoding Model Names
 
@@ -198,8 +200,7 @@ The naming conventions differ by provider. OpenAI uses suffixes like "Low Thinki
 > [!TIP]
 > **Practical Rule:** Start with the cheapest model that might work. Add a "Thinking" variant only if you hit reasoning failures. Move to "Fast" only if latency is a measured problem. Most applications never need "Max" or "High."
 
-> [!NOTE]
-> **Deep Dive:** For a detailed breakdown of every provider's naming scheme with examples and a decision flowchart, see [Model Naming Guide](https://github.com/kpassoubady/building-with-llms-companion/blob/main/references/model-naming-guide.md) in the companion repository.
+**Deep Dive:** For a detailed breakdown of every provider's naming scheme with examples and a decision flowchart, see [Model Naming Guide](https://github.com/kpassoubady/building-with-llms-companion/blob/main/references/model-naming-guide.md) in the companion repository.
 
 ## Key Terminology Quick Reference
 
@@ -218,6 +219,11 @@ These terms appear throughout the book. Bookmark this table for reference.
 | **Quantization** | Compressing model weights to use less memory (e.g., 4-bit), enabling larger models on smaller hardware |
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for calculating API costs and selecting the right model for specific use cases:
+
+- [building-with-llms-companion/exercises/ch02/cost_calculator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/cost_calculator)
+- [building-with-llms-companion/exercises/ch02/model_selector](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/model_selector)
 
 ### Exercise 1: Cost Comparison Calculator
 
@@ -251,10 +257,7 @@ For each scenario below, pick the best model and justify your choice:
 2. A healthcare company must analyze patient records that cannot leave their private cloud.
 3. A publisher wants to summarize 300-page manuscripts into 2-page synopses.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for calculating API costs and selecting the right model for specific use cases.
-> - [building-with-llms-companion/exercises/ch02/cost_calculator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/cost_calculator)
-> - [building-with-llms-companion/exercises/ch02/model_selector](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch02/model_selector)
+
 
 ## 📋 Chapter Summary
 
@@ -303,10 +306,10 @@ For each scenario below, pick the best model and justify your choice:
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Google Gemini 2.5 Pro (1M)** - at 1 million tokens, Gemini 2.5 Pro supports roughly 3,000 pages of text in a single request, far exceeding other options.
-2. **False** - open-source models require GPU infrastructure (purchase or rental). For low-volume workloads, a pay-per-token API can be cheaper than maintaining dedicated GPU servers.
-3. **Quantization** - quantization reduces model size and memory requirements, enabling larger models to run on consumer-grade hardware at the cost of some precision.
-4. **GPT-4o-mini** - for a simple classification task, GPT-4o-mini provides sufficient quality at $0.15 per million input tokens, roughly 17x cheaper than GPT-4o.
-5. **A self-hosted open-source model** (Llama 3.1 or Mistral). The data stays on your infrastructure, satisfying the privacy requirement. The main tradeoff is that you need GPU infrastructure and the model quality may be slightly lower than the top closed-source alternatives for the same parameter count.
+1. **Answer**: Google Gemini 2.5 Pro (1M). At 1 million tokens, Gemini 2.5 Pro supports roughly 3,000 pages of text in a single request, far exceeding other options.
+2. **Answer**: False. Open-source models require GPU infrastructure (purchase or rental). For low-volume workloads, a pay-per-token API can be cheaper than maintaining dedicated GPU servers.
+3. **Answer**: Quantization. Quantization reduces model size and memory requirements, enabling larger models to run on consumer-grade hardware at the cost of some precision.
+4. **Answer**: GPT-4o-mini. For a simple classification task, GPT-4o-mini provides sufficient quality at $0.15 per million input tokens, roughly 17x cheaper than GPT-4o.
+5. **Answer**: A self-hosted open-source model (Llama 3.1 or Mistral). The data stays on your infrastructure, satisfying the privacy requirement. The main tradeoff is that you need GPU infrastructure and the model quality may be slightly lower than the top closed-source alternatives for the same parameter count.
 
 </details>

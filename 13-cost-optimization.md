@@ -71,8 +71,7 @@ def estimate_cost(messages, response, model="gpt-4o"):
 
 The same workloads on GPT-4o-mini cost roughly 15 times less. For many tasks, the quality difference is negligible.
 
-> [!TIP]
-> **Cross-Reference:** For model capabilities and when quality differences matter, see [Chapter 2](02-llm-landscape.md): The LLM Landscape. Not every task needs the most powerful model.
+For model capabilities and when quality differences matter, see [Chapter 2](02-llm-landscape.md): The LLM Landscape. Not every task needs the most powerful model.
 
 ## Cost Optimization Strategies
 
@@ -97,7 +96,7 @@ def choose_model(task_complexity):
 
 ### Strategy 2: Prompt Optimization
 
-Every unnecessary word in your prompt is a token you pay for. Verbose prompts are not just bad style; they are expensive.
+Every unnecessary word in your prompt is a token you pay for. Verbose prompts are poor style and expensive.
 
 **Verbose prompt: ~85 tokens**
 ```prompt
@@ -160,9 +159,8 @@ One call with a longer prompt is cheaper than multiple calls with short prompts 
 ![Cost optimization decision tree](diagrams/ch13-cost-decision-tree.svg)
 <!-- figure: Cost optimization decision tree -->
 
-> [!TIP]
-> **High-Resolution Decision Tree:** For a full-page, high-resolution Cost Optimization Decision Tree, see [Appendix E](appendix-e-diagrams.md#chapter-13-cost-optimization-decision-tree). The high-resolution file is also available in the companion repository:
-> - [ch13-cost-decision-tree.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch13-cost-decision-tree.png)
+**High-Resolution Decision Tree:** For a full-page, high-resolution Cost Optimization Decision Tree, see [Appendix E](appendix-e-diagrams.md#chapter-13-cost-optimization-decision-tree). The high-resolution file is also available in the companion repository:
+- [ch13-cost-decision-tree.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch13-cost-decision-tree.png)
 
 ## Implementing a Semantic Cache
 
@@ -205,8 +203,10 @@ Hash-based caching only matches identical queries.
 
 The approach: embed the incoming query, compare it to cached query embeddings using cosine similarity, and return the cached response if similarity exceeds a threshold (typically 0.92 to 0.95).
 
+For a detailed explanation of embeddings and cosine similarity, see [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases. The same techniques that power RAG retrieval power semantic caching.
+
 > [!TIP]
-> **Cross-Reference:** For a detailed explanation of embeddings and cosine similarity, see [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases. The same techniques that power RAG retrieval power semantic caching.
+> **Semantic Cache Gotcha:** Sentences with opposite intents (e.g., "How do I start the server?" vs. "How do I stop the server?") can sometimes have highly similar embeddings because they share so much context. If your semantic cache serves the wrong answer, you may need to add a lightweight intent classification step or keyword filter before relying solely on the embedding similarity.
 
 ### Cache Invalidation
 
@@ -275,8 +275,7 @@ async def parallel_queries(queries):
 | Caching | Skip the API call entirely | 100% (cache hit) | 100% (cache hit) |
 | Shorter prompts | Fewer tokens to process | 10-20% | 10-20% |
 
-> [!TIP]
-> **Cross-Reference:** For streaming implementation details and the `stream` parameter, see [Chapter 7](07-api-parameters.md): API Parameters & Output Control.
+For streaming implementation details and the `stream` parameter, see [Chapter 7](07-api-parameters.md): API Parameters & Output Control.
 
 ## Error Handling and Retry Logic
 
@@ -428,6 +427,10 @@ Provider dashboards (OpenAI's Usage page, Google Cloud Billing) give you aggrega
 
 ## 🧪 Try It Yourself
 
+The companion repository contains full exercises, starter code, and solutions for implementing semantic caching and robust retry logic:
+
+- [building-with-llms-companion/exercises/ch13/caching_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch13/caching_lab)
+
 ### Exercise 1: Calculate Your Costs
 
 Use the `estimate_cost` function to calculate the cost of 10 different prompts (varying lengths) with both GPT-4o and GPT-4o-mini. Create a comparison table showing the price difference.
@@ -440,9 +443,7 @@ Add the `ResponseCache` class to a simple chatbot. Ask the same question three t
 
 Wrap `get_completion` with the `completion_with_retry` function. Simulate failures by raising `RateLimitError` on the first two attempts. Verify that the third attempt succeeds and the delays increase.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for implementing semantic caching and robust retry logic.
-> - [building-with-llms-companion/exercises/ch13/caching_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch13/caching_lab)
+
 
 ## 📋 Chapter Summary
 
@@ -490,10 +491,14 @@ Wrap `get_completion` with the `completion_with_retry` function. Simulate failur
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Answer**: (b) Output tokens. Output tokens cost 3-5x more than input tokens across all major providers. This is because generation (producing tokens one at a time) is more compute-intensive than encoding (processing the full input in parallel).
-2. **True/False**: True. Exponential backoff doubles the wait: 1s, 2s, 4s, 8s. Adding random jitter (a small random delay) prevents the thundering herd problem where many clients retry simultaneously.
+1. **Answer**: Output tokens. Output tokens cost 3-5x more than input tokens across all major providers. This is because generation (producing tokens one at a time) is more compute-intensive than encoding (processing the full input in parallel).
+
+2. **Answer**: True. Exponential backoff doubles the wait: 1s, 2s, 4s, 8s. Adding random jitter (a small random delay) prevents the thundering herd problem where many clients retry simultaneously.
+
 3. **Answer**: Semantic cache. Unlike exact-match caching, semantic caching uses embeddings to match queries with similar meaning, catching paraphrased duplicates that hash-based caching would miss.
-4. **Answer**: (b) Rate limit exceeded. HTTP 429 means you have sent too many requests in a given time window. The correct response is to retry with exponential backoff, not to immediately resend the request.
-5. **Answer**: ~$175 per day ($500 x 0.35 = $175). Monthly savings: ~$5,250 ($175 x 30). Over a year, that is $63,000 saved by a caching layer that takes a few hours to implement. Cross-reference [Chapter 10](10-embeddings-vector-databases.md) for the embeddings that power semantic caching.
+
+4. **Answer**: Rate limit exceeded. HTTP 429 means you have sent too many requests in a given time window. The correct response is to retry with exponential backoff, not to immediately resend the request.
+
+5. **Answer**: ~$175 per day ($500 x 0.35 = $175). Monthly savings: ~$5,250 ($175 x 30). Over a year, that is $63,000 saved by a caching layer that takes a few hours to implement. See [Chapter 10](10-embeddings-vector-databases.md) for the embeddings that power semantic caching.
 
 </details>

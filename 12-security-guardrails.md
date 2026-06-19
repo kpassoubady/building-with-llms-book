@@ -24,7 +24,7 @@ The most common security mistake in LLM applications is also the most preventabl
 
 ### The Golden Rules
 
-Four rules govern API key management. Follow all four, not just the convenient ones.
+Four rules govern API key management. Follow all four, rather than only the convenient ones.
 
 1. Never hardcode keys in source code
 2. Never commit keys to version control
@@ -119,7 +119,6 @@ No single defense stops all prompt injection attacks.
 
 Your system prompt is your first line of defense. Write it to anticipate manipulation:
 
-> [!PROMPT]
 > You are a customer service assistant for Acme Corp.
 >
 > **CRITICAL RULES:**
@@ -133,11 +132,10 @@ Your system prompt is your first line of defense. Write it to anticipate manipul
 > If you are unsure whether a request is appropriate, err on the side of
 > caution and politely redirect to Acme Corp topics.
 
-> [!TIP]
-> **Cross-Reference:** For more on writing effective system messages, see [Chapter 5](05-prompt-fundamentals.md): Prompt Fundamentals. A well-structured system message is your first line of defense against injection.
+For more on writing effective system messages, see [Chapter 5](05-prompt-fundamentals.md): Prompt Fundamentals. A well-structured system message is your first line of defense against injection.
 
 > [!NOTE]
-> **Cross-Reference:** For a step-by-step guide to setting up your `.env` file and keeping your API keys out of source code, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
+> For a step-by-step guide to setting up your `.env` file and keeping your API keys out of source code, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
 
 ### Layer 2: Input Filtering
 
@@ -159,13 +157,13 @@ def check_injection(user_input):
     return False, None
 ```
 
-Input filtering is not foolproof. Creative attackers rephrase their attempts to dodge keyword lists. A user might write "disregard the above directives" instead of "ignore previous instructions," and the pattern list would miss it. But keyword filtering catches the low-effort attacks that account for the majority of real-world injection attempts. It is the first ring of defense, not the last.
+Input filtering is not foolproof. Creative attackers rephrase their attempts to dodge keyword lists. A user might write "disregard the above directives" instead of "ignore previous instructions," and the pattern list would miss it. **Obfuscation and encoding attacks** are another common vector that catches developers off guard: attackers may pass Base64 encoded instructions or use foreign languages to bypass English-only keyword filters. But keyword filtering catches the low-effort attacks that account for the majority of real-world injection attempts. It is the first ring of defense, not the last.
 
 For stronger input filtering, consider classification-based approaches: train a lightweight classifier (or use an LLM with a dedicated prompt) to score user input as "normal" or "potentially adversarial." This catches rephrased attacks that keyword lists miss.
 
 ### Layer 3: The Sandwich Defense
 
-**Sandwich defense** places your instructions around the user input, not just before it. By repeating rules after the user's message, you remind the model to stay in role:
+**Sandwich defense** places your instructions around the user input, rather than only before it. By repeating rules after the user's message, you remind the model to stay in role:
 
 ```python
 messages = [
@@ -200,10 +198,8 @@ def filter_output(response):
 
 ### The Complete Defense Pipeline
 
-![Defense-in-depth security rings](diagrams/ch12-defense-rings.svg)
-<!-- IMAGE: A single odd key (a tangled string shape) cracking a padlock, with three small shields behind it showing strain. Conveys one adversarial input bypassing multiple models. -->
-<img src="diagrams/ch12-defense-rings.svg" alt="Defense-in-depth security rings" style="float:right; margin-left:20px; width:650px;  border-radius:8px;" />
-<!-- END IMAGE -->
+![Defense-in-depth security rings](diagrams/ch12-defense-rings.png)
+<!-- figure: Defense-in-depth security rings -->
 
 
 In production, combine all four layers. Each layer catches what the previous one missed:
@@ -356,10 +352,13 @@ In production, moderate both directions. Check user input before sending it to t
 | Post-LLM (output) | Harmful generated content, hallucinated toxic text | 1 moderation call per response |
 | Document ingestion | Toxic content in RAG knowledge base | 1 call per document chunk |
 
-> [!TIP]
-> **Cross-Reference:** For cost implications of adding moderation API calls to every request, see [Chapter 13](13-cost-optimization.md): Cost, Latency & Error Handling. Moderation calls are inexpensive but add up at scale.
+For cost implications of adding moderation API calls to every request, see [Chapter 13](13-cost-optimization.md): Cost, Latency & Error Handling. Moderation calls are inexpensive but add up at scale.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for building a multi-layered moderation system to defend against prompt injection:
+
+- [building-with-llms-companion/exercises/ch12/moderation_layer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch12/moderation_layer)
 
 ### Exercise 1: Test an Input Filter
 
@@ -373,9 +372,7 @@ Extend the `redact_pii` function to detect physical addresses (e.g., "123 Main S
 
 Combine input filtering, the sandwich defense, and output filtering into a single `secure_completion` function that wraps `get_completion` from `shared/llm_client.py`.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building a multi-layered moderation system to defend against prompt injection.
-> - [building-with-llms-companion/exercises/ch12/moderation_layer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch12/moderation_layer)
+
 
 ## 📋 Chapter Summary
 
@@ -387,7 +384,7 @@ Combine input filtering, the sandwich defense, and output filtering into a singl
 
 > [!PITFALLS]
 > - Relying on a single defense layer (a strong system prompt alone is not enough)
-> - Forgetting to filter LLM output (injection can manifest in responses, not just inputs)
+> - Forgetting to filter LLM output (injection can manifest in responses, rather than inputs alone)
 > - Sending PII to external APIs without scrubbing (GDPR fines are real)
 
 ## 🧠 Knowledge Check
@@ -424,14 +421,14 @@ Combine input filtering, the sandwich defense, and output filtering into a singl
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) User input that hijacks the LLM's system instructions.** Prompt injection exploits the LLM's inability to distinguish system instructions from user-provided text.
+1. **Answer**: User input that hijacks the LLM's system instructions. Prompt injection exploits the LLM's inability to distinguish system instructions from user-provided text.
 
-2. **Partially true.** Environment variables are better than hardcoded keys, but for production systems, a secrets manager (AWS Secrets Manager, HashiCorp Vault) provides rotation, auditing, and access control.
+2. **Answer**: Partially true. Environment variables are better than hardcoded keys, but for production systems, a secrets manager (AWS Secrets Manager, HashiCorp Vault) provides rotation, auditing, and access control.
 
-3. **Indirect prompt** injection. The attacker does not interact with the LLM directly; the malicious payload travels through the retrieval pipeline.
+3. **Answer**: Indirect prompt. The attacker does not interact with the LLM directly; the malicious payload travels through the retrieval pipeline.
 
-4. **(c) Defense in depth with multiple layers.** No single defense is foolproof. Layering input filtering, system prompt hardening, sandwich defense, and output filtering provides the strongest protection.
+4. **Answer**: Defense in depth with multiple layers. No single defense is foolproof. Layering input filtering, system prompt hardening, sandwich defense, and output filtering provides the strongest protection.
 
-5. **Output content moderation** (check the LLM's response for harmful content before displaying it) and **document-level content filtering** (scan documents for harmful or malicious content during ingestion, before they enter the vector store). Cross-reference [Chapter 11](11-rag-architecture.md) for RAG ingestion pipeline design.
+5. **Answer**: Output content moderation (check the LLM's response for harmful content before displaying it) and document-level content filtering (scan documents for harmful or malicious content during ingestion, before they enter the vector store). See [Chapter 11](11-rag-architecture.md) for RAG ingestion pipeline design.
 
 </details>

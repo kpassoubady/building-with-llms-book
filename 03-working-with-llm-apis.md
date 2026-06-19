@@ -131,7 +131,7 @@ print(response)
 # science, AI, and automation.
 ```
 
-Five lines. That is all it takes to query one of the most capable language models ever built. Now let's understand what each part does.
+Five lines. That is all it takes to query one of the most capable language models ever built. Now examine what each part does.
 
 ![OpenAI API sequence diagram](./diagrams/ch03-three-roles-sketch.png)
 <!-- figure: OpenAI API sequence diagram -->
@@ -164,8 +164,7 @@ response = get_completion(
 )
 ```
 
-> [!TIP]
-> **Cross-Reference:** For a deep dive into temperature, top_p, and other parameters that control output, see [Chapter 7](07-api-parameters.md): API Parameters & Output Control.
+For a deep dive into temperature, top_p, and other parameters that control output, see [Chapter 7](07-api-parameters.md): API Parameters & Output Control.
 
 ## Anatomy of an API Response
 
@@ -304,6 +303,9 @@ The model sees the full history and responds in context
 response = get_completion(messages=conversation)
 ```
 
+> [!TIP]
+> **Developer Gotcha:** While OpenAI is relatively forgiving about message order (allowing consecutive `user` messages), other providers like Anthropic strictly require the message history to alternate between `user` and `assistant`. When building multi-provider applications, always maintain strict alternating roles.
+
 Each turn sends all previous messages again, which means token costs grow with conversation length. [Chapter 9](09-conversation-design.md) covers strategies for managing long conversations.
 
 > [!WARNING]
@@ -362,8 +364,7 @@ Two rules of thumb for cost management:
 1. **Develop with mini, deploy with whatever the task requires.** You do not need GPT-4o to iterate on your prompt structure. Switch to the capable tier only for final quality checks.
 2. **Log every call.** Track prompt_tokens, completion_tokens, and model name in a log file or database. This data is invaluable for optimizing costs later.
 
-> [!TIP]
-> **Cross-Reference:** For advanced cost optimization strategies including prompt caching and batching, see [Chapter 13](13-cost-optimization.md): Cost Optimization & Monitoring.
+For advanced cost optimization strategies including prompt caching and batching, see [Chapter 13](13-cost-optimization.md): Cost Optimization & Monitoring.
 
 ## Your First 5 API Calls
 
@@ -498,10 +499,14 @@ for tier in ["mini", "default"]:
     print(response.choices[0].message.content[:300])
 ```
 
-> [!TIP]
-> **Cross-Reference:** [Chapter 2](02-llm-landscape.md) covers how to choose between open and closed models, and when to upgrade from mini to default tier.
+[Chapter 2](02-llm-landscape.md) covers how to choose between open and closed models, and when to upgrade from mini to default tier.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for making basic LLM API calls and building simple CLI Q&A scripts:
+
+- [building-with-llms-companion/exercises/ch03/hello_llm](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/hello_llm)
+- [building-with-llms-companion/exercises/ch03/cli_qa](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/cli_qa)
 
 ### Exercise 1: Inspect a Full Response
 
@@ -526,10 +531,7 @@ print(f"Tokens:  {response.usage.total_tokens}")
 
 Write a 10-line script that classifies support tickets into one of four categories: BILLING, TECHNICAL, ACCOUNT, or GENERAL. Test it with at least three different ticket descriptions.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for making basic LLM API calls and building simple CLI Q&A scripts.
-> - [building-with-llms-companion/exercises/ch03/hello_llm](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/hello_llm)
-> - [building-with-llms-companion/exercises/ch03/cli_qa](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch03/cli_qa)
+
 
 ## 📋 Chapter Summary
 
@@ -578,10 +580,10 @@ Write a 10-line script that classifies support tickets into one of four categori
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **system**: the system message sets the model's persona, rules, and constraints. It is the first message in the array and influences every response.
-2. **True**: you only need the assistant role when you are building multi-turn conversations and want the model to have context from its own prior responses.
-3. **finish_reason**: the three possible values are `stop` (completed naturally), `length` ( hit the max_tokens limit), and `content_filter` (blocked by safety filters).
-4. **The number of tokens in your input messages**: `prompt_tokens` counts the tokens sent to the model (system + user + assistant messages). Output tokens are tracked separately in `completion_tokens`.
-5. **The response was truncated because it exceeded `max_tokens`.** The model was still generating when it hit the limit. Fix it by increasing `max_tokens` in your API call, or by shortening your input prompt to leave more room for the response within the context window.
+1. **Answer**: system. The system message sets the model's persona, rules, and constraints. It is the first message in the array and influences every response.
+2. **Answer**: True. You only need the assistant role when you are building multi-turn conversations and want the model to have context from its own prior responses.
+3. **Answer**: finish_reason. The three possible values are `stop` (completed naturally), `length` (hit the max_tokens limit), and `content_filter` (blocked by safety filters).
+4. **Answer**: The number of tokens in your input messages. `prompt_tokens` counts the tokens sent to the model (system + user + assistant messages). Output tokens are tracked separately in `completion_tokens`.
+5. **Answer**: The response was truncated because it exceeded `max_tokens`. The model was still generating when it hit the limit. Fix it by increasing `max_tokens` in your API call, or by shortening your input prompt to leave more room for the response within the context window.
 
 </details>
