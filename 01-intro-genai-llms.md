@@ -39,8 +39,7 @@ The path from the earliest AI systems to today's generative models spans seven d
 > [!NOTE]
 > **Did You Know?** The original Transformer paper "Attention Is All You Need" has been cited over 130,000 times, making it one of the most influential computer science papers ever written. The eight authors are now spread across multiple AI companies they helped found.
 
-> [!TIP]
-> **Cross-Reference:** Once you understand the Transformer pipeline, see [Chapter 3](03-working-with-llm-apis.md) to set up your environment and make your first API calls. For a deep dive into security and protecting your API keys, see [Chapter 12](12-security-guardrails.md).
+Once you understand the Transformer pipeline, see [Chapter 3](03-working-with-llm-apis.md) to set up your environment and make your first API calls. For a deep dive into security and protecting your API keys, see [Chapter 12](12-security-guardrails.md).
 
 ## How Transformers Work (Simplified)
 
@@ -81,6 +80,9 @@ print(f"Token IDs:   {tokens}")
 
 Tokenization matters for three practical reasons. You are billed per token, not per word. Context windows are measured in tokens. Different languages tokenize differently: a sentence in Japanese may use twice as many tokens as the same meaning expressed in English.
 
+> [!TIP]
+> **Developer Gotcha:** Tokenizers are specific to model families. `tiktoken` is OpenAI's tokenizer. If you are using Claude or Gemini, their tokenizers are different. While `tiktoken` provides a decent rough estimate, using it to calculate exact costs for non-OpenAI models will result in inaccurate counts.
+
 ![Tokenization flow from text to token IDs](./diagrams/ch01-token-pipeline-sketch.png)
 <!-- figure: Tokenization flow from text to token IDs -->
 
@@ -111,9 +113,8 @@ The word "bank" is ambiguous. Is it a financial institution or a riverbank? The 
 ![Full Transformer architecture](diagrams/ch01-transformer-full.svg)
 <!-- figure: Full Transformer architecture -->
 
-> [!TIP]
-> **High-Resolution Diagram:** For a full-page version of this architecture and other technical matrices, see [Appendix E](appendix-e-diagrams.md#chapter-1-the-transformer-architecture). The high-resolution file is also available in the companion repository: 
-> - [ch01-transformer-full.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch01-transformer-full.png)
+**High-Resolution Diagram:** For a full-page version of this architecture and other technical matrices, see [Appendix E](appendix-e-diagrams.md#chapter-1-the-transformer-architecture). The high-resolution file is also available in the companion repository: 
+- [ch01-transformer-full.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch01-transformer-full.png)
 
 > [!NOTE]
 > **Think of attention like a meeting.** In a 10-person meeting, when someone says "the budget," everyone immediately looks at the CFO. Self-attention works the same way: each token figures out which other tokens are most relevant to its meaning.
@@ -171,8 +172,7 @@ Self-attention compares every token to every other token. For a sequence of leng
 | GPT-4 | ~1.8 trillion (estimated) | A team of experts |
 | Llama 3.1 | 8B / 70B / 405B | Choose your size |
 
-> [!TIP]
-> **Cross-Reference:** For a deeper dive into choosing the right model based on context window and parameter count, see [Chapter 2](02-llm-landscape.md): The LLM Landscape.
+For a deeper dive into choosing the right model based on context window and parameter count, see [Chapter 2](02-llm-landscape.md): The LLM Landscape.
 
 ## NLP Tasks That LLMs Handle
 
@@ -207,10 +207,14 @@ Pre-training produces the base model. Fine-tuning adjusts it for a specific doma
 
 This book focuses on prompting: the most accessible and cost-effective way to get value from LLMs. You do not need to train anything. You write instructions, and the model follows them. The quality of your instructions determines the quality of the output.
 
-> [!TIP]
-> **Cross-Reference:** For your first hands-on API call, jump to [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
+For your first hands-on API call, jump to [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for exploring tokenization and building parameter intuition:
+
+- [building-with-llms-companion/exercises/ch01/tokenizer_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/tokenizer_explorer)
+- [building-with-llms-companion/exercises/ch01/parameter_intuition](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/parameter_intuition)
 
 ### Exercise 1: Count Your Tokens
 
@@ -243,10 +247,7 @@ Try tokenizing these inputs and explain why the token counts differ:
 - `"indivisibility"` (long word)
 - `"🚀🤖✨"` (emojis)
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for exploring tokenization and building parameter intuition.
-> - [building-with-llms-companion/exercises/ch01/tokenizer_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/tokenizer_explorer)
-> - [building-with-llms-companion/exercises/ch01/parameter_intuition](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch01/parameter_intuition)
+
 
 ## 📋 Chapter Summary
 
@@ -295,10 +296,10 @@ Try tokenizing these inputs and explain why the token counts differ:
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Self-attention**: self-attention lets each token attend to every other token in parallel, replacing the sequential processing of RNNs and LSTMs.
-2. **False**: smaller models often outperform larger ones on simple tasks where the extra capacity adds noise rather than value. A GPT-4o-mini can classify sentiment just as well as GPT-4o at a fraction of the cost.
-3. **Tokenization**: the tokenizer splits text into subword units and maps each to a numerical ID.
-4. **Prompting**: prompting requires no training, no infrastructure, and costs fractions of a penny per call. Pre-training costs millions.
-5. **16 million**: self-attention is O(n²), so 4,000² = 16,000,000 attention computations. This is why context windows have practical limits.
+1. **Answer**: Self-attention. Self-attention lets each token attend to every other token in parallel, replacing the sequential processing of RNNs and LSTMs.
+2. **Answer**: False. Smaller models often outperform larger ones on simple tasks where the extra capacity adds noise rather than value. A GPT-4o-mini can classify sentiment just as well as GPT-4o at a fraction of the cost.
+3. **Answer**: Tokenization. The tokenizer splits text into subword units and maps each to a numerical ID.
+4. **Answer**: Prompting. Prompting requires no training, no infrastructure, and costs fractions of a penny per call. Pre-training costs millions.
+5. **Answer**: 16 million. Self-attention is O(n²), so 4,000² = 16,000,000 attention computations. This is why context windows have practical limits.
 
 </details>

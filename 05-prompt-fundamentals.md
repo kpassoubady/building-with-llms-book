@@ -16,7 +16,7 @@ A developer at a mid-size SaaS company built a feature that used GPT-4o to class
 
 The fix was not a bigger model or a fine-tuning job. The fix was a better prompt. The developer added explicit handling for short inputs, specified that the model should respond "unknown" when the language was not English, and included three edge-case examples in the system message. Accuracy returned to 95% within an hour.
 
-This story illustrates the central thesis of this chapter: prompt engineering is software engineering. A prompt is an interface between your application and a language model. Like any interface, it needs clear specifications, edge-case handling, and iterative testing. In this chapter, you will learn the building blocks of effective prompts, the anti-patterns that cause silent failures, and the discipline of writing prompts that work not just on your test data but on real-world input.
+This story illustrates the central thesis of this chapter: prompt engineering is software engineering. A prompt is an interface between your application and a language model. Like any interface, it needs clear specifications, edge-case handling, and iterative testing. In this chapter, you will learn the building blocks of effective prompts, the anti-patterns that cause silent failures, and the discipline of writing prompts that work reliably on both your test data and real-world input.
 
 ## The 4 Building Blocks of a Prompt
 
@@ -149,8 +149,7 @@ print(response)
 > [!IMPORTANT]
 > **Add one building block at a time.** Start with just an instruction. If the output is not good enough, add context. Still not right? Add an output format. This incremental approach helps you pinpoint which block is missing.
 
-> [!TIP]
-> **Cross-Reference:** To take these fundamentals further with advanced methods like Few-Shot and Chain-of-Thought, see [Chapter 6](06-prompting-techniques.md): Prompting Techniques. For the systematic loop to refine your prompts until they reach production quality, see [Chapter 8](08-iteration-evaluation.md): Prompt Iteration & Evaluation.
+To take these fundamentals further with advanced methods like Few-Shot and Chain-of-Thought, see [Chapter 6](06-prompting-techniques.md): Prompting Techniques. For the systematic loop to refine your prompts until they reach production quality, see [Chapter 8](08-iteration-evaluation.md): Prompt Iteration & Evaluation.
 
 ## The Prompt Quality Checklist
 
@@ -168,7 +167,7 @@ Before sending any prompt to production, verify it against this seven-item check
 
 Here is a prompt that passes all seven checks:
 
-> [!PROMPT]
+> **Prompt Example:**
 > **System:**
 > You are a senior Python developer reviewing code for a fintech team.
 > FORMAT: Respond as a numbered list of findings.
@@ -290,7 +289,7 @@ A well-crafted system message follows a predictable structure. Here is a templat
 
 Here is a concrete example:
 
-> [!PROMPT]
+> **Prompt Example:**
 > You are a Python code review assistant for a team
 > that follows these standards:
 >
@@ -351,6 +350,9 @@ Provide 3 key points."""
 | Equals signs | `===` | Separating examples from input |
 | XML-style tags | `<document>...</document>` | Complex nested structures |
 
+> [!TIP]
+> **Developer Gotcha:** If you use Markdown delimiters like `---` or `###`, make sure your input data does not naturally contain those same characters, as this will confuse the model. XML tags (`<input>...</input>`) are generally the safest and most robust delimiter choice for programmatic prompts because they rarely appear naturally in non-code text.
+
 ### A Well-Delimited Prompt
 
 ```python
@@ -370,8 +372,7 @@ Summarize the key findings from the document below.
 
 Each section is labeled and delimited. The model knows exactly where instructions end, where the document starts and stops, and what format to use.
 
-> [!TIP]
-> **Cross-Reference:** For a deeper understanding of how delimiters help defend against prompt injection attacks, see [Chapter 12](12-security-guardrails.md): Security & Guardrails.
+For a deeper understanding of how delimiters help defend against prompt injection attacks, see [Chapter 12](12-security-guardrails.md): Security & Guardrails.
 
 ## Goal-First Prompting
 
@@ -442,6 +443,11 @@ These are starting points, not final prompts. Each one still needs context, cons
 
 ## 🧪 Try It Yourself
 
+The companion repository contains full exercises, starter code, and solutions for rewriting prompts and building effective system messages:
+
+- [building-with-llms-companion/exercises/ch05/prompt_rewriter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/prompt_rewriter)
+- [building-with-llms-companion/exercises/ch05/system_message_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/system_message_lab)
+
 ### Exercise 1: Building Blocks Progression
 
 Take this vague prompt and improve it in four steps, adding one building block at a time. After each step, run the prompt and observe how the output quality changes.
@@ -472,10 +478,7 @@ Each of these prompts contains an anti-pattern. Identify the problem and rewrite
 2. `"Don't you think microservices are better than monoliths?"`
 3. `"Be brief but explain everything in detail"`
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for rewriting prompts and building effective system messages.
-> - [building-with-llms-companion/exercises/ch05/prompt_rewriter](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/prompt_rewriter)
-> - [building-with-llms-companion/exercises/ch05/system_message_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch05/system_message_lab)
+
 
 ## 📋 Chapter Summary
 
@@ -525,7 +528,7 @@ Each of these prompts contains an anti-pattern. Identify the problem and rewrite
 <summary><strong>Click to Reveal Answers</strong></summary>
 
 1. **Answer**: Output Format. The output format block specifies how the model should structure its response (JSON, table, bullets, code). Instruction specifies what to do, context provides background, and input data is the material to process.
-2. **True/False**: False. The system message should contain persistent rules, persona, and format that apply to every request. The specific task goes in the user message, which changes per request.
+2. **Answer**: False. The system message should contain persistent rules, persona, and format that apply to every request. The specific task goes in the user message, which changes per request.
 3. **Answer**: goal. Goal-first prompting starts by writing the exact expected output, then works backwards through format, context, and instruction to build the prompt.
 4. **Answer**: "Help me with this". This is a vague instruction anti-pattern. It gives the model no direction about what kind of help is needed. The other options are all specific, actionable instructions.
 5. **Answer**: Output Format. Without an explicit output format specification, the model chooses a format based on its best guess, which varies between calls. Adding a format template (e.g., "Respond as JSON with these fields...") makes the output consistent and parseable.

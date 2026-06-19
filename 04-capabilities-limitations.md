@@ -35,9 +35,8 @@ LLMs are strongest when the task involves transforming, reorganizing, or generat
 | Format conversion | Excellent | mini | JSON to CSV, Markdown to HTML, SQL to ORM |
 | 10+ Task Full Matrix | [Full Matrix](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch04-capability-matrix.png) | default/mini | Detailed capability mapping in companion repo |
 
-> [!TIP]
-> **High-Resolution Matrix:** For a full-page Model Capability Matrix mapping 10+ tasks against reliability and cost tiers, see [Appendix E](appendix-e-diagrams.md#chapter-4-model-capability-matrix). The high-resolution file is also available in the companion repository:
-> - [ch04-capability-matrix.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch04-capability-matrix.png)
+**High-Resolution Matrix:** For a full-page Model Capability Matrix mapping 10+ tasks against reliability and cost tiers, see [Appendix E](appendix-e-diagrams.md#chapter-4-model-capability-matrix). The high-resolution file is also available in the companion repository:
+- [ch04-capability-matrix.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch04-capability-matrix.png)
 
 The pattern behind all of these: the answer is either contained in the prompt or follows a well-known template. When the model does not need to recall facts from its training data, it rarely fails.
 
@@ -114,8 +113,7 @@ print(response)
 <img src="images/fact-ch04.png" alt="Chapter 04 fact illustration: gavel over document with dissolving citation lines" style="float:right; margin-left:20px; width:200px; border-radius:8px;" />
 <!-- END IMAGE -->
 
-> [!TIP]
-> **Cross-Reference:** To mitigate hallucinations by providing models with actual source material, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG). For controlling output creativity and reducing "guesswork" with API parameters, see [Chapter 7](07-api-parameters.md).
+To mitigate hallucinations by providing models with actual source material, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG). For controlling output creativity and reducing "guesswork" with API parameters, see [Chapter 7](07-api-parameters.md).
 
 ## Where LLMs Fail
 
@@ -206,8 +204,7 @@ You cannot eliminate hallucinations entirely, but you can make them rare and det
 
 The single most effective strategy is also the simplest: provide the source material in the prompt. When the model has the answer in front of it, it almost never fabricates.
 
-> [!TIP]
-> **Cross-Reference:** For a complete implementation of Retrieval-Augmented Generation that grounds model responses in real documents, see [Chapter 11](11-rag-architecture.md): RAG Pipelines.
+For a complete implementation of Retrieval-Augmented Generation that grounds model responses in real documents, see [Chapter 11](11-rag-architecture.md): RAG Pipelines.
 
 ## Input Preprocessing
 
@@ -271,6 +268,9 @@ cost_estimate = token_count * 2.50 / 1_000_000  # GPT-4o input price
 print(f"Tokens: {token_count} | Estimated cost: ${cost_estimate:.4f}")
 ```
 
+> [!NOTE]
+> **Tokenizers are Provider-Specific:** The `tiktoken` library used here is specific to OpenAI models. If you are routing to Anthropic (Claude) or Google (Gemini) models, be aware they use their own tokenizers. Token counts and boundaries will vary across different providers.
+
 > [!TIP]
 > **Test with adversarial inputs.** Before deploying any LLM feature, try inputs designed to break it: empty strings, very long text, text in unexpected languages, and deliberately misleading prompts.
 
@@ -333,10 +333,16 @@ except json.JSONDecodeError:
 
 Start cheap, upgrade if needed. Begin every new feature with the mini tier. Only upgrade to the default tier if the quality difference matters for your use case. Most classification, extraction, and formatting tasks work equally well on both tiers.
 
-> [!TIP]
-> **Cross-Reference:** For writing prompts that reduce failure modes, see [Chapter 5](05-prompt-fundamentals.md): Prompt Engineering Fundamentals. For security implications of hallucinations in production, see [Chapter 12](12-security-guardrails.md).
+For writing prompts that reduce failure modes, see [Chapter 5](05-prompt-fundamentals.md): Prompt Engineering Fundamentals. For security implications of hallucinations in production, see [Chapter 12](12-security-guardrails.md).
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for building code explainers, bug triagers, user story generators, and auditing hallucinations:
+
+- [building-with-llms-companion/exercises/ch04/code_explainer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/code_explainer)
+- [building-with-llms-companion/exercises/ch04/bug_triager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/bug_triager)
+- [building-with-llms-companion/exercises/ch04/user_story_generator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/user_story_generator)
+- [building-with-llms-companion/exercises/ch04/hallucination_audit](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/hallucination_audit)
 
 ### Exercise 1: Hallucination Detector
 
@@ -362,12 +368,7 @@ print(response)
 
 Extend the `scrub_pii()` function to also redact Social Security numbers (pattern: `NNN-NN-NNNN`) and credit card numbers (4 groups of 4 digits). Test it with sample text before sending anything to an API.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building code explainers, bug triagers, user story generators, and auditing hallucinations.
-> - [building-with-llms-companion/exercises/ch04/code_explainer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/code_explainer)
-> - [building-with-llms-companion/exercises/ch04/user_story_generator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/user_story_generator)
-> - [building-with-llms-companion/exercises/ch04/bug_triager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/bug_triager)
-> - [building-with-llms-companion/exercises/ch04/hallucination_audit](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch04/hallucination_audit)
+
 
 ## 📋 Chapter Summary
 
@@ -416,10 +417,10 @@ Extend the `scrub_pii()` function to also redact Social Security numbers (patter
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Precise mathematical calculation**: LLMs predict what an answer looks like based on patterns, not by performing computation. For simple arithmetic they often match patterns from training data, but multi-step or large-number calculations are unreliable.
-2. **False**: higher temperature increases randomness in token selection, which makes hallucinations more likely, not less. Use lower temperature (0.0 to 0.3) for factual tasks.
-3. **knowledge cutoff**: every model has a knowledge cutoff date. Information after that date is not in its training data. The model may refuse to answer or fabricate a response.
-4. **Two causes: (1) `max_tokens` is set too low, so the response hits the limit before completing. (2) The input is so long that the combined input + output exceeds the context window.** Check `finish_reason` in the response. If it says `"length"`, increase `max_tokens` or shorten the input.
-5. **Validate URLs programmatically**: no prompt instruction can guarantee the model will not hallucinate URLs. The only reliable mitigation is to check that URLs exist (HTTP HEAD request) or to provide the valid URLs in the prompt and instruct the model to use only those.
+1. **Answer**: Precise mathematical calculation. LLMs predict what an answer looks like based on patterns, not by performing computation. For simple arithmetic they often match patterns from training data, but multi-step or large-number calculations are unreliable.
+2. **Answer**: False. Higher temperature increases randomness in token selection, which makes hallucinations more likely, not less. Use lower temperature (0.0 to 0.3) for factual tasks.
+3. **Answer**: knowledge cutoff. Every model has a knowledge cutoff date. Information after that date is not in its training data. The model may refuse to answer or fabricate a response.
+4. **Answer**: Two causes: (1) `max_tokens` is set too low, so the response hits the limit before completing. (2) The input is so long that the combined input + output exceeds the context window. Check `finish_reason` in the response. If it says `"length"`, increase `max_tokens` or shorten the input.
+5. **Answer**: Validate URLs programmatically. No prompt instruction can guarantee the model will not hallucinate URLs. The only reliable mitigation is to check that URLs exist (HTTP HEAD request) or to provide the valid URLs in the prompt and instruct the model to use only those.
 
 </details>

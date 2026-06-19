@@ -91,7 +91,7 @@ Use GitHub-style admonitions:
 > **Did You Know?** Interesting facts.
 
 > [!TIP]
-> **Cross-Reference:** See [Chapter X](XX-file.md)
+> See [Chapter X](XX-file.md)
 
 > [!IMPORTANT]
 > Critical information.
@@ -146,7 +146,7 @@ Use GitHub-style admonitions:
 - Add a chapter illustration: place PNG in `images/` following `hero-ch##.png` or `fact-ch##.png` naming.
 - Rebuild the book: run `./builder/build.sh pdf` (or `epub`).
 - Update build config: edit `builder/book-order.json` (page size, fonts, margins, admonition styles).
-- Add a cross-reference: link as `[Chapter N](NN-file.md)` in a `[!TIP]` callout.
+- Add a cross-reference: link as `[Chapter N](NN-file.md)` naturally in the prose, do not use `[!TIP]`.
 
 ## Book metadata
 

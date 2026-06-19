@@ -27,7 +27,7 @@ The fix is not a smarter model. The fix is your code. You manage the conversatio
 The diagrams contrast a stateless API (two independent requests) with a stateful conversation (your app managing history); the sketch below shows how your code bridges the gap by passing a growing messages[] array across turns.
 
 <!-- IMAGE: tateful Conversation: your app manages history. -->
-<img src="../day3/diagrams/stateful-conversation.svg" alt="Stateful Conversation: your app manages history" style="float:right; margin-left:20px; height:360px; border-radius:8px;" />
+<img src="diagrams/ch09-stateful-conversation.svg" alt="Stateful Conversation: your app manages history" style="float:right; margin-left:20px; height:360px; border-radius:8px;" />
 <!-- END IMAGE -->
 
 Here is the problem in code. Two separate API calls, two separate universes:
@@ -100,10 +100,9 @@ Now the model remembers everything. "My name is Alice" in turn 1 is still visibl
 The cost of this approach is literal. Every turn adds tokens. A 50-turn conversation with an average of 200 tokens per message means you are sending roughly 10,000 tokens in the final API call. The total tokens sent across all 50 calls is approximately 250,000. That is real money and real latency.
 
 > [!TIP]
-> **Cross-Reference:** For a deeper dive into message roles (system, user, assistant) and how to structure system messages, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs and [Chapter 5](05-prompt-fundamentals.md): Prompt Engineering Fundamentals.
+> **Developer Gotcha:** The token usage reported by the API in a multi-turn chat is the *total* tokens processed in that single request (all previous turns + the new turn). You pay for the entire history every single turn, making long conversations exponentially more expensive than separate one-turn prompts.
 
-> [!TIP]
-> **Cross-Reference:** If your chatbot needs to answer questions from a large knowledge base that exceeds the context window, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG) for a more scalable approach than message history alone.
+For a deeper dive into message roles (system, user, assistant) and how to structure system messages, see [Chapter 3](03-working-with-llm-apis.md): Working with LLM APIs and [Chapter 5](05-prompt-fundamentals.md): Prompt Engineering Fundamentals. If your chatbot needs to answer questions from a large knowledge base that exceeds the context window, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG) for a more scalable approach than message history alone.
 
 ## Context Window Management Strategies
 
@@ -162,8 +161,10 @@ def summarize(conversation, keep_recent=6):
     old_text = "\n".join(f"{m['role']}: {m['content']}" for m in old_turns)
     summary = get_completion(
         messages=[
-            {"role": "system", "content": "Summarize in 2-3 sentences. "
-             "Preserve key facts: names, preferences, decisions."},
+            {
+                "role": "system",
+                "content": "Summarize in 2-3 sentences. Preserve key facts: names, preferences, decisions."
+            },
             {"role": "user", "content": old_text},
         ],
         temperature=0.0,
@@ -256,7 +257,7 @@ Notice the structure: capabilities tell the model what it can do, limitations te
 
 A well-designed chatbot handles more than the happy path. Real users go off-topic, ask ambiguous questions, get frustrated, and occasionally try to break the bot.
 
-![Conversation Flow](./diagrams/conversation-flow-sketch.png)
+![Conversation Flow](diagrams/ch09-conversation-flow-sketch.png)
 <!-- figure: Conversation Flow -->
 
 ### Intents and Fallbacks
@@ -303,10 +304,15 @@ USER CONTEXT:
 Adapt your explanations to the user's skill level."""
 ```
 
-> [!TIP]
-> **Cross-Reference:** For securing chatbots against prompt injection and other adversarial inputs, see [Chapter 12](12-security-guardrails.md): Security and Guardrails. For managing the cost of long conversations, see [Chapter 13](13-cost-optimization.md): Cost Optimization.
+For securing chatbots against prompt injection and other adversarial inputs, see [Chapter 12](12-security-guardrails.md): Security and Guardrails. For managing the cost of long conversations, see [Chapter 13](13-cost-optimization.md): Cost Optimization.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for building multi-turn chatbots, managing context windows, and testing different personas:
+
+- [building-with-llms-companion/exercises/ch09/multi_turn_chatbot](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/multi_turn_chatbot)
+- [building-with-llms-companion/exercises/ch09/context_manager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/context_manager)
+- [building-with-llms-companion/exercises/ch09/persona_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/persona_lab)
 
 ### Exercise 1: The Amnesia Test
 
@@ -320,11 +326,7 @@ Build a chat loop that keeps only the last 5 turns (10 messages) plus the system
 
 Create two different system messages: one for a formal legal assistant and one for a casual cooking helper. Ask both the same question ("How do I handle an exception?") and compare the responses.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building multi-turn chatbots, managing context windows, and testing different personas.
-> - [building-with-llms-companion/exercises/ch09/multi_turn_chatbot](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/multi_turn_chatbot)
-> - [building-with-llms-companion/exercises/ch09/context_manager](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/context_manager)
-> - [building-with-llms-companion/exercises/ch09/persona_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch09/persona_lab)
+
 
 ## 📋 Chapter Summary
 
@@ -373,14 +375,14 @@ Create two different system messages: one for a formal legal assistant and one f
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) The API is stateless and has no memory between calls.** Each request is independent. The model only sees what you include in the messages list for that specific call.
+1. **Answer**: The API is stateless and has no memory between calls. Each request is independent. The model only sees what you include in the messages list for that specific call.
 
-2. **True.** Summarization compresses old messages into a short summary, reducing the token count of earlier turns. Over a long conversation, this saves significant tokens compared to sending every message verbatim.
+2. **Answer**: True. Summarization compresses old messages into a short summary, reducing the token count of earlier turns. Over a long conversation, this saves significant tokens compared to sending every message verbatim.
 
-3. **Sliding.** A sliding window strategy keeps the system message plus the last N user/assistant pairs, dropping everything older.
+3. **Answer**: Sliding. A sliding window strategy keeps the system message plus the last N user/assistant pairs, dropping everything older.
 
-4. **(c) Purpose, capabilities, and what the bot should NOT do.** A complete system message defines the persona, what the bot can do, what it cannot do, and behavioral rules. Without explicit constraints, the model will answer any question.
+4. **Answer**: Purpose, capabilities, and what the bot should NOT do. A complete system message defines the persona, what the bot can do, what it cannot do, and behavioral rules. Without explicit constraints, the model will answer any question.
 
-5. **The system message lacks explicit constraints.** Saying "You are a Python debugging assistant" defines identity but not boundaries. The fix is to add explicit scope and refusal instructions: "You specialize in Python debugging. You do not answer questions about other topics. If asked about non-Python topics, politely redirect the user."
+5. **Answer**: The system message lacks explicit constraints. Saying "You are a Python debugging assistant" defines identity but not boundaries. The fix is to add explicit scope and refusal instructions: "You specialize in Python debugging. You do not answer questions about other topics. If asked about non-Python topics, politely redirect the user."
 
 </details>

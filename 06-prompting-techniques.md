@@ -22,7 +22,7 @@ This chapter covers the major prompting techniques: zero-shot, few-shot, chain-o
 
 ## Zero-Shot Prompting
 
-**Zero-shot prompting** is the simplest technique: give the model a direct instruction with no examples. The model relies entirely on patterns learned during training.
+Zero-shot prompting is the simplest technique: give the model a direct instruction with no examples. The model relies entirely on patterns learned during training.
 
 ```python
 from shared import get_completion
@@ -58,12 +58,11 @@ Zero-shot fails when the task is ambiguous, the labels are domain-specific, or t
 
 The rule of thumb: always try zero-shot first. It uses the fewest tokens and is the simplest to maintain. Only add complexity when zero-shot is not reliable enough.
 
-> [!TIP]
-> **Cross-Reference:** Zero-shot prompts rely on the building blocks from [Chapter 5](05-prompt-fundamentals.md). A well-structured zero-shot prompt with a clear instruction, context, and output format can outperform a sloppy few-shot prompt with many examples.
+Zero-shot prompts rely on the building blocks from [Chapter 5](05-prompt-fundamentals.md). A well-structured zero-shot prompt with a clear instruction, context, and output format can outperform a sloppy few-shot prompt with many examples.
 
 ## Few-Shot Prompting
 
-**Few-shot prompting** adds 2 to 5 examples to the prompt, teaching the model your specific pattern. The model uses these examples to infer the task format, edge-case handling, and output style.
+Few-shot prompting adds 2 to 5 examples to the prompt, teaching the model your specific pattern. The model uses these examples to infer the task format, edge-case handling, and output style.
 
 ### Message-Based Few-Shot (Recommended)
 
@@ -141,18 +140,18 @@ Both approaches work. Message-based is better for longer examples and multi-turn
 
 ### Best Practices for Few-Shot Examples
 
-1. **Use 3 to 5 examples.** Enough to show the pattern without wasting tokens. More than 5 rarely improves results.
-2. **Cover edge cases.** Include the tricky inputs that zero-shot gets wrong: mixed sentiment, ambiguous phrasing, empty inputs.
-3. **Balance categories.** If you have three labels, include at least one example per label. Showing four positives and one negative biases the model toward positive.
-4. **Order matters.** The model attends most strongly to the first and last examples (primacy and recency effects). Put your most representative examples in those positions.
-5. **Match the real distribution.** If 80% of your inputs are technical issues, most of your examples should be technical.
+1. Use 3 to 5 examples. Enough to show the pattern without wasting tokens. More than 5 rarely improves results.
+2. Cover edge cases. Include the tricky inputs that zero-shot gets wrong: mixed sentiment, ambiguous phrasing, empty inputs.
+3. Balance categories. If you have three labels, include at least one example per label. Showing four positives and one negative biases the model toward positive.
+4. Order matters. The model attends most strongly to the first and last examples (primacy and recency effects). Put your most representative examples in those positions.
+5. Match the real distribution. If 80% of your inputs are technical issues, most of your examples should be technical.
 
 > [!TIP]
 > **Few-shot examples are your test cases.** Include examples that cover edge cases: the ambiguous input, the empty input, the input in an unexpected format. The model learns as much from your edge-case examples as from the happy-path ones.
 
 ## Chain-of-Thought (CoT) Prompting
 
-**Chain-of-thought prompting** asks the model to show its reasoning before giving the final answer. Instead of jumping directly to a conclusion, the model works through intermediate steps, which significantly improves accuracy on multi-step problems.
+Chain-of-thought prompting asks the model to show its reasoning before giving the final answer. Instead of jumping directly to a conclusion, the model works through intermediate steps, which significantly improves accuracy on multi-step problems.
 
 ### The Simplest Version: "Think Step by Step"
 
@@ -187,9 +186,7 @@ Without "Think step by step," the model sometimes jumps to the wrong answer beca
 
 ### Structured CoT
 
-#### Controlling the Reasoning Format
-
-For production systems, you want the reasoning in a predictable structure:
+For production systems, you want the reasoning in a predictable structure. The structured format makes the output parseable. You can extract the BUGS section programmatically and route it to your issue tracker.
 
 ```python
 from shared import get_completion
@@ -219,7 +216,8 @@ response = get_completion(
 print(response)
 ```
 
-The structured format makes the output parseable. You can extract the BUGS section programmatically and route it to your issue tracker.
+> [!TIP]
+> **Developer Gotcha:** When using Structured CoT in user-facing applications, you must parse the reasoning blocks out before displaying the final answer. If you just return the raw model output, your users will see the model "talking to itself" (the `ANALYSIS:` block), which degrades the user experience.
 
 ### When to Use CoT
 
@@ -261,7 +259,7 @@ This trades API cost for reliability. If 4 out of 5 runs agree, you have high co
 
 ## Role Prompting
 
-**Role prompting** assigns a persona to the model, shaping its response style, depth, and focus. The same question answered by "a senior security engineer" and "a friendly Python tutor" produces dramatically different responses.
+Role prompting assigns a persona to the model, shaping its response style, depth, and focus. The same question answered by "a senior security engineer" and "a friendly Python tutor" produces dramatically different responses.
 
 ```python
 from shared import get_completion
@@ -312,7 +310,7 @@ The security engineer will flag plaintext password storage, lack of hashing, and
 
 Roles are most effective when combined with explicit constraints:
 
-> [!PROMPT]
+> **Prompt Example:**
 > You are a senior code reviewer at a fintech company.
 > You follow these standards:
 > - PEP 8 compliance
@@ -326,7 +324,7 @@ The role sets the perspective. The constraints set the rules. Together, they pro
 
 ## Structured Output: JSON Mode
 
-For production systems, free-form text is not enough. You need output that code can parse, validate, and route. Structured output techniques force the model to respond in a specific format.
+Production systems require output that code can parse, validate, and route. Structured output techniques force the model to respond in a specific format.
 
 ![Structured Output Flow](./diagrams/ch06-few-shot-layout-sketch.png)
 
@@ -432,19 +430,29 @@ This function handles the three most common failure modes: clean JSON, JSON wrap
 
 ## Technique Selection Guide
 
-With five techniques in your toolkit, the question becomes: which one should you use? The answer depends on your task type, reliability requirements, and token budget.
+With five techniques in your toolkit, the question becomes: which one should you use? Prompting is an iterative process. Start with the simplest possible instruction and add complexity only when the model fails.
 
-<!-- ![Five prompting techniques on a progression ladder](./diagrams/ch06-technique-ladder-sketch.png) -->
+![The Prompting Technique Ladder: moving from simple instructions to high-reliability outputs](diagrams/ch06-technique-ladder-sketch.svg)
+<!-- figure: The Prompting Technique Ladder: moving from simple instructions to high-reliability outputs -->
 
-<!-- IMAGE: An open toolbox with several distinct prompt "tools," and a path of stepping stones leading from a question to a lightbulb. Conveys a kit of prompting methods. -->
-<img src="../day2/diagrams/prompting-techniques.svg" alt="Five prompting techniques on a progression ladder" style="float:right; margin-left:20px; height:650px; border-radius:8px;" />
+The Prompting Technique Ladder represents a progression in both reliability and token cost. As you climb this ladder, you add more constraints and context, which consumes more tokens but produces more predictable results. The staircase illustration above shows how each technique builds upon the previous one as a series of steps toward higher reliability.
+
+The vertical flowchart below traces the logical "build" of a prompt, showing exactly what you add (examples, reasoning, persona, or format) as you move up each level of the ladder.
+
+<!-- IMAGE: Vertical progression of prompting techniques. -->
+![Vertical progression of prompting techniques](diagrams/ch06-technique-ladder.svg)
 <!-- END IMAGE -->
 
-The diagram traces the logical progression from zero-shot through structured output, labeling what you add at each step; the sketch below presents the same progression as a staircase where each step represents increasing reliability.
+- Zero-Shot is your baseline. It's fast, cheap, and works for standard tasks where the model has extensive training data.
+- Few-Shot adds 2-5 examples to anchor the format and handle domain-specific labels that zero-shot might miss.
+- Chain-of-Thought gives the model "permission to think," significantly improving accuracy on math, logic, and multi-step reasoning.
+- Role Prompting focuses the model's expertise, setting a professional tone and bringing domain-specific knowledge to the forefront.
+- Structured Output is the final step for production systems, ensuring the model's response can be reliably parsed by your code.
 
-![Prompting techniques as a reliability staircase](diagrams/ch06-technique-ladder.svg)
 
 ### Decision Table
+
+The following table helps you choose your starting point based on the task at hand. Remember the rule of thumb: start as low on the ladder as possible.
 
 | Situation | Start With | Upgrade To |
 |:----------|:-----------|:-----------|
@@ -495,6 +503,8 @@ This prompt tells the model who it is (role), how to think (CoT), what the outpu
 
 ### Technique Comparison
 
+The following table summarizes the trade-offs between the five techniques. As you move down the table, reliability increases along with token consumption and implementation effort.
+
 | Technique | Tokens Used | Reliability | Complexity | Best For |
 |:----------|:-----------|:-----------|:-----------|:---------|
 | Zero-shot | Low | Moderate | Simple | Standard tasks, prototyping |
@@ -504,16 +514,24 @@ This prompt tells the model who it is (role), how to think (CoT), what the outpu
 | Structured output | Low-Medium | High for format | Moderate | Production systems, APIs |
 | Combined | High | Highest | Complex | Production, critical systems |
 
-![Technique comparison matrix](diagrams/ch06-technique-matrix-sketch.svg)
+The matrix below visualizes these trade-offs, helping you quickly identify the right tool for your specific reliability and complexity requirements.
+
+![Technique comparison matrix comparing reliability vs complexity](diagrams/ch06-technique-matrix-sketch.svg)
+<!-- figure: Technique comparison matrix comparing reliability vs complexity -->
 
 > [!NOTE]
 > **High-Resolution Matrix:** For a full-page version of the Prompting Technique Matrix comparing 6+ advanced techniques, see [Appendix E](appendix-e-diagrams.md#chapter-6-prompting-technique-matrix). The high-resolution file is also available in the companion repository:
 > - [ch06-technique-matrix.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch06-technique-matrix.png)
 
-> [!TIP]
-> **Cross-Reference:** For controlling output creativity and consistency with API parameters (temperature, top_p), see [Chapter 7](07-api-parameters.md). For evaluating which technique works best on your specific dataset, see [Chapter 8](08-iteration-evaluation.md).
+For controlling output creativity and consistency with API parameters (temperature, top_p), see [Chapter 7](07-api-parameters.md). For evaluating which technique works best on your specific dataset, see [Chapter 8](08-iteration-evaluation.md).
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for building sentiment classifiers, parsing resumes, and comparing prompting techniques:
+
+- [building-with-llms-companion/exercises/ch06/sentiment_classifier](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/sentiment_classifier)
+- [building-with-llms-companion/exercises/ch06/resume_parser](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/resume_parser)
+- [building-with-llms-companion/exercises/ch06/technique_shootout](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/technique_shootout)
 
 ### Exercise 1: Zero-Shot vs Few-Shot Comparison
 
@@ -550,11 +568,7 @@ Now add 3 to 5 few-shot examples (including edge cases) and rerun. How much does
 
 Give the model a buggy function and ask it to debug using structured CoT. Compare the output with and without the "Think step by step" instruction.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building sentiment classifiers, parsing resumes, and comparing prompting techniques.
-> - [building-with-llms-companion/exercises/ch06/sentiment_classifier](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/sentiment_classifier)
-> - [building-with-llms-companion/exercises/ch06/resume_parser](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/resume_parser)
-> - [building-with-llms-companion/exercises/ch06/technique_shootout](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch06/technique_shootout)
+
 
 ## 📋 Chapter Summary
 
@@ -603,10 +617,10 @@ Give the model a buggy function and ask it to debug using structured CoT. Compar
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **Zero-shot chain-of-thought**: Adding "Let's think step by step" (or similar) to a prompt without providing reasoning examples is zero-shot CoT. The technique was discovered by Kojima et al. (2022) and dramatically improved accuracy on reasoning benchmarks.
-2. **False**: Few-shot prompting provides examples directly in the prompt at inference time. No model weights are modified. Fine-tuning is a separate process that changes the model's parameters using training data.
-3. **few**: Few-shot prompting provides a small number of input/output examples in the prompt to teach the model the desired pattern, format, and edge-case handling.
-4. **Domain-specific expertise and tone control**: Role prompting assigns a persona that shapes the model's vocabulary, depth, and focus. A "senior security engineer" will flag vulnerabilities that a generic assistant might miss.
-5. **Two fixes: (1) Add "no markdown fences" or "respond with raw JSON only" to your prompt instruction. (2) Implement robust parsing that strips markdown fences before calling `json.loads()`.** Both approaches should be used together for maximum reliability.
+1. **Answer**: Zero-shot chain-of-thought. Adding "Let's think step by step" (or similar) to a prompt without providing reasoning examples is zero-shot CoT. The technique was discovered by Kojima et al. (2022) and dramatically improved accuracy on reasoning benchmarks.
+2. **Answer**: False. Few-shot prompting provides examples directly in the prompt at inference time. No model weights are modified. Fine-tuning is a separate process that changes the model's parameters using training data.
+3. **Answer**: few. Few-shot prompting provides a small number of input/output examples in the prompt to teach the model the desired pattern, format, and edge-case handling.
+4. **Answer**: Domain-specific expertise and tone control. Role prompting assigns a persona that shapes the model's vocabulary, depth, and focus. A "senior security engineer" will flag vulnerabilities that a generic assistant might miss.
+5. **Answer**: Two fixes: (1) Add "no markdown fences" or "respond with raw JSON only" to your prompt instruction. (2) Implement robust parsing that strips markdown fences before calling `json.loads()`. Both approaches should be used together for maximum reliability.
 
 </details>

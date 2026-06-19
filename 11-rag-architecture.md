@@ -33,9 +33,8 @@ Hallucinations happen for three reasons:
 ![RAG ingestion and query pipelines end-to-end](./diagrams/ch11-rag-full-sketch.png)
 <!-- figure: RAG ingestion and query pipelines end-to-end -->
 
-> [!TIP]
-> **High-Resolution Architecture:** For a full-page, high-resolution RAG architecture diagram, see [Appendix E](appendix-e-diagrams.md#chapter-11-rag-architecture-full). The high-resolution file is also available in the companion repository:
-> - [ch11-rag-full.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch11-rag-full.png)
+**High-Resolution Architecture:** For a full-page, high-resolution RAG architecture diagram, see [Appendix E](appendix-e-diagrams.md#chapter-11-rag-architecture-full). The high-resolution file is also available in the companion repository:
+- [ch11-rag-full.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch11-rag-full.png)
 
 The diagram separates RAG into three labeled subgraphs (ingestion, query, generation) with data flowing left to right; the sketch below condenses the same pipeline into five hand-drawn steps you can trace from document to grounded answer.
 
@@ -87,8 +86,7 @@ User Query → Embed → Search Vector DB → Retrieve Top-K → Augment Prompt 
 | **Ingestion** | Once, or on document updates | Chunk, embed, store documents | Minutes to hours (depends on corpus size) |
 | **Query** | Every user question | Retrieve context, generate answer | 1-3 seconds per query |
 
-> [!TIP]
-> **Cross-Reference:** The embedding and vector storage steps use the same models and databases covered in [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases. This chapter focuses on wiring them into a complete pipeline.
+The embedding and vector storage steps use the same models and databases covered in [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases. This chapter focuses on wiring them into a complete pipeline.
 
 ## Building the Ingestion Pipeline
 
@@ -145,8 +143,10 @@ chunks = chunk_documents(docs)
 print(f"Created {len(chunks)} chunks")  # Created 42 chunks
 ```
 
+For a detailed comparison of fixed-size, semantic, and overlapping chunking strategies, see [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases.
+
 > [!TIP]
-> **Cross-Reference:** For a detailed comparison of fixed-size, semantic, and overlapping chunking strategies, see [Chapter 10](10-embeddings-vector-databases.md): Embeddings & Vector Databases.
+> **Developer Gotcha:** When chunking structured documents (like Markdown or code), a naive fixed-character chunker might split a code block or table right in the middle, breaking the syntax for the LLM. Consider using a syntax-aware splitter (like those provided by LangChain or LlamaIndex) that respects header boundaries and preserves code blocks.
 
 ### Embedding and Storing
 
@@ -240,8 +240,7 @@ print(f"Sources: {result['sources']}")
 
 Setting `temperature=0.0` makes the model deterministic. For RAG, you want the model to report what the documents say, not to be creative. If you are building a RAG-powered chatbot with multi-turn conversation, combine this pipeline with the conversation history techniques from [Chapter 9](09-conversation-design.md): Conversation Design.
 
-> [!TIP]
-> **Cross-Reference:** [Chapter 5](05-prompt-fundamentals.md): Prompt Fundamentals covers the four building blocks of a prompt (role, context, task, format). A RAG prompt uses all four: the system message defines the role and constraints, the retrieved chunks provide context, the user question is the task, and the citation instruction specifies the output format.
+[Chapter 5](05-prompt-fundamentals.md): Prompt Fundamentals covers the four building blocks of a prompt (role, context, task, format). A RAG prompt uses all four: the system message defines the role and constraints, the retrieved chunks provide context, the user question is the task, and the citation instruction specifies the output format.
 
 > [!WARNING]
 > **The query embedding model must match the ingestion embedding model.** If you embed documents with `text-embedding-3-small` and queries with `text-embedding-3-large`, the vectors live in different spaces and similarity scores are meaningless. This is the single most common RAG bug.
@@ -315,13 +314,11 @@ The decision process is straightforward:
 
 1. **Try prompt engineering first.** If you can fit the necessary context into the prompt directly (a few pages of text), you do not need RAG.
 2. **Add RAG when you have too much data to fit in a prompt.** RAG scales from 10 documents to 10 million. It handles changing data because you update the index, not the model.
-3. **Fine-tune only as a last resort.** Fine-tuning is expensive, slow, and the model's knowledge becomes stale the moment training ends. Reserve it for cases where you need to change the model's behavior or style, not just its knowledge.
+3. **Fine-tune only as a last resort.** Fine-tuning is expensive, slow, and the model's knowledge becomes stale the moment training ends. Reserve it for cases where you need to change the model's behavior or style, rather than solely its knowledge.
 
-> [!IMPORTANT]
-> **Start with 5 documents, not 500.** Build your RAG pipeline with a tiny knowledge base first. Get the retrieval and generation working end-to-end. Then scale up. Debugging retrieval issues is much easier with 5 documents than 500.
+**Start with 5 documents, not 500.** Build your RAG pipeline with a tiny knowledge base first. Get the retrieval and generation working end-to-end. Then scale up. Debugging retrieval issues is much easier with 5 documents than 500.
 
-> [!TIP]
-> **Cross-Reference:** [Chapter 12](12-security-guardrails.md): Security & Guardrails covers how to protect RAG systems against prompt injection via retrieved content. [Chapter 13](13-cost-optimization.md): Cost & Latency Optimization covers strategies for reducing embedding, retrieval, and generation costs in production RAG systems.
+[Chapter 12](12-security-guardrails.md): Security & Guardrails covers how to protect RAG systems against prompt injection via retrieved content. [Chapter 13](13-cost-optimization.md): Cost & Latency Optimization covers strategies for reducing embedding, retrieval, and generation costs in production RAG systems.
 
 ## Evaluating RAG Quality
 
@@ -368,13 +365,18 @@ For a prototype, manual review of 20-30 question-answer pairs is often sufficien
 | High K value | Noise overwhelms signal | Decrease K, add a score threshold |
 | No "ONLY" instruction | Model hallucinates despite having context | Strengthen the system message constraint |
 
-> [!TIP]
-> **Cross-Reference:** [Chapter 8](08-iteration-evaluation.md): Iteration & Evaluation covers golden datasets and the LLM-as-judge pattern in depth. Apply those same techniques to evaluate your RAG system.
+[Chapter 8](08-iteration-evaluation.md): Iteration & Evaluation covers golden datasets and the LLM-as-judge pattern in depth. Apply those same techniques to evaluate your RAG system.
 
 ![Complete RAG architecture with evaluation](diagrams/ch11-rag-full.svg)
 <!-- figure: Complete RAG architecture with evaluation -->
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for building a complete RAG pipeline, wrapping it in an API, and evaluating retrieval quality:
+
+- [building-with-llms-companion/exercises/ch11/rag_pipeline](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_pipeline)
+- [building-with-llms-companion/exercises/ch11/rag_api](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_api)
+- [building-with-llms-companion/exercises/ch11/rag_evaluator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_evaluator)
 
 ### Exercise 1: Build a RAG Pipeline
 
@@ -388,11 +390,7 @@ Run your pipeline with chunk sizes of 200, 500, and 1,000 characters. For each s
 
 Modify your `retrieve` function to discard results with an L2 distance above a threshold (try 1.5). Test with a question that has no answer in the knowledge base. The system should return "I don't have enough information" instead of irrelevant results.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for building a complete RAG pipeline, wrapping it in an API, and evaluating retrieval quality.
-> - [building-with-llms-companion/exercises/ch11/rag_pipeline](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_pipeline)
-> - [building-with-llms-companion/exercises/ch11/rag_api](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_api)
-> - [building-with-llms-companion/exercises/ch11/rag_evaluator](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch11/rag_evaluator)
+
 
 ## 📋 Chapter Summary
 
@@ -441,14 +439,14 @@ Modify your `retrieve` function to discard results with an L2 distance above a t
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) Retrieval-Augmented Generation.** RAG retrieves relevant documents from a knowledge base and injects them into the prompt so the LLM can generate answers grounded in real source material.
+1. **Answer**: Retrieval-Augmented Generation. RAG retrieves relevant documents from a knowledge base and injects them into the prompt so the LLM can generate answers grounded in real source material.
 
-2. **False.** RAG does not require fine-tuning. The LLM uses the retrieved context at query time. You embed and index the documents, but the model itself remains unchanged.
+2. **Answer**: False. RAG does not require fine-tuning. The LLM uses the retrieved context at query time. You embed and index the documents, but the model itself remains unchanged.
 
-3. **Ingestion** pipeline runs once to process and store documents; the **query** pipeline runs on every user question. The ingestion pipeline handles loading, chunking, embedding, and storing. The query pipeline handles embedding the query, searching, retrieving, augmenting, and generating.
+3. **Answer**: Ingestion pipeline runs once to process and store documents; the query pipeline runs on every user question. The ingestion pipeline handles loading, chunking, embedding, and storing. The query pipeline handles embedding the query, searching, retrieving, augmenting, and generating.
 
-4. **(c) To prevent the model from hallucinating beyond the retrieved documents.** Without this constraint, the model will supplement retrieved facts with information from its training data, which may be incorrect for your specific domain. The "ONLY" instruction forces the model to stay grounded in the provided context.
+4. **Answer**: To prevent the model from hallucinating beyond the retrieved documents. Without this constraint, the model will supplement retrieved facts with information from its training data, which may be incorrect for your specific domain. The "ONLY" instruction forces the model to stay grounded in the provided context.
 
-5. **Two things to check:** (1) **Chunk size**: chunks may be too large, causing the embedding to average out the meaning and miss the specific topic the query targets. Try reducing chunk size to 200-300 tokens. (2) **Embedding model mismatch**: the documents and queries may have been embedded with different models, producing vectors in different spaces that cannot be meaningfully compared. Verify both use the same model. Other valid checks: the K value may be too low, the relevance threshold may be too strict, or the documents may not have been re-indexed after the last update.
+5. **Answer**: Two things to check: (1) Chunk size: chunks may be too large, causing the embedding to average out the meaning and miss the specific topic the query targets. Try reducing chunk size to 200-300 tokens. (2) Embedding model mismatch: the documents and queries may have been embedded with different models, producing vectors in different spaces that cannot be meaningfully compared. Verify both use the same model. Other valid checks: the K value may be too low, the relevance threshold may be too strict, or the documents may not have been re-indexed after the last update.
 
 </details>

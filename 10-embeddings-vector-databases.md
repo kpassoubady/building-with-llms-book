@@ -54,7 +54,7 @@ print(f"First 5 values: {[round(v, 4) for v in vectors[0][:5]]}")
 The output is a list of 1,536 numbers per sentence. By itself, a single vector is not useful. The power comes from comparing vectors.
 
 > [!NOTE]
-> **Did You Know?** The word2vec algorithm (2013) was the breakthrough that showed words could be represented as vectors. The famous example: vector("King") minus vector("Man") plus vector("Woman") approximately equals vector("Queen"). Modern embedding models handle entire sentences and paragraphs, not just single words.
+> **Did You Know?** The word2vec algorithm (2013) was the breakthrough that showed words could be represented as vectors. The famous example: vector("King") minus vector("Man") plus vector("Woman") approximately equals vector("Queen"). Modern embedding models handle entire sentences and paragraphs, rather than single words.
 
 <!-- IMAGE: A clean vector-arithmetic visual: a crown plus a small figure, an arrow, resolving to a second crowned figure. Conveys word-vector analogies. No text. -->
 <img src="images/fact-ch10.png" alt="Chapter 10 fact illustration: word vector arithmetic king minus man plus woman equals queen" style="float:right; margin-left:20px; width:200px; border-radius:8px;" />
@@ -118,11 +118,9 @@ vector = response.data[0]["embedding"]
 print(f"Dimensions: {len(vector)}")  # 1536
 ```
 
-> [!NOTE]
-> **Use the smallest embedding model that works for your task.** `text-embedding-3-small` (1,536 dimensions) is 5x cheaper than `text-embedding-3-large` (3,072 dimensions) and performs within 2% on most retrieval benchmarks. Start small, upgrade only if retrieval quality demands it.
+**Use the smallest embedding model that works for your task.** `text-embedding-3-small` (1,536 dimensions) is 5x cheaper than `text-embedding-3-large` (3,072 dimensions) and performs within 2% on most retrieval benchmarks. Start small, upgrade only if retrieval quality demands it.
 
-> [!TIP]
-> **Cross-Reference:** To see how these embeddings are used to ground LLM responses in real-world knowledge, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG).
+To see how these embeddings are used to ground LLM responses in real-world knowledge, see [Chapter 11](11-rag-architecture.md): Retrieval-Augmented Generation (RAG).
 
 ## Chunking Strategies
 
@@ -131,9 +129,8 @@ print(f"Dimensions: {len(vector)}")  # 1536
 ![Chunking Strategies](./diagrams/ch10-chunking-indexing-sketch.png)
 <!-- figure: Chunking Strategies -->
 
-> [!TIP]
-> **High-Resolution Pipeline:** For a full-page version of the complete Chunking and Indexing Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-10-chunking-and-indexing-pipeline). The high-resolution file is also available in the companion repository:
-> - [ch10-chunking-indexing.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch10-chunking-indexing.png)
+**High-Resolution Pipeline:** For a full-page version of the complete Chunking and Indexing Pipeline, see [Appendix E](appendix-e-diagrams.md#chapter-10-chunking-and-indexing-pipeline). The high-resolution file is also available in the companion repository:
+- [ch10-chunking-indexing.png](https://github.com/kpassoubady/building-with-llms-companion/blob/main/diagrams/ch10-chunking-indexing.png)
 
 ### Fixed-Size Chunking
 
@@ -203,8 +200,7 @@ chunks = [
 ]
 ```
 
-> [!TIP]
-> **Cross-Reference:** For a deeper dive into how chunking fits into a full Retrieval-Augmented Generation pipeline, see [Chapter 11](11-rag-architecture.md): RAG Architecture.
+For a deeper dive into how chunking fits into a full Retrieval-Augmented Generation pipeline, see [Chapter 11](11-rag-architecture.md): RAG Architecture.
 
 ![Chunking and indexing pipeline](diagrams/ch10-chunking-indexing.svg)
 <!-- figure: Chunking and indexing pipeline -->
@@ -241,8 +237,8 @@ print(f"Vectors in index: {index.ntotal}")
 query = np.array([query_embedding], dtype=np.float32)
 distances, indices = index.search(query, k=3)
 
-# indices[0]   = [7, 3, 12]              — IDs of closest vectors
-# distances[0] = [0.12, 0.34, 0.56]      — L2 distances (lower = closer)
+# indices[0]   = [7, 3, 12]              - IDs of closest vectors
+# distances[0] = [0.12, 0.34, 0.56]      - L2 distances (lower = closer)
 ```
 
 FAISS stores only vectors. You manage metadata (source file, chunk text) in a parallel list where position `i` in the list corresponds to vector `i` in the index.
@@ -346,11 +342,20 @@ for result in search("How does Python handle errors?", index, chunks):
 
 For normalized vectors (most embedding models output normalized vectors), L2 distance and cosine similarity produce equivalent rankings. FAISS uses L2 by default. To use cosine similarity with FAISS, normalize your vectors and use `IndexFlatIP` (inner product).
 
+> [!TIP]
+> **Developer Gotcha:** If an embedding model returns *unnormalized* vectors, computing cosine similarity manually requires dividing by the product of their magnitudes (a slower operation). Fortunately, OpenAI's `text-embedding-3` models return normalized vectors (magnitude of 1) by default. For normalized vectors, the dot product `np.dot(a, b)` is mathematically identical to cosine similarity and much faster to compute.
+
 ### Thresholds
 
 Not every search result is relevant. A low similarity score (or high distance) means the best match in your database is still not a good match for the query. Set a threshold below which you discard results rather than returning poor matches.
 
 ## 🧪 Try It Yourself
+
+The companion repository contains full exercises, starter code, and solutions for exploring embeddings, experimenting with chunking strategies, and comparing vector databases:
+
+- [building-with-llms-companion/exercises/ch10/embedding_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/embedding_explorer)
+- [building-with-llms-companion/exercises/ch10/chunking_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/chunking_lab)
+- [building-with-llms-companion/exercises/ch10/vector_db_comparison](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/vector_db_comparison)
 
 ### Exercise 1: Embedding Explorer
 
@@ -364,11 +369,7 @@ Take any markdown file from the `day3/knowledge-base/` folder. Chunk it using bo
 
 Load the same 5 documents into both FAISS (with a parallel metadata list) and Chroma (with built-in metadata). Query both with the same question. Compare the APIs and the results.
 
-> [!TIP]
-> **Starter Code:** The companion repository contains full exercises, starter code, and solutions for exploring embeddings, experimenting with chunking strategies, and comparing vector databases.
-> - [building-with-llms-companion/exercises/ch10/embedding_explorer](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/embedding_explorer)
-> - [building-with-llms-companion/exercises/ch10/chunking_lab](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/chunking_lab)
-> - [building-with-llms-companion/exercises/ch10/vector_db_comparison](https://github.com/kpassoubady/building-with-llms-companion/tree/main/exercises/ch10/vector_db_comparison)
+
 
 ## 📋 Chapter Summary
 
@@ -417,14 +418,14 @@ Load the same 5 documents into both FAISS (with a parallel metadata list) and Ch
 <details>
 <summary><strong>Click to Reveal Answers</strong></summary>
 
-1. **(b) The angle between two vectors.** Cosine similarity computes the cosine of the angle between two vectors. A score of 1.0 means the vectors point in the same direction (identical meaning), and 0.0 means they are perpendicular (unrelated).
+1. **Answer**: The angle between two vectors. Cosine similarity computes the cosine of the angle between two vectors. A score of 1.0 means the vectors point in the same direction (identical meaning), and 0.0 means they are perpendicular (unrelated).
 
-2. **True.** An embedding converts text into a fixed-length vector of floating-point numbers. The position in vector space encodes semantic meaning, so similar texts produce similar vectors.
+2. **Answer**: True. An embedding converts text into a fixed-length vector of floating-point numbers. The position in vector space encodes semantic meaning, so similar texts produce similar vectors.
 
-3. **Chunking.** Documents are split into smaller pieces (chunks) of 300-500 tokens before embedding. This ensures each vector represents a focused piece of meaning.
+3. **Answer**: Chunking. Documents are split into smaller pieces (chunks) of 300-500 tokens before embedding. This ensures each vector represents a focused piece of meaning.
 
-4. **(c) Pinecone.** Pinecone is a fully managed cloud service for vector storage and search. FAISS is a local library, Chroma is an embedded database, and NumPy is a numerical computing library.
+4. **Answer**: Pinecone. Pinecone is a fully managed cloud service for vector storage and search. FAISS is a local library, Chroma is an embedded database, and NumPy is a numerical computing library.
 
-5. **Two things to check:** (1) Chunk size: chunks may be too large (diluting the embedding with irrelevant content) or too small (lacking sufficient context). (2) Embedding model mismatch: the query and the documents may have been embedded with different models, producing vectors in different spaces that cannot be meaningfully compared. Other valid checks include whether vectors are properly normalized and whether the correct distance metric is being used.
+5. **Answer**: Two things to check: (1) Chunk size: chunks may be too large (diluting the embedding with irrelevant content) or too small (lacking sufficient context). (2) Embedding model mismatch: the query and the documents may have been embedded with different models, producing vectors in different spaces that cannot be meaningfully compared. Other valid checks include whether vectors are properly normalized and whether the correct distance metric is being used.
 
 </details>
